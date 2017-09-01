@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author-meta)$
+  <meta name="author" content="$author-meta$">
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$">
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+$if(math)$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(254, 255, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+}
+a:link {
+  color: rgb(42, 46, 61);
+}
+a:visited {
+  color: rgb(40, 30, 31);
+}
+#$idprefix$TOC ul,
+#$idprefix$TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 1.25;
+  margin-bottom: 3px;
+  filter: brightness(85%);
+}
+.author {
+  font-size-adjust: 1.5;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 1.5;
+  margin-bottom: 2px;
+  filter: brightness(135%);
+}
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="~/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="~/blog.html">Blog</a>
+      </li>
+    </ul>
+    $if(title)$
+    <div class="navbar-text">$title$</div>
+    $endif$
+    </ul>
+  </nav>
+  <div class="row">
+    $if(toc)$
+    <div class="col col-sm-auto">
+      <nav id="$idprefix$TOC">
+        $toc$
+      </nav>
+    </div>
+    $endif$
+    <div class="col">
+      $for(include-before)$
+      $include-before$
+      $endfor$
+      $if(title)$
+      <header>
+      <h1 class="title">$title$</h1>
+      $if(subtitle)$
+      <p class="subtitle smaller">$subtitle$</p>
+      $endif$
+      $for(author)$
+      <p class="author ml-3">$author$</p>
+      $endfor$
+      $if(date)$
+      <p class="date ml-3">$date$</p>
+      $endif$
+      </header>
+      $endif$
+      $body$
+      $for(include-after)$
+      $include-after$
+      $endfor$
+    </div>
+  </div>
+</body>
+</html>
