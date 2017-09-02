@@ -1,1 +1,4 @@
 *.exe
+.git-rewrite/
+tmp.md
+tex2pdf*/
