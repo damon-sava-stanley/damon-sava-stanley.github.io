@@ -16,7 +16,7 @@ while ($true) {
     $html="slides/html/$_" -replace ".md", ".html"
     $pdf="slides/html/$_" -replace ".md", ".pdf"
     ./gpp.exe -H -DHTML=1 -o tmp.md slides/$_
-    pandoc -t revealjs -s -V revealjs-url=reveal-js tmp.md  --bibliography=$bib -o $html
+    pandoc -t revealjs -s -V revealjs-url=reveal-js tmp.md  --bibliography=$bib -o $html --include-in-header=reveal.css.html
     rm tmp.md
     ./gpp.exe -H -DTEX=1 -o tmp.md slides/$_
     pandoc -t beamer tmp.md --bibliography=$bib -o $pdf
