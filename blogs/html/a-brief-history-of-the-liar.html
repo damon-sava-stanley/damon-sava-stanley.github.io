@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <title>A Brief History of the Liar (pt. 1)</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(254, 255, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+}
+a:link {
+  color: rgb(42, 46, 61);
+}
+a:visited {
+  color: rgb(40, 30, 31);
+}
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 1.25;
+  margin-bottom: 3px;
+  filter: brightness(85%);
+}
+.author {
+  font-size-adjust: 1.5;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 1.5;
+  margin-bottom: 2px;
+  filter: brightness(135%);
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">A Brief History of the Liar (pt. 1)</div>
+        </ul>
+  </nav>
+  <div class="row">
+        <div class="col col-sm-auto">
+      <nav id="TOC">
+        <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-greeks">The Greeks</a><ul>
+        <li><a href="#the-way-of-the-megarian">The Way of the Megarian</a></li>
+        <li><a href="#the-path-syllogistic">The Path Syllogistic</a></li>
+        </ul></li>
+        <li><a href="#bibliography">Bibliography</a></li>
+        </ul>
+      </nav>
+    </div>
+        <div class="col">
+                  <h1 class="title">A Brief History of the Liar (pt. 1)</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">2017-9-1</p>
+            <br/>
+                  <div class="lead">This article provides a brief historical survey examining some of the ways the liar sentence has been fought against and with. Particular attention is paid to the formulation of the paradox. This part of the account ends with Tarski with future developments warranting their own articles.</div>
+            <blockquote>
+One of themselves, even a prophet of their own, said, the Cretians are alway liars, evil beasts, slow bellies. This witness is true.
+<footer class="blockquote-footer">
+<cite>Epistles 1:12-13</cite>
+</footer>
+</blockquote>
+<h1 id="introduction">Introduction</h1>
+<p>There is an old fable: a man enters a despotic land. Not knowing the customs or politics of this place, he offends the local tyrant, who proclaims “What kind of man are you? Speak: if you say falsely, you shall be hanged, but, if you say truly, you shall not be hanged.” The man considers his options for a moment before replying, “Well, I’ll be hanged.”</p>
+<p>Likely the man is hung either way as we should not hazard our chances with tyrants, but perhaps logic will serve us fairer.</p>
+<hr />
+<p>The key to solving any puzzle is to find its basic structure. That the story concerns a man and a tyrant, that it concerns executions or speaking or events at all is inessential to it. Let us find this core, step by step. First we isolate the puzzling statements into a triple:</p>
+<ol class="example" type="1">
+<li>If the man’s statement is false, then he will be hanged.</li>
+<li>If the man’s statement is true, then he will not be hanged.</li>
+<li>The man’s statement is that he will be hanged.</li>
+</ol>
+<p>Now we abstract away the specific content with the original trick: putting letters in the place of parts of the sentence.</p>
+<ol start="4" class="example" type="1">
+<li>If <span class="math inline"><em>S</em></span> is false, then <span class="math inline"><em>H</em></span>.</li>
+<li>If <span class="math inline"><em>S</em></span> is true, then is is not the case that <span class="math inline"><em>H</em></span>.</li>
+<li><span class="math inline"><em>S</em></span> is “<span class="math inline"><em>H</em></span>.”</li>
+</ol>
+<p>Presented like this, we can isolate what is puzzling about this. For because <span class="math inline"><em>S</em></span> is “<span class="math inline"><em>H</em></span>” we can “<span class="math inline"><em>H</em></span>” for <span class="math inline"><em>S</em></span> and derive</p>
+<ol start="7" class="example" type="1">
+<li>If “<span class="math inline"><em>H</em></span>” is false, then <span class="math inline"><em>H</em></span>.</li>
+<li>If “<span class="math inline"><em>H</em></span>” is true, then it is not the case that <span class="math inline"><em>H</em></span>.</li>
+</ol>
+<p>Further relying on the principles that <span class="math inline"><em>H</em></span> is true if and only if <span class="math inline"><em>H</em></span> and that <span class="math inline"><em>H</em></span> is false if an only if it is not the case that <span class="math inline"><em>H</em></span>, we can further break this down.</p>
+<ol start="9" class="example" type="1">
+<li>If it is not the case that <span class="math inline"><em>H</em></span>, then <span class="math inline"><em>H</em></span>.</li>
+<li>If <span class="math inline"><em>H</em></span>, then it is not the case that <span class="math inline"><em>H</em></span>.</li>
+</ol>
+<p>Putting these two together gives us</p>
+<ol start="11" class="example" type="1">
+<li><span class="math inline"><em>H</em></span> if and only if it is not the case that <span class="math inline"><em>H</em></span>.</li>
+</ol>
+<p>Which is a direct contradiction.</p>
+<h1 id="the-greeks">The Greeks</h1>
+<p>Much the same exercise in abstraction and simplification that we just went through occurred historically. As <span class="citation" data-cites="sorensen2003Brief">Sorensen (2003)</span> reports, the initial kernel of the liar paradox owes to Epimenides, a seventh century B.C.E. prophet who reportedly said, “The Cretans always lie.” We can immediately see some features of the statement that distract from the puzzle, namely the references to “The Cretans” and, more subtly, the use of “lie.” The first real engagement with the paradox as more than a trifle appears to have been with the Megarian philosopher Eubulides.</p>
+<p>This engagement has been rehabilitated by <span class="citation" data-cites="wheeler1983Megarian">Wheeler (1983)</span>, who likens Eubulides to Zeno in marshaling paradoxes to speak to a largely Parmenidian set of theses. We are not here concerned with these propositions or this history,<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> but will accept Wheeler’s broad characterization that “In any case, most interpretations of Parmenides’ poem take him to have at least concluded that negation, plurality, falsehood, and physical existents with parts can not be real phenomena, and these claims are what I take the Megarians to be defending.”</p>
+<h2 id="the-way-of-the-megarian">The Way of the Megarian</h2>
+<p>With that preamble out of the way, let’s look at a presentation of the liar. I am here reworking Wheeler’s presentation, as he prefers a characterization of a paradox as a set of mutually inconsistent premises. This is a popular characterization, but one I believe to be deeply problematic.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> I will instead prefer to say that a paradox is an apparently sound proof of an apparent falsehood.</p>
+<ol start="12" class="example" type="1">
+<li>Every meaningful declarative sentence is either true or false.</li>
+<li>The sentences “<span class="math inline"><em>S</em></span> is true” and “<span class="math inline"><em>S</em></span> is false” are mutually exclusive whatever object is put for <span class="math inline"><em>S</em></span>.</li>
+<li>The sentences “<span class="math inline"><em>S</em></span> is false/true” are meaningful declarative sentences whenever <span class="math inline"><em>S</em></span> is a meaningful declarative sentence.</li>
+<li>Self-reference does not bar a sentence from being a meaningful declarative sentence.</li>
+<li>Some meaningful declarative sentence is false.</li>
+</ol>
+<p>I will give the proof sketch from these sentences as we will have the occasion later on to go into much more depth into how exactly this works. The basic idea is that given these and some other basic assumptions about how “_ is true”, “_ is false” and sentential reference work, we first conclude that</p>
+<ol start="17" class="example" type="1">
+<li><span class="math inline"><em>L</em></span> = “<span class="math inline"><em>L</em></span> is false”</li>
+</ol>
+<p>is a meaningful declarative sentence that is therefore either true or false. With a bit of manipulation we prove that <span class="math inline"><em>L</em></span> is both true and false, but 13 said that could not happen!<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>The picture is something like this: we started with a number of sentences that seemed innocent and obviously true, but when we put them together we ended up somewhere rather different, somewhere we’d rather not be. If we are to get out of this place, we will have to turn our backs on what got us here. What can happen though is that we return very much changed, wary and wondering after the solid ground. This is the basis of a productive use of paradox: from this state of uncertainty we are willing to reject sentences that we otherwise considered unassailable. It is this state that Eubulides exploits, recommending as a balm to our condition the rejection of ‘false’ as a meaningful sentential predicate, that is rejection of 16 and 14.</p>
+<h2 id="the-path-syllogistic">The Path Syllogistic</h2>
+<p>I am going to back up a bit in history and divert us somewhat because we’ve entered shaky territory. We have a proof that is both sound and apparently disastrous and feel we need to give up our certainty in some step of the proof. We’ve seen what Eubulides said we should give, but what he says to do sounds crazy. We want a second opinion, but more than that we want to know which opinion to trust.</p>
+<p>Slightly preceding this problem</p>
+<h1 id="bibliography" class="unnumbered">Bibliography</h1>
+<div id="refs" class="references">
+<div id="ref-sorensen2003Brief">
+<p>Sorensen, Roy. 2003. <em>A Brief History of the Paradox: Philosophy and the Labyrinths of the Mind</em>. Oxford University Press.</p>
+</div>
+<div id="ref-wheeler1983Megarian">
+<p>Wheeler, Samuel C. 1983. “Megarian Paradoxes as Eleatic Arguments.” <em>American Philosophical Quarterly</em> 20 (3). JSTOR:287–95.</p>
+</div>
+</div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>However, I believe Parmenidian philosophy is well worth studying from the perspective of a philosophy of logic as a limit case on how much ontology one can reasonably derive from your semantics. I am sure we will return to cover this omission in the future.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>The major deficiency of this characterization is that it is prejudiced against paraconstistent approaches.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>I am again dissatisfied with Wheeler’s way of putting the problem, but it must be remembered that the paper predates serious dialethic approaches to the liar. The main deficiency is that such approaches <em>validate</em> 12–15 while still, in my terms, eliminating the paradox— the original paradox must be much further developed to show how such proposed solutions are supposed to work.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+          </div>
+  </div>
+</body>
+</html>
