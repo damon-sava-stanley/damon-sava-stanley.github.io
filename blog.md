@@ -1,6 +1,7 @@
 ---
 title: Blog
 ...
-# [Lorem Ipsum Dolorum Est](/blogs/html/example.html)
+# [Natural Deduction Rendering](/pages/nd-render/index.html)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit laoreet id donec ultrices tincidunt. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Mi tempus imperdiet nulla malesuada.
+A simple web-app used for typesetting natural deduction proofs into
+SVG. The current version lives in [this repository.](https://github.com/damon-sava-stanley/nd-rendering)
