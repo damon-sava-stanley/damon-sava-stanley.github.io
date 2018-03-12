@@ -2,7 +2,7 @@
 title: Home
 ...
 
-Damon Stanley is a PhD student in the [Ohio State Philosophy department](https://philosophy.osu.edu/). His interests center on the semantic paradoxes.
+Damon Stanley is a graduate student in the [Ohio State Philosophy department.](https://philosophy.osu.edu/)
 
 # Contact
 
