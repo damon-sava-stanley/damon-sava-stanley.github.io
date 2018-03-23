@@ -1,12 +1,17 @@
 textarea {
   width: 1000px;
   height: 300px;
+  margin: 0.5em; /* Increased margin since the outline expands outside the element */
 }
 .winner {
   font-weight: bold !important;
 }
 .link {
   text-decoration: underline !important;
+}
+.code-error {
+  outline: solid 3px #FC5150;
+  transition: outline .4s ease-in-out .2s;
 }
 h1 { font-size: 20pt !important; }
 h2 { font-size: 18pt !important; }

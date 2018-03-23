@@ -290,10 +290,29 @@ function viewResults(view, results, container) {
     return false;
 }
 
+function shmeval(obj){
+    return eval(obj);
+}
+
 function handleForm() {
     var playerCode = $("#bidding-code").val();
-    var players = eval(playerCode);
+    $("#bidding-code").removeClass('code-error');
+    try {
+        var players = shmeval(playerCode);
+    } catch (err) {
+        $("#bidding-code").addClass('code-error');
+        return false;
+    }
     var result = play_set(players, rounds);
+    
+    Cookies.set('bidding-code', playerCode, { expires: 7 });
+
     var container= $("#container");
     return viewResults({action: "summary"}, result, container);
 }
+
+function main() {
+    var code = Cookies.get('bidding-code');
+    if (code) $("#bidding-code").val(code)
+}
+main();
