@@ -1,11 +1,11 @@
 ---
-pagetitle: The Jim-Crow Projection
-author: Damon Stanley
-date: March 15, 2019
+title: Azimuthal Theories
 bibliography: blogs/2019-3-azimuthal-theories.bib
 ...
 
-# Azimuthal Theories
+*Published March 15, 2019.*
+
+***
 
 > The New Yorker map of the United States went on to reflect the New Yorker's
 > notions in the very sizes the several areas appeared to have on the map. Our
