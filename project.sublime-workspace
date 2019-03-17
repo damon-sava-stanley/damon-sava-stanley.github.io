@@ -1,0 +1,885 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"remo",
+				"remove_button"
+			],
+			[
+				"remove",
+				"remove_button"
+			],
+			[
+				"rem",
+				"remove_button"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"appl",
+				"applicable"
+			],
+			[
+				"h_re",
+				"h_responses"
+			],
+			[
+				"_draw",
+				"_draw_hand"
+			],
+			[
+				"_pla",
+				"_play_copy"
+			],
+			[
+				"ener",
+				"energy_available"
+			],
+			[
+				"sle",
+				"select"
+			],
+			[
+				"unit",
+				"unit_grants"
+			],
+			[
+				"grant",
+				"grant_bonus"
+			],
+			[
+				"assigned",
+				"assigned_to"
+			],
+			[
+				"ass",
+				"assigned_to"
+			],
+			[
+				"gran",
+				"grant_bonus"
+			],
+			[
+				"assign",
+				"assigned_to"
+			],
+			[
+				"Resource",
+				"ResourceBundle"
+			],
+			[
+				"Res",
+				"ResourceBundle"
+			],
+			[
+				"assi",
+				"assigned_to"
+			],
+			[
+				"as",
+				"assigned_to"
+			],
+			[
+				"_pl",
+				"_play_copy"
+			],
+			[
+				"res",
+				"resource_non_negative"
+			],
+			[
+				"Resour",
+				"ResourceBundle"
+			],
+			[
+				"_initi",
+				"_initialize_year_decks"
+			],
+			[
+				"_ini",
+				"_initialize_copies"
+			],
+			[
+				"_dr",
+				"_draw_hand"
+			],
+			[
+				"_tr",
+				"_multi_try_remove"
+			],
+			[
+				"_han",
+				"_hand_played"
+			],
+			[
+				"_ha",
+				"_hand_size"
+			],
+			[
+				"_in",
+				"_in_play"
+			],
+			[
+				"_init",
+				"_initialize_year_decks"
+			],
+			[
+				"fo",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"fra",
+				"fragments_c"
+			],
+			[
+				"class",
+				"classmethod"
+			],
+			[
+				"card_t",
+				"card_type"
+			],
+			[
+				"card",
+				"card_type"
+			],
+			[
+				"cards",
+				"cards_by_year"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"crea",
+				"createTextNode"
+			],
+			[
+				"cre",
+				"createElement"
+			],
+			[
+				"ap",
+				"appendChild"
+			],
+			[
+				"border-co",
+				"border-collapse\tproperty"
+			],
+			[
+				"app",
+				"appendTD"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"ga",
+				"gameOver"
+			],
+			[
+				"game",
+				"gameOver_0"
+			],
+			[
+				"outh",
+				"out_path"
+			],
+			[
+				"cl",
+				"cleanupMainNodes"
+			],
+			[
+				"mai",
+				"mainElement"
+			],
+			[
+				"se",
+				"separateMainNodes"
+			],
+			[
+				"tra",
+				"traverseNodeElementTree"
+			],
+			[
+				"CY",
+				"CYMLError"
+			],
+			[
+				"id",
+				"idMaker"
+			],
+			[
+				"new",
+				"newId"
+			],
+			[
+				"nextE",
+				"nextElementSibling"
+			],
+			[
+				"firs",
+				"firstElementChild"
+			],
+			[
+				"stack",
+				"stackChild"
+			],
+			[
+				"sta",
+				"stackChild"
+			],
+			[
+				"clea",
+				"cleanedNodes"
+			],
+			[
+				"sep",
+				"separatedMainNodes"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"this",
+				"this_name_1"
+			],
+			[
+				"view",
+				"viewResults"
+			],
+			[
+				"other",
+				"other_score"
+			],
+			[
+				"poi",
+				"point_1"
+			],
+			[
+				"vi",
+				"viewResults"
+			],
+			[
+				"pla",
+				"play_set"
+			],
+			[
+				"reac",
+				"reactive_player"
+			],
+			[
+				"past",
+				"past_bids"
+			],
+			[
+				"pas",
+				"past_bids"
+			],
+			[
+				"font-siz",
+				"font-size-adjust"
+			],
+			[
+				"size",
+				"font-size-adjust"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "blogs/2018-7-carlos-among-the-candles.md",
+			"settings":
+			{
+				"buffer_size": 2378,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "blog.md",
+			"settings":
+			{
+				"buffer_size": 126,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "blog.html",
+			"settings":
+			{
+				"buffer_size": 3127,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/2018-7-carlos-among-the-candles.js",
+			"settings":
+			{
+				"buffer_size": 1533,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 236.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git stage",
+				"git: quick stage"
+			],
+			[
+				"git che",
+				"git: checkout current file at commit"
+			],
+			[
+				"git st",
+				"git: quick stage"
+			],
+			[
+				"git push",
+				"git: push"
+			],
+			[
+				"updat",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"install \t",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git comm",
+				"git: commit"
+			],
+			[
+				"git commit",
+				"git: commit"
+			],
+			[
+				"stage",
+				"git: quick stage"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Install Package Control"
+			]
+		],
+		"width": 508.0
+	},
+	"console":
+	{
+		"height": 379.0,
+		"history":
+		[
+			"exec(\"pandoc -o draft.pdf draft.md --smart --bibliography proposal.bib\")",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/js",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/notes",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages/2018-7-carlos-among-the-candles"
+	],
+	"file_history":
+	[
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/built.json",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/build.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/2018-7-carlos-among-the-candles.tw",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/2018-7-fragments.md",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/2018-7-site-setup.md",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/1-ashbery-moods.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/scratch/2018/6/teasingcoma_comments.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/scratch/2018/6/tea_drinker_comments.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/dictionary-of-words/composition/dictionary.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/scratch/2018/6/22.md",
+		"/C/Users/damon/Amazon Drive/Documents/pass.json",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/dictionary-of-words/explore/quotes.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/dictionary-of-words/explore/bibliography.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/build.ps1",
+		"/C/Users/damon/Downloads/WorldCat_764567611.ris",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/out/dictionary-of-words/composition/dictionary.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/out/dictionary-of-words/explore/quotes.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/built.json",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/README.md",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/forest/instructions.md",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/forest/cards.py",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/forest/game.py",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/term/final.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/term/paper.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/candidacy/literature-review/Harman - Changes in View.md",
+		"/C/Users/damon/bin/tracking.py",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/2-fragments.md",
+		"/C/Users/damon/tracking.json",
+		"/C/Users/damon/OneDrive/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/js/blogs/fragments.js",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/favicon.ico",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/1-ashbery-moods.md",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages/1-ashbery-moods/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages/body-shaped-like-gold/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/2-fragments.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/2048/precis.md",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/forest/cards.js",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/2048/index.md",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/forest/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/coup/index.md",
+		"/C/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/preferences/STSDataDefect",
+		"/C/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/preferences/STSDataTheSilent",
+		"/C/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/preferences/STSDataVagabond",
+		"/C/Users/damon/Amazon Drive/Documents/a-dream.markdown",
+		"/C/Users/damon/Amazon Drive/Documents/Blahg/coup.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/markov-condition/precis.md",
+		"/C/Users/damon/Amazon Drive/Documents/Essays/story-telling-in-games.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-authority-for-skeptics/bibliography.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/term/revision-note.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/term/proposal.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-authority-for-skeptics/outline.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-authority-for-skeptics/draft.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-deliberative-standards/proposal.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/1-25/reaction-paper.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/1-18/parfit-normativity.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/2-15-discussion.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-nonmonotonic-paradox/handout.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/.gitignore",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/build.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-nonmonotonic-paradox/bibliography.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-harmony/bibliography.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-harmony/draft.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-nonmonotonic-paradox/draft.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Logic/Hlobil - A Nonmonotonic Sequent Calculus.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/tex2pdf.9564/input.tex",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Papers/2018-harmony/build.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/final.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/build.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/draft.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/bibliography.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/shabel-sei.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/lsystem/LSystem.js",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/lsystem/Transformation.js",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/lsystem/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/blogs/html/1-poets-in-paradise.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/scratch/2018-4-set.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/a-story/example.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/a-story/engine.js",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/games/nouns/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/games/nouns/nouns.md",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/generic/example.html",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/abstract.md",
+		"/C/Users/damon/AppData/Roaming/Sublime Text 3/Packages/User/Pandoc.sublime-build",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/2-9-response.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/presentation.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/1-21-response.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/1-28-response.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/2-2-response.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/term/draft.tex",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/digital/generic/engine.js",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/presentation.tex",
+		"/C/Users/damon/AppData/Roaming/pandoc/template/tufte-handout.tex",
+		"/C/Users/damon/Downloads/oso-9780198746911-chapter-7.ris",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8200/9-shepherd.md",
+		"/C/Users/damon/Amazon Drive/Documents/Website/cyml/examples/house.cyml.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/5100/models.md",
+		"/C/Users/damon/AppData/Roaming/Sublime Text 3/Packages/User/GenericPowershell.sublime-build",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/out/dictionary-of-words/explore/HomePage.html",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/empty.bib",
+		"/C/Users/damon/Downloads/WorldCat_606627944.ris",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/out/dictionary-of-words/explore/quotes.pdf",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/out/scratch/phoenix-night.pdf",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/filters/short-captions.lua",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/filters/task-list.lua",
+		"/C/Users/damon/Amazon Drive/Documents/Writing/dictionary-of-words/explore/notes.md",
+		"/C/Users/damon/Downloads/WorldCat_45843485.ris",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/make.ps1",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/ali-comments.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/xiang-comments.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8200/8-ethics.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/draft.tex",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8650/3-30-response.md",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/template.html",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages/bidding-game/index.html",
+		"/C/Users/damon/Amazon Drive/Documents/Website/damon-sava-stanley.github.io/pages/bidding-game/index.template.html",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Working Set/2018-3-7.md",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Working Set/2018-3-20.md",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Scratch/a-streetcar-named-disjunction.md",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Working Set/2018-3-5.md",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Working Set/2018-2-17.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/bibliography.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8300/term/proposal.bib",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/lols-notes.md",
+		"/C/Users/damon/Amazon Drive/Documents/Poems/Icarus/uruk-uriku-urikhai.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8200/6-abstract-ideas.md",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/8200/6-abstract-ideas.html",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/5100/notes.tex",
+		"/C/Users/damon/Amazon Drive/Documents/Notes/Classes/5100/prep.tex"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"|",
+			"copy.card",
+			"play",
+			"clazz",
+			"@classmethod",
+			"flavor",
+			"capacity(",
+			"capacity",
+			"'special'",
+			"Baker",
+			"Price"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			">",
+			"self",
+			"",
+			"grants",
+			"costs",
+			"description",
+			"room(",
+			"room",
+			"'S'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "blogs/2018-7-carlos-among-the-candles.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2213,
+								2213
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 2814,
+								"count": 290,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "",
+							"git_savvy.repo_path": "C:\\Users\\damon\\Amazon Drive\\Documents\\Website\\damon-sava-stanley.github.io",
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1728.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "blog.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 103,
+								"count": 16,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"git_savvy.repo_path": "C:\\Users\\damon\\Amazon Drive\\Documents\\Website\\damon-sava-stanley.github.io",
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "blog.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 104,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"git_savvy.repo_path": "C:\\Users\\damon\\Amazon Drive\\Documents\\Website\\damon-sava-stanley.github.io",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1920.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/2018-7-carlos-among-the-candles.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								946,
+								946
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 0,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"git_savvy.repo_path": "C:\\Users\\damon\\Amazon Drive\\Documents\\Website\\damon-sava-stanley.github.io",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 33.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.show_commit_info":
+	{
+		"height": 138.0
+	},
+	"output.sublime_haskell_output_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/GenericPowershell.sublime-build",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\damon\\Amazon Drive\\Documents\\Writing\\project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 357.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

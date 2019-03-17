@@ -22,8 +22,6 @@ Get-ChildItem "blogs/" -Filter *.md | Foreach-Object {
       pp -en -pdf "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf"
     }
   }
-
-
   $writes[$_.Name] = $last_write
 }
 
