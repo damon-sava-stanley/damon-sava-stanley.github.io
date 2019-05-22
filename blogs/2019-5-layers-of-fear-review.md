@@ -63,7 +63,7 @@ primarily medical but moral. He could be having a much better time than he ends
 up having, given the family's wealth, his evidently concerned friends, if only
 he had behaved differently.
 
-# Gamy-stuff
+# Gamey-stuff
 
 That's roughly the narrative context. Mechanically, the game is light. The
 player navigates in first person, opens doors, rummages through drawers to find
