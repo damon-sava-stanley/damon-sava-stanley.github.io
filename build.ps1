@@ -18,12 +18,12 @@ Get-ChildItem "blogs/" -Filter *.md | Foreach-Object {
     $html="$dir/index.html"
     $pdf="$dir/index.pdf"
     if (Get-Command "pp" -errorAction SilentlyContinue) {
-      pp -en -html "blogs/$_" | pandoc --template=template.html --toc --filter pandoc-citeproc -o "$html"
+      pp -en -html "blogs/$_" | pandoc --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html"
       if ($tex) {
         pp -en -pdf "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf"
       }
     } else {
-      cat "blogs/$_" | pandoc --template=template.html --toc --filter pandoc-citeproc -o "$html" 
+      cat "blogs/$_" | pandoc --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" 
       if ($tex) {
         cat "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf" 
       }
