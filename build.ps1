@@ -17,9 +17,16 @@ Get-ChildItem "blogs/" -Filter *.md | Foreach-Object {
     }
     $html="$dir/index.html"
     $pdf="$dir/index.pdf"
-    pp -en -html "blogs/$_" | pandoc --template=template.html --toc --filter pandoc-citeproc -o "$html"
-    if ($tex) {
-      pp -en -pdf "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf"
+    if (Get-Command "pp" -errorAction SilentlyContinue) {
+      pp -en -html "blogs/$_" | pandoc --template=template.html --toc --filter pandoc-citeproc -o "$html"
+      if ($tex) {
+        pp -en -pdf "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf"
+      }
+    } else {
+      cat "blogs/$_" | pandoc --template=template.html --toc --filter pandoc-citeproc -o "$html" 
+      if ($tex) {
+        cat "blogs/$_" | pandoc --toc --filter pandoc-citeproc -o "$pdf" 
+      }
     }
   }
   $writes[$_.Name] = $last_write
