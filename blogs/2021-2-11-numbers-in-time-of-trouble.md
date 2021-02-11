@@ -1163,7 +1163,7 @@ enthusiasm. I will add that the italicized "*is*" is very KJV.
 ========================================================================================
 
 "sureties" is likely used in the sense of "Subjective certainty on the
-part of an individual; confidence, conviction. Cf. sureness n. 1a. Now
+part of an individual; confidence, conviction. Cf. sureness n. 1a. Now
 somewhat archaic." (OED, "surety," 5a) We'll try to decipher what kind
 of surety is intended in a moment. We are told that these are "sickening
 and greasy," and the tentativeness of the proposal is meant to contrast
