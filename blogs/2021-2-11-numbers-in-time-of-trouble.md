@@ -108,6 +108,8 @@ Numbers in Time of Trouble --- J. H. Prynne
 | if we can see thus far, these are the few
 | outer lights of the city, burning on the horizon.
 
+***
+
 Lots to say, I'll be a bit abbreviated. I'll start just working through
 a reading of it on a phrase-by-phrase level, trying to puzzle through
 what's going on. Maybe later I'll try to say something about the
