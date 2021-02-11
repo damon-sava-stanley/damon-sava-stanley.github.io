@@ -4,28 +4,24 @@ title: Blog
 
 # Overviews
 
-Brief precis of material I am working through.
-
-## Change, Choice and Inference
-
-Hans Rott's 2001 book concerning belief revision and nonmonotonic reasoning.
-
-- [Chapter 1](pages/2019-5-change-choice-and-inference-1)
-
 # Reviews
 
-## [Layers of Fear (Review)](/pages/2019-5-layers-of-fear-review)
+## [My Work Is Not Yet Done](/pages/2020-8-13-my-work-is-not-yet-done)
+
+A review of the Ligotti novella.
+
+## [Layers of Fear](/pages/2019-5-layers-of-fear-review)
 
 A quick review / script-doctor of a somewhat interesting horror game.
 
 # Essays
 
-## [Implicit Bias and the Idealized Self](/pages/2019-3-implicit-bias-and-the-idealized-self)
+## [Numbers in Time of Trouble](/pages/2021-2-11-numbers-in-time-of-trouble)
 
-A critical précis to an interesting paper by Nora Berenstain of the same title
-offering an explanation of the underappreciation of implicit bias in the
-discipline.
+An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
 
-## [Azimuthal Theories](/pages/2019-3-azimuthal-theories)
+# Other
 
-A quick note on theories as maps and egocentric distortions.
+## [The Parable of the Mugger](/pages/2020-11-12-the-parable-of-the-mugger)
+
+Moral: some bad people speak well.
