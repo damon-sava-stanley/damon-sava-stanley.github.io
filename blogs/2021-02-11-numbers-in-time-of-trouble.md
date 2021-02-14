@@ -148,7 +148,7 @@ the when in which events happen.
 
 A time standard is a specification for measuring time. So for example,
 by local standard time, "3:32 PM 2020-13-3" specifies the time it is
-now, "4:32 PM 2020-13-3" the time it is in a minute. Time standards
+now, "4:32 PM 2020-13-3" the time it is in an hour. Time standards
 include but are more general than time zones: for example there are time
 standards used in astronomy that have nothing to do with the Earth's
 rotation. Some relevant facts about time standards.
@@ -573,7 +573,7 @@ and "history" rather than history has an arc, is moving in some definite
 direction and so has a tail.
 
 The idea that history has a direction has a long, well, history. Some
-enlightenment figures (Kant, Hegel) thought of some sort of republican
+Enlightenment figures (Kant, Hegel) thought of some sort of republican
 maybe cosmopolitan state as the direction in which history heads.
 (Kant---and probably Hegel but I know nothing about him---is more
 complex here and closer to how I read this poem. He thinks of history
@@ -925,8 +925,7 @@ fits with the rhetoric. Rather, I will suggest, that this is an even
 more preliminary proposal than all that, looking not towards a return to
 history (reaction) or even a future communist state, but looks beyond
 history: the abolishment of the time standard as an abolishment of
-*time*. This is a weird proposal for a reading, but it's a weird
-proposal.
+*time*. This is a weird reading, but it's a weird proposal.
 
 One benefit of this odd, transcendent reading is that it goes some
 distance towards the question of *difficulty* of this poem. Why is this
@@ -1038,7 +1037,7 @@ an industrialized economic system. In particular, an industrial
 socialist/communist society would still be post-time standard, even if
 they were non-imperial, i.e. post-traverse. This then suggests that the
 poem is looking further, towards what Marx (in *Critique of the Gotha
-Program* calls a higher form of communism), which is no longer tied to
+Program*) calls a higher form of communism, which is no longer tied to
 industrial labor. So coming off the time standard could be a proposal
 that looks further than the end of capitalism.
 
@@ -1149,7 +1148,7 @@ would be anything beyond that.
 
 One more thought about the cities: we usually understand them as a place
 of residence, something more-or-less permanent. Yet if we are or have
-been residents of these citizens (that is actually not made clear), we
+been residents of these cities (that is actually not made clear), we
 are not permanent residents. The poem defines itself in opposition to
 the idea of residence (more on which anon). If the numbers are the human
 populace of the cities, it is not even clear that we number among them.
@@ -1220,8 +1219,14 @@ Hopefully I can get back and finish this soon.
 "The homing instinct of a great deal / else might then be cracked up" {#sec:l24-25}
 =====================================================================
 
+"Homing instinct" is a phrase typically used in connection with animals (esp. homing pigeons), referring to their instinct to return home. Prynne then links this basic, generally non- (or perhaps sub-)human tendency to the political project of "returning to our proper homes." The addition of "a great deal else," suggests that this instinct goes even beyond this political movement. Indeed, we might think that some sort of homing instinct is common and natural: think of one's nostalgic yearning for a childhood home. This yearning is quickly made reactionary.
+
+When is "then?" As clear by context and further evidenced by "might," it is presumably after the time standard has been disestablished. Not only is the poem's proposal contrasted with this homing instinct, but the taking up of the proposal will result in the cracking up of the homing instinct. How though? Well, we might think that when the 
+
 "the loving / magnetism by which consequence springs / to attentive display in the field of roses." {#sec:l25-27}
 ===================================================================================================
+
+
 
 "That, say, and the justice of what we / are said to deserve when so hopelessly / we want so much more." {#sec:l28-30}
 ========================================================================================================

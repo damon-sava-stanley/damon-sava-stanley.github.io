@@ -16,7 +16,7 @@ A quick review / script-doctor of a somewhat interesting horror game.
 
 # Essays
 
-## [Numbers in Time of Trouble](/pages/2021-2-11-numbers-in-time-of-trouble)
+## [Numbers in Time of Trouble](/pages/2021-02-11-numbers-in-time-of-trouble)
 
 An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
 
