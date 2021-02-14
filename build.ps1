@@ -9,23 +9,24 @@ $unix = Get-Date -Date "01/01/1970"
 
 Get-ChildItem "blogs/" -Filter *.md | Foreach-Object {
   $last_write = (New-TimeSpan -Start $unix -End $_.LastWriteTime).TotalSeconds
-  $previous_write = $writes[$_.Name]
+  $name=$_.Name
+  $previous_write = $writes[$name]
   if (!$previous_write -or ($previous_write -lt $last_write)) {
-    $dir="pages/$_" -replace ".md", ""
+    $dir="pages/$name" -replace ".md", ""
     if(!(Test-Path -Path $dir)) {
       mkdir $dir
     }
     $html="$dir/index.html"
     $pdf="$dir/index.pdf"
     if (Get-Command "pp" -errorAction SilentlyContinue) {
-      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "blogs/$_" 
+      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "$_" 
       if ($tex) {
         pp -en -pdf "blogs/$_" | pandoc -s --toc --filter pandoc-citeproc -o "$pdf"
       }
     } else {
-      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "blogs/$_"
+      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "$_"
       if ($tex) {
-        cat "blogs/$_" | pandoc -s --toc --filter pandoc-citeproc -o "$pdf" 
+        cat "$_" | pandoc -s --toc --filter pandoc-citeproc -o "$pdf" 
       }
     }
   }
