@@ -20,6 +20,13 @@ A quick review / script-doctor of a somewhat interesting horror game.
 
 An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
 
+# Translations
+
+## Vincente Huidobro
+
+* [Solitario Invencible](/pages/2021-02-14-huidobro-solitario-invencible)
+* [Altazor](/pages/2021-02-14-huidobro-altazor-1)
+
 # Other
 
 ## [The Parable of the Mugger](/pages/2020-11-12-the-parable-of-the-mugger)
