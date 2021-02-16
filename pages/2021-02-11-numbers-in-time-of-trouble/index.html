@@ -15,6 +15,7 @@ body {
   background-color: rgb(250, 250, 247);
   color: rgb(30, 31, 35);
   font-family: Georgia;
+  hanging-punctuation: first;
 }
 a:link {
   color: rgb(42, 46, 61);
@@ -29,11 +30,6 @@ a:visited {
   margin-left: 2px;
 }
 .author {
-  font-size-adjust: 1.25;
-  margin-bottom: 3px;
-  filter: brightness(85%);
-}
-.author {
   font-size-adjust: 1.5;
   margin-bottom: 3px;
   filter: brightness(125%);
@@ -42,6 +38,15 @@ a:visited {
   font-size-adjust: 1.5;
   margin-bottom: 2px;
   filter: brightness(135%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+
+.verse li {
+  font-size-adjust: 0.4;
+  text-indent: -28px;
+  padding-left: 28px;
 }
 blockquote {
   background: #f9f9f9;
@@ -91,8 +96,7 @@ figcaption {
       </li>
     </ul>
         <div class="navbar-text">Numbers in Time of Trouble</div>
-        </ul>
-  </nav>
+      </nav>
   <div class="row">
         <div class="col col-sm-3">
       <nav id="TOC">
