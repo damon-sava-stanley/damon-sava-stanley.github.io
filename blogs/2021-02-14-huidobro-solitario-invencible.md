@@ -1,8 +1,8 @@
 ---
-title: "Vincente Huidobro: Solitario invencible"
+title: "Vicente Huidobro: Solitario invencible"
 ...
 
-I've been occasionally pecking away some of the work of Vincente Huidobro. I have long since lost my never-good Spanish and have engaged in very amateur translations in a half-hearted effort to return it to its former half-luster. The are three versions of the translation here: a straightforward, unpoetic, line-by-line translation; a condensed, more poetic version; and then a complete reworking. In general, I think an effective translation requires someone much more fluent, much more attuned to the context and features of the original. So this is not really a translation but a writing-through.
+I've been occasionally pecking away some of the work of Vicente Huidobro. I have long since lost my never-good Spanish and have engaged in very amateur translations in a half-hearted effort to return it to its former half-luster. The are three versions of the translation here: a straightforward, unpoetic, line-by-line translation; a condensed, more poetic version; and then a complete reworking. In general, I think an effective translation requires someone much more fluent, much more attuned to the context and features of the original. So this is not really a translation but a writing-through.
 
 # Solitario invencible
 

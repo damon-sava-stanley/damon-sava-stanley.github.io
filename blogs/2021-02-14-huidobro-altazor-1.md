@@ -1,8 +1,8 @@
 ---
-title: "Vincente Huidobro: Altazor"
+title: "Vicente Huidobro: Altazor"
 ...
 
-# Canto 1
+# Canto I
 
 ::: {class="container verse"}
 :::: row
@@ -516,7 +516,7 @@ title: "Vincente Huidobro: Altazor"
 * | Caídas de los sortilegios sin refugio
 * | Todo lo que se esconde y nos incita con imanes fatales
 * | Lo que se esconde en las frías regiones de lo invisible
-* | 0 en la ardiente tempestad de nuestro cráneo
+* | en la ardiente tempestad de nuestro cráneo
 :::::
 ::::: col
 * | "Ain't you that fallen angel?"
@@ -564,7 +564,7 @@ title: "Vincente Huidobro: Altazor"
 * | Dadme la llave del naufragio
 * | Dadme una certeza de raíces en horizonte quieto
 * | Un descubrimiento que no huya a cada paso
-* | 0 dadme un bello naufragio verde
+* | dadme un bello naufragio verde
 ::::: 
 ::::: col
 * |         Liberation! Sure, total liberation!
@@ -794,11 +794,11 @@ title: "Vincente Huidobro: Altazor"
 :::: row
 ::::: col
 * |         Que Dios sea Dios
-* | 0 Satán sea Dios
-* | 0 ambos sean miedo nocturna ignorancia
+* | Satán sea Dios
+* | ambos sean miedo nocturna ignorancia
 * | Lo mismo da
 * | Que sea la Vía Láctea
-* | 0 una procesión que asciende en pos de la verdad
+* | una procesión que asciende en pos de la verdad
 * | Hoy me es igual
 * | Traedme una hora que vivir
 * | Traedme un amor pescado por la oreja
@@ -1266,7 +1266,7 @@ title: "Vincente Huidobro: Altazor"
 :::::
 ::::: col
 * | I do not want the ligatures, the stars, the wind (still
-* | whipping at the cross-roads), the cliffs the moon has not
+* | whipping at the crossroads), the cliffs the moon has not
 * | released, the crystal spheres, nor what is beyond them.
 * | Lord, I renounce these things. My fingers are magnets
 * | and search on their own across the silent earth.
@@ -1296,5 +1296,294 @@ title: "Vincente Huidobro: Altazor"
 ::::: col
 :::::
 ::::
+:::
 
+# Canto II
+
+::: {class="container verse"}
+:::: row
+::::: col
+* | Mujer el mundo está amueblado por tus ojos
+* | Se hace más alto el cielo en tu presencia
+* | La tierra se prolonga de rosa en rosa
+* | Y el aire se prolonga de paloma en paloma
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Al irte dejas una estrella en tu sitio
+* | Dejas caer tus luces como el barco que pasa
+* | Mientras te sigue mi canto embrujado
+* | Como una serpiente fiel y melancólica
+* | Y tú vuelves la cabeza detrás de algún astro
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | ¿Qué combate se libra en el espacio?
+* | Esas lanzas de luz entre planetas
+* | Reflejo de armaduras despiadadas
+* | ¿Qué estrella sanguinaria no quiere ceder el paso?
+* | En dónde estás triste noctámbula
+* | Dadora de infinito
+* | Que pasea en el bosque de los sueños
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Heme aquí perdido entre mares desiertos
+* | Solo como la pluma que se cae de un pájaro en la noche
+* | Heme aquí en una torre de frío
+* | Abrigado del recuerdo de tus labios marítimos
+* | Del recuerdo de tus complacencias y de tu cabellera
+* | Luminosa y desatada como los ríos de montaña
+* | ¿Irías a ser ciega que Dios te dio esas manos?
+* | Te pregunto otra vez
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* |         El arco de tus cejas tendido para las armas de los ojos
+* | En la ofensiva alada vencedora segura con orgullos de flor
+* | Te hablan por mí las piedras aporreadas
+* | Te hablan por mí las olas de pájaros sin cielo
+* | Te habla por mí el color de los paisajes sin viento
+* | Te habla por mí el rebaño de ovejas taciturnas
+* | Dormido en tu memoria
+* | Te habla por mí el arroyo descubierto
+* | La yerba sobreviviente atada a la aventura
+* | Aventura de luz y sangre de horizonte
+* | Sin más abrigo que una flor que se apaga
+* | Si hay un poco de viento
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Las llanuras se pierden bajo tu gracia frágil
+* | Se pierde el mundo bajo tu andar visible
+* | Pues todo es artificio cuando tú te presentas
+* | Con tu luz peligrosa
+* | Inocente armonía sin fatiga ni olvido
+* | Elemento de lágrima que rueda hacia adentro
+* | Construido de miedo altivo y de silencio
+* | Haces dudar al tiempo
+* | Y al cielo con instintos de infinito
+* | Lejos de ti todo es mortal
+* | Lanzas la agonía por la tierra humillada de noches
+* | Sólo lo que piensa en ti tiene sabor a eternidad
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | He aquí tu estrella que pasa
+* | Con tu respiración de fatigas lejanas
+* | Con tus gestos y tu modo de andar
+* | Con el espacio magnetizado que te saluda
+* | Que nos separa con leguas de noche
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Sin embargo te advierto que estamos cosidos
+* | A la misma estrella
+* | Estamos cosidos por la misma música tendida
+* | De uno a otro
+* | Por la misma sombra gigante agitada como árbol
+* | Seamos ese pedazo de cielo
+* | Ese trozo en que pasa la aventura misteriosa
+* | La aventura del planeta que estalla en pétalos de sueño
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | En vano tratarías de evadirte de mi voz
+* | Y de saltar los muros de mis alabanzas
+* | Estamos cosidos por la misma estrella
+* | Estás atada al ruiseñor de las lunas
+* | Que tiene un ritual sagrado en la garganta
+* | Qué me importan los signos de la noche
+* | Y la raíz y el eco funerario que tengan en mi pecho
+* | Qué me importa el enigma luminoso
+* | Los emblemas que alumbran el azar 
+* | Y esas islas que viajan por el caos sin
+* | destino a mis ojos
+* | Qué me importa ese miedo de flor en el vacío
+* | Qué me importa el nombre de la nada
+* | El nombre del desierto infinito
+* | O de la voluntad o del azar que representan
+* | Y si en ese desierto cada estrella es un deseo de oasis
+* | O banderas de presagio y de muerte
+* | Tengo una atmósfera propia en tu aliento
+* | La fabulosa seguridad de tu mirada con sus constelaciones íntimas
+* | Con su propio lenguaje de semilla
+* | Tu frente luminosa como un anillo de Dios
+* | Más firme que todo en la flora del cielo
+* | Sin torbellinos de universo que se encabrita
+* | Como un caballo a causa de su sombra en el aire
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Te pregunto otra vez
+* | ¿Irías a ser muda que Dios te dio esos ojos?
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Tengo esa voz tuya para toda defensa
+* | Esa voz que sale de ti en latidos de corazón
+* | Esa voz en que cae la eternidad
+* | Y se rompe en pedazos de esferas fosforescentes
+* | ¿Qué sería la vida si no hubieras nacido?
+* | Un cometa sin manto muriéndose de frío
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Te hallé como una lágrima en un libro olvidado
+* | Con tu nombre sensible desde antes en mi pecho
+* | Tu nombre hecho del ruido de palomas que se vuelan
+* | Traes en ti el recuerdo de otras vidas más altas
+* | De un Dios encontrado en alguna parte
+* | Y al fondo de ti misma recuerdas que eras tú
+* | El pájaro de antaño en la clave del poeta
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Sueño en un sueño sumergido
+* | La cabellera que se ata hace el día
+* | La cabellera al desatarse hace la noche
+* | La vida se contempla en el olvido
+* | Sólo viven tus ojos en el mundo
+* | El único sistema planetario sin fatiga
+* | Serena piel anclada en las alturas
+* | Ajena a toda red y estratagema
+* | En su fuerza de luz ensimismada
+* | Detrás de ti la vida siente miedo
+* | Porque eres la profundidad de toda cosa
+* | El mundo deviene majestuoso cuando pasas
+* | Se oyen caer lágrimas del cielo
+* | Y borras en el alma adormecida
+* | La amargura de ser vivo
+* | Se hace liviano el orbe en las espaldas
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Mí alegría es oír el ruido del viento en tus cabellos
+* | (Reconozco ese ruido desde lejos)
+* | Cuando las barcas zozobran y el río arrastra troncos de árbol
+* | Eres una lámpara de carne en la tormenta
+* | Con los cabellos a todo viento
+* | Tus cabellos donde el sol va a buscar sus mejores sueños
+* | Mi alegría es mirarte solitaria en el diván del mundo
+* | Como la mano de una princesa soñolienta
+* | Con tus ojos que evocan un piano de olores
+* | Una bebida de paroxismos
+* | Una flor que está dejando de perfumar
+* | Tus ojos hipnotizan la soledad
+* | Como la rueda que sigue girando después de la catástrofe
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Mi alegría es mirarte cuando escuchas
+* | Ese rayo de luz que camina hacia el fondo del agua
+* | Y te quedas suspensa largo rato
+* | Tantas estrellas pasadas por el harnero del mar
+* | Nada tiene entonces semejante emoción
+* | Ni un mástil pidiendo viento
+* | Ni un aeroplano ciego palpando el infinito
+* | Ni la paloma demacrada dormida sobre un lamento
+* | Ni el arcoiris con las alas selladas
+* | Más bello que la parábola de un verso
+* | La parábola tendida en puente nocturno de alma a alma
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Nacida en todos los sitios donde pongo los ojos
+* | Con la cabeza levantada
+* | Y todo el cabello al viento
+* | Eres más hermosa que el relincho de un potro en la montaña
+* | Que la sirena de un barco que deja escapar toda su alma
+* | Que un faro en la neblina buscando a quien salvar
+* | Eres más hermosa que la golondrina atravesada por el viento
+* | Eres el ruido del mar en verano
+* | Eres el ruido de una calle populosa llena de admiración
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Mi gloria está en tus ojos
+* | Vestida del lujo de tus ojos y de su brillo interno
+* | Estoy sentado en el rincón más sensible de tu mirada
+* | Bajo el silencio estático de inmóviles pestañas
+* | Viene saliendo un augurio del fondo de tus ojos
+* | Y un viento de océano ondula tus pupilas
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Nada se compara a esa leyenda de semillas que deja tu presencia
+* | A esa voz que busca un astro muerto que volver a la vida
+* | Tu voz hace un imperio en el espacio
+* | Y esa mano que se levanta en ti como si fuera a colgar soles en el aire
+* | Y ese mirar que escribe mundos en el infinito
+* | Y esa cabeza que se dobla para escuchar un murmullo en la eternidad
+* | Y ese pie que es la fiesta de los caminos encadenados
+* | Y esos párpados donde vienen a vararse las centellas del éter
+* | Y ese beso que hincha la proa de tus labios
+* | Y esa sonrisa como un estandarte al frente de tu vida
+* | Y ese secreto que dirige las mareas de tu pecho
+* | Dormido a la sombra de tus senos
+:::::
+::::: col
+:::::
+::::
+:::: row
+::::: col
+* | Si tú murieras
+* | Las estrellas a pesar de su lámpara encendida
+* | Perderían el camino
+* | ¿Qué sería del universo?
+:::::
+::::: col
+:::::
+::::
 :::

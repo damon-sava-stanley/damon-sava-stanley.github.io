@@ -22,7 +22,7 @@ An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
 
 # Translations
 
-## Vincente Huidobro
+## Vicente Huidobro
 
 * [Solitario Invencible](/pages/2021-02-14-huidobro-solitario-invencible)
 * [Altazor](/pages/2021-02-14-huidobro-altazor-1)
