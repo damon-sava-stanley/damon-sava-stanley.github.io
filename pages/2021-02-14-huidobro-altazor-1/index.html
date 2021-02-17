@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Vincente Huidobro: Altazor</title>
+  <title>Vicente Huidobro: Altazor</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -45,8 +45,8 @@ a:visited {
 
 .verse li {
   font-size-adjust: 0.45;
-  text-indent: -28px;
-  padding-left: 28px;
+  text-indent: -5em;
+  padding-left: 5em;
 }
 blockquote {
   background: #f9f9f9;
@@ -82,6 +82,106 @@ figcaption {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+            element.style.color = "red";
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -95,20 +195,21 @@ figcaption {
         <a class="nav-link" href="/blog.html">Blog</a>
       </li>
     </ul>
-        <div class="navbar-text">Vincente Huidobro: Altazor</div>
+        <div class="navbar-text">Vicente Huidobro: Altazor</div>
       </nav>
-  <div class="row">
+  <div class="row" id="body">
         <div class="col col-sm-3">
       <nav id="TOC">
         <ul>
-        <li><a href="#canto-1">Canto 1</a></li>
+        <li><a href="#canto-i">Canto I</a></li>
+        <li><a href="#canto-ii">Canto II</a></li>
         </ul>
       </nav>
     </div>
         <div class="col col-sm-9">
-                  <h1 class="title">Vincente Huidobro: Altazor</h1>
+                  <h1 class="title">Vicente Huidobro: Altazor</h1>
                         <br/>
-                  <h1 id="canto-1">Canto 1</h1>
+                  <h1 id="canto-i">Canto I</h1>
                   <div class="container verse">
                   <div class="row">
                   <div class="col">
@@ -678,7 +779,7 @@ figcaption {
                   <li><div class="line-block">Caídas de los sortilegios sin refugio</div></li>
                   <li><div class="line-block">Todo lo que se esconde y nos incita con imanes fatales</div></li>
                   <li><div class="line-block">Lo que se esconde en las frías regiones de lo invisible</div></li>
-                  <li><div class="line-block">0 en la ardiente tempestad de nuestro cráneo</div></li>
+                  <li><div class="line-block">en la ardiente tempestad de nuestro cráneo</div></li>
                   </ul>
                   </div>
                   <div class="col">
@@ -735,7 +836,7 @@ figcaption {
                   <li><div class="line-block">Dadme la llave del naufragio</div></li>
                   <li><div class="line-block">Dadme una certeza de raíces en horizonte quieto</div></li>
                   <li><div class="line-block">Un descubrimiento que no huya a cada paso</div></li>
-                  <li><div class="line-block">0 dadme un bello naufragio verde</div></li>
+                  <li><div class="line-block">dadme un bello naufragio verde</div></li>
                   </ul>
                   </div>
                   <div class="col">
@@ -1006,11 +1107,11 @@ figcaption {
                   <div class="col">
                   <ul>
                   <li><div class="line-block">        Que Dios sea Dios</div></li>
-                  <li><div class="line-block">0 Satán sea Dios</div></li>
-                  <li><div class="line-block">0 ambos sean miedo nocturna ignorancia</div></li>
+                  <li><div class="line-block">Satán sea Dios</div></li>
+                  <li><div class="line-block">ambos sean miedo nocturna ignorancia</div></li>
                   <li><div class="line-block">Lo mismo da</div></li>
                   <li><div class="line-block">Que sea la Vía Láctea</div></li>
-                  <li><div class="line-block">0 una procesión que asciende en pos de la verdad</div></li>
+                  <li><div class="line-block">una procesión que asciende en pos de la verdad</div></li>
                   <li><div class="line-block">Hoy me es igual</div></li>
                   <li><div class="line-block">Traedme una hora que vivir</div></li>
                   <li><div class="line-block">Traedme un amor pescado por la oreja</div></li>
@@ -1558,7 +1659,7 @@ figcaption {
                   <div class="col">
                   <ul>
                   <li><div class="line-block">I do not want the ligatures, the stars, the wind (still</div></li>
-                  <li><div class="line-block">whipping at the cross-roads), the cliffs the moon has not</div></li>
+                  <li><div class="line-block">whipping at the crossroads), the cliffs the moon has not</div></li>
                   <li><div class="line-block">released, the crystal spheres, nor what is beyond them.</div></li>
                   <li><div class="line-block">Lord, I renounce these things. My fingers are magnets</div></li>
                   <li><div class="line-block">and search on their own across the silent earth.</div></li>
@@ -1588,6 +1689,351 @@ figcaption {
                   <li><div class="line-block">Silencio</div></li>
                   <li><div class="line-block">        Se oye el pulso del mundo como nunca pálido</div></li>
                   <li><div class="line-block">La tierra acaba de alumbrar un árbol</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  </div>
+                  <h1 id="canto-ii">Canto II</h1>
+                  <div class="container verse">
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Mujer el mundo está amueblado por tus ojos</div></li>
+                  <li><div class="line-block">Se hace más alto el cielo en tu presencia</div></li>
+                  <li><div class="line-block">La tierra se prolonga de rosa en rosa</div></li>
+                  <li><div class="line-block">Y el aire se prolonga de paloma en paloma</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Al irte dejas una estrella en tu sitio</div></li>
+                  <li><div class="line-block">Dejas caer tus luces como el barco que pasa</div></li>
+                  <li><div class="line-block">Mientras te sigue mi canto embrujado</div></li>
+                  <li><div class="line-block">Como una serpiente fiel y melancólica</div></li>
+                  <li><div class="line-block">Y tú vuelves la cabeza detrás de algún astro</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">¿Qué combate se libra en el espacio?</div></li>
+                  <li><div class="line-block">Esas lanzas de luz entre planetas</div></li>
+                  <li><div class="line-block">Reflejo de armaduras despiadadas</div></li>
+                  <li><div class="line-block">¿Qué estrella sanguinaria no quiere ceder el paso?</div></li>
+                  <li><div class="line-block">En dónde estás triste noctámbula</div></li>
+                  <li><div class="line-block">Dadora de infinito</div></li>
+                  <li><div class="line-block">Que pasea en el bosque de los sueños</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Heme aquí perdido entre mares desiertos</div></li>
+                  <li><div class="line-block">Solo como la pluma que se cae de un pájaro en la noche</div></li>
+                  <li><div class="line-block">Heme aquí en una torre de frío</div></li>
+                  <li><div class="line-block">Abrigado del recuerdo de tus labios marítimos</div></li>
+                  <li><div class="line-block">Del recuerdo de tus complacencias y de tu cabellera</div></li>
+                  <li><div class="line-block">Luminosa y desatada como los ríos de montaña</div></li>
+                  <li><div class="line-block">¿Irías a ser ciega que Dios te dio esas manos?</div></li>
+                  <li><div class="line-block">Te pregunto otra vez</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">        El arco de tus cejas tendido para las armas de los ojos</div></li>
+                  <li><div class="line-block">En la ofensiva alada vencedora segura con orgullos de flor</div></li>
+                  <li><div class="line-block">Te hablan por mí las piedras aporreadas</div></li>
+                  <li><div class="line-block">Te hablan por mí las olas de pájaros sin cielo</div></li>
+                  <li><div class="line-block">Te habla por mí el color de los paisajes sin viento</div></li>
+                  <li><div class="line-block">Te habla por mí el rebaño de ovejas taciturnas</div></li>
+                  <li><div class="line-block">Dormido en tu memoria</div></li>
+                  <li><div class="line-block">Te habla por mí el arroyo descubierto</div></li>
+                  <li><div class="line-block">La yerba sobreviviente atada a la aventura</div></li>
+                  <li><div class="line-block">Aventura de luz y sangre de horizonte</div></li>
+                  <li><div class="line-block">Sin más abrigo que una flor que se apaga</div></li>
+                  <li><div class="line-block">Si hay un poco de viento</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Las llanuras se pierden bajo tu gracia frágil</div></li>
+                  <li><div class="line-block">Se pierde el mundo bajo tu andar visible</div></li>
+                  <li><div class="line-block">Pues todo es artificio cuando tú te presentas</div></li>
+                  <li><div class="line-block">Con tu luz peligrosa</div></li>
+                  <li><div class="line-block">Inocente armonía sin fatiga ni olvido</div></li>
+                  <li><div class="line-block">Elemento de lágrima que rueda hacia adentro</div></li>
+                  <li><div class="line-block">Construido de miedo altivo y de silencio</div></li>
+                  <li><div class="line-block">Haces dudar al tiempo</div></li>
+                  <li><div class="line-block">Y al cielo con instintos de infinito</div></li>
+                  <li><div class="line-block">Lejos de ti todo es mortal</div></li>
+                  <li><div class="line-block">Lanzas la agonía por la tierra humillada de noches</div></li>
+                  <li><div class="line-block">Sólo lo que piensa en ti tiene sabor a eternidad</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">He aquí tu estrella que pasa</div></li>
+                  <li><div class="line-block">Con tu respiración de fatigas lejanas</div></li>
+                  <li><div class="line-block">Con tus gestos y tu modo de andar</div></li>
+                  <li><div class="line-block">Con el espacio magnetizado que te saluda</div></li>
+                  <li><div class="line-block">Que nos separa con leguas de noche</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Sin embargo te advierto que estamos cosidos</div></li>
+                  <li><div class="line-block">A la misma estrella</div></li>
+                  <li><div class="line-block">Estamos cosidos por la misma música tendida</div></li>
+                  <li><div class="line-block">De uno a otro</div></li>
+                  <li><div class="line-block">Por la misma sombra gigante agitada como árbol</div></li>
+                  <li><div class="line-block">Seamos ese pedazo de cielo</div></li>
+                  <li><div class="line-block">Ese trozo en que pasa la aventura misteriosa</div></li>
+                  <li><div class="line-block">La aventura del planeta que estalla en pétalos de sueño</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">En vano tratarías de evadirte de mi voz</div></li>
+                  <li><div class="line-block">Y de saltar los muros de mis alabanzas</div></li>
+                  <li><div class="line-block">Estamos cosidos por la misma estrella</div></li>
+                  <li><div class="line-block">Estás atada al ruiseñor de las lunas</div></li>
+                  <li><div class="line-block">Que tiene un ritual sagrado en la garganta</div></li>
+                  <li><div class="line-block">Qué me importan los signos de la noche</div></li>
+                  <li><div class="line-block">Y la raíz y el eco funerario que tengan en mi pecho</div></li>
+                  <li><div class="line-block">Qué me importa el enigma luminoso</div></li>
+                  <li><div class="line-block">Los emblemas que alumbran el azar</div></li>
+                  <li><div class="line-block">Y esas islas que viajan por el caos sin</div></li>
+                  <li><div class="line-block">destino a mis ojos</div></li>
+                  <li><div class="line-block">Qué me importa ese miedo de flor en el vacío</div></li>
+                  <li><div class="line-block">Qué me importa el nombre de la nada</div></li>
+                  <li><div class="line-block">El nombre del desierto infinito</div></li>
+                  <li><div class="line-block">O de la voluntad o del azar que representan</div></li>
+                  <li><div class="line-block">Y si en ese desierto cada estrella es un deseo de oasis</div></li>
+                  <li><div class="line-block">O banderas de presagio y de muerte</div></li>
+                  <li><div class="line-block">Tengo una atmósfera propia en tu aliento</div></li>
+                  <li><div class="line-block">La fabulosa seguridad de tu mirada con sus constelaciones íntimas</div></li>
+                  <li><div class="line-block">Con su propio lenguaje de semilla</div></li>
+                  <li><div class="line-block">Tu frente luminosa como un anillo de Dios</div></li>
+                  <li><div class="line-block">Más firme que todo en la flora del cielo</div></li>
+                  <li><div class="line-block">Sin torbellinos de universo que se encabrita</div></li>
+                  <li><div class="line-block">Como un caballo a causa de su sombra en el aire</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Te pregunto otra vez</div></li>
+                  <li><div class="line-block">¿Irías a ser muda que Dios te dio esos ojos?</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Tengo esa voz tuya para toda defensa</div></li>
+                  <li><div class="line-block">Esa voz que sale de ti en latidos de corazón</div></li>
+                  <li><div class="line-block">Esa voz en que cae la eternidad</div></li>
+                  <li><div class="line-block">Y se rompe en pedazos de esferas fosforescentes</div></li>
+                  <li><div class="line-block">¿Qué sería la vida si no hubieras nacido?</div></li>
+                  <li><div class="line-block">Un cometa sin manto muriéndose de frío</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Te hallé como una lágrima en un libro olvidado</div></li>
+                  <li><div class="line-block">Con tu nombre sensible desde antes en mi pecho</div></li>
+                  <li><div class="line-block">Tu nombre hecho del ruido de palomas que se vuelan</div></li>
+                  <li><div class="line-block">Traes en ti el recuerdo de otras vidas más altas</div></li>
+                  <li><div class="line-block">De un Dios encontrado en alguna parte</div></li>
+                  <li><div class="line-block">Y al fondo de ti misma recuerdas que eras tú</div></li>
+                  <li><div class="line-block">El pájaro de antaño en la clave del poeta</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Sueño en un sueño sumergido</div></li>
+                  <li><div class="line-block">La cabellera que se ata hace el día</div></li>
+                  <li><div class="line-block">La cabellera al desatarse hace la noche</div></li>
+                  <li><div class="line-block">La vida se contempla en el olvido</div></li>
+                  <li><div class="line-block">Sólo viven tus ojos en el mundo</div></li>
+                  <li><div class="line-block">El único sistema planetario sin fatiga</div></li>
+                  <li><div class="line-block">Serena piel anclada en las alturas</div></li>
+                  <li><div class="line-block">Ajena a toda red y estratagema</div></li>
+                  <li><div class="line-block">En su fuerza de luz ensimismada</div></li>
+                  <li><div class="line-block">Detrás de ti la vida siente miedo</div></li>
+                  <li><div class="line-block">Porque eres la profundidad de toda cosa</div></li>
+                  <li><div class="line-block">El mundo deviene majestuoso cuando pasas</div></li>
+                  <li><div class="line-block">Se oyen caer lágrimas del cielo</div></li>
+                  <li><div class="line-block">Y borras en el alma adormecida</div></li>
+                  <li><div class="line-block">La amargura de ser vivo</div></li>
+                  <li><div class="line-block">Se hace liviano el orbe en las espaldas</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Mí alegría es oír el ruido del viento en tus cabellos</div></li>
+                  <li><div class="line-block">(Reconozco ese ruido desde lejos)</div></li>
+                  <li><div class="line-block">Cuando las barcas zozobran y el río arrastra troncos de árbol</div></li>
+                  <li><div class="line-block">Eres una lámpara de carne en la tormenta</div></li>
+                  <li><div class="line-block">Con los cabellos a todo viento</div></li>
+                  <li><div class="line-block">Tus cabellos donde el sol va a buscar sus mejores sueños</div></li>
+                  <li><div class="line-block">Mi alegría es mirarte solitaria en el diván del mundo</div></li>
+                  <li><div class="line-block">Como la mano de una princesa soñolienta</div></li>
+                  <li><div class="line-block">Con tus ojos que evocan un piano de olores</div></li>
+                  <li><div class="line-block">Una bebida de paroxismos</div></li>
+                  <li><div class="line-block">Una flor que está dejando de perfumar</div></li>
+                  <li><div class="line-block">Tus ojos hipnotizan la soledad</div></li>
+                  <li><div class="line-block">Como la rueda que sigue girando después de la catástrofe</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Mi alegría es mirarte cuando escuchas</div></li>
+                  <li><div class="line-block">Ese rayo de luz que camina hacia el fondo del agua</div></li>
+                  <li><div class="line-block">Y te quedas suspensa largo rato</div></li>
+                  <li><div class="line-block">Tantas estrellas pasadas por el harnero del mar</div></li>
+                  <li><div class="line-block">Nada tiene entonces semejante emoción</div></li>
+                  <li><div class="line-block">Ni un mástil pidiendo viento</div></li>
+                  <li><div class="line-block">Ni un aeroplano ciego palpando el infinito</div></li>
+                  <li><div class="line-block">Ni la paloma demacrada dormida sobre un lamento</div></li>
+                  <li><div class="line-block">Ni el arcoiris con las alas selladas</div></li>
+                  <li><div class="line-block">Más bello que la parábola de un verso</div></li>
+                  <li><div class="line-block">La parábola tendida en puente nocturno de alma a alma</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Nacida en todos los sitios donde pongo los ojos</div></li>
+                  <li><div class="line-block">Con la cabeza levantada</div></li>
+                  <li><div class="line-block">Y todo el cabello al viento</div></li>
+                  <li><div class="line-block">Eres más hermosa que el relincho de un potro en la montaña</div></li>
+                  <li><div class="line-block">Que la sirena de un barco que deja escapar toda su alma</div></li>
+                  <li><div class="line-block">Que un faro en la neblina buscando a quien salvar</div></li>
+                  <li><div class="line-block">Eres más hermosa que la golondrina atravesada por el viento</div></li>
+                  <li><div class="line-block">Eres el ruido del mar en verano</div></li>
+                  <li><div class="line-block">Eres el ruido de una calle populosa llena de admiración</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Mi gloria está en tus ojos</div></li>
+                  <li><div class="line-block">Vestida del lujo de tus ojos y de su brillo interno</div></li>
+                  <li><div class="line-block">Estoy sentado en el rincón más sensible de tu mirada</div></li>
+                  <li><div class="line-block">Bajo el silencio estático de inmóviles pestañas</div></li>
+                  <li><div class="line-block">Viene saliendo un augurio del fondo de tus ojos</div></li>
+                  <li><div class="line-block">Y un viento de océano ondula tus pupilas</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Nada se compara a esa leyenda de semillas que deja tu presencia</div></li>
+                  <li><div class="line-block">A esa voz que busca un astro muerto que volver a la vida</div></li>
+                  <li><div class="line-block">Tu voz hace un imperio en el espacio</div></li>
+                  <li><div class="line-block">Y esa mano que se levanta en ti como si fuera a colgar soles en el aire</div></li>
+                  <li><div class="line-block">Y ese mirar que escribe mundos en el infinito</div></li>
+                  <li><div class="line-block">Y esa cabeza que se dobla para escuchar un murmullo en la eternidad</div></li>
+                  <li><div class="line-block">Y ese pie que es la fiesta de los caminos encadenados</div></li>
+                  <li><div class="line-block">Y esos párpados donde vienen a vararse las centellas del éter</div></li>
+                  <li><div class="line-block">Y ese beso que hincha la proa de tus labios</div></li>
+                  <li><div class="line-block">Y esa sonrisa como un estandarte al frente de tu vida</div></li>
+                  <li><div class="line-block">Y ese secreto que dirige las mareas de tu pecho</div></li>
+                  <li><div class="line-block">Dormido a la sombra de tus senos</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Si tú murieras</div></li>
+                  <li><div class="line-block">Las estrellas a pesar de su lámpara encendida</div></li>
+                  <li><div class="line-block">Perderían el camino</div></li>
+                  <li><div class="line-block">¿Qué sería del universo?</div></li>
                   </ul>
                   </div>
                   <div class="col">
