@@ -42,11 +42,13 @@ a:visited {
 .verse ul, .verse ol {
   list-style-type: none;
 }
-
-.verse li {
+.shrunk-to-col {
   font-size-adjust: 0.45;
-  text-indent: -5em;
-  padding-left: 5em;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
 }
 blockquote {
   background: #f9f9f9;
@@ -169,7 +171,6 @@ function hangPunctuation(element) {
             var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
             var indent = currentIndentPx - toIndentPx;
             element.style.textIndent = Math.floor(indent) + 'px';
-            element.style.color = "red";
         }
     }
 }
@@ -210,6 +211,7 @@ window.onload = function() {
         <li><a href="#essays">Essays</a>
         <ul>
         <li><a href="#numbers-in-time-of-trouble"><span>Numbers in Time of Trouble</span></a></li>
+        <li><a href="#medusa-and-medusas"><span>Medusa and Medusas</span></a></li>
         </ul></li>
         <li><a href="#translations">Translations</a>
         <ul>
@@ -234,6 +236,8 @@ window.onload = function() {
                   <h1 id="essays">Essays</h1>
                   <h2 id="numbers-in-time-of-trouble"><a href="/pages/2021-02-11-numbers-in-time-of-trouble">Numbers in Time of Trouble</a></h2>
                   <p>An overlong reading of the J. H. Prynne poem “Numbers in Time of Trouble.”</p>
+                  <h2 id="medusa-and-medusas"><a href="/pages/2021-02-23-medusas">Medusa and Medusas</a></h2>
+                  <p>A co-reading of the Estrada and Path poem.</p>
                   <h1 id="translations">Translations</h1>
                   <h2 id="vicente-huidobro">Vicente Huidobro</h2>
                   <ul>

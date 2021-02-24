@@ -42,11 +42,13 @@ a:visited {
 .verse ul, .verse ol {
   list-style-type: none;
 }
-
-.verse li {
+.shrunk-to-col {
   font-size-adjust: 0.45;
-  text-indent: -5em;
-  padding-left: 5em;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
 }
 blockquote {
   background: #f9f9f9;
@@ -169,7 +171,6 @@ function hangPunctuation(element) {
             var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
             var indent = currentIndentPx - toIndentPx;
             element.style.textIndent = Math.floor(indent) + 'px';
-            element.style.color = "red";
         }
     }
 }
@@ -210,7 +211,7 @@ window.onload = function() {
                   <h1 class="title">Vicente Huidobro: Altazor</h1>
                         <br/>
                   <h1 id="canto-i">Canto I</h1>
-                  <div class="container verse">
+                  <div class="container verse shrunk-to-col">
                   <div class="row">
                   <div class="col">
                   <ul>

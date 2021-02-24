@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Medusa and Medusas: Plath and Estrada</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a:link {
+  color: rgb(42, 46, 61);
+}
+a:visited {
+  color: rgb(40, 30, 31);
+}
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 1.5;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 1.5;
+  margin-bottom: 2px;
+  filter: brightness(135%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline-block;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">Medusa and Medusas: Plath and Estrada</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-9">
+                  <h1 class="title">Medusa and Medusas: Plath and Estrada</h1>
+                        <br/>
+                  <p>In this chat, I want to talk a bit about the Sylvia Plath poem “Medusa” and the Lucia Estrada poem “Medusas” and see what Estrada has done with Plath’s influence. First a translation of the Estrada poem. I am drawing on Olivia Lott’s <a href="https://www.eulaliabooks.com/catalog/katabasis">recent translation</a>, with a few divergences. Afterwards, I will offer a reading of how Estrada flips the script on Plath’s “Medusa.”</p>
+                  <div class="container verse shrunk-to-col">
+                  <div class="row">
+                  <section id="medusas" class="col">
+                  <h1>Medusas</h1>
+                  </section>
+                  <section id="medusas-1" class="col">
+                  <h1>Medusas</h1>
+                  </section>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Te mueves en un mar perplejo. Tus ojos desechan antiguas claridades en las que un árbol era un árbol, y la ardiente sal, un motivo para ir por el mundo.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">You move in an incoherent sea. Your eyes jettison the ancient clarities in which a tree was a tree, and hot salt, a motive to head towards the world.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Como los restos de un barco, te dejas abrazar por el oleaje. Tienes piedad de ti, y de aquello que dejaste en la orilla.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Like the wreckage of a ship, you leave the surf to embrace you. You pity yourself and that you have left on the shore.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Abiertas medusas te rodean. Es verdad que todo tiende sus redes hacia ti en este instante. Quieres volver porque tienes miedo, pero ya es imposible. El secreto debe ser devorado completamente. Vuelves, sin embargo, dentro de ti, reconoces como cierto el rojo impulso que te lanzó al mar.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Open medusas enclose you. Truly all nets now tend in your direction. Afraid, you want to return, but that is already closed off. The secret is to be completely consumed. You return, nevertheless, within yourself, admitting as a fact the red impulse that threw you to the sea.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Respiras más allá de ti, más allá de nosotros. Haces que la carrera sea más larga. Te sigo de cerca sin saber, sintiendo cómo los días se desintegran, cómo el error va ganando altura y se arroja indiferente al vacío.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">You breathe even beyond yourself, even beyond us. You have lengthened this traversal. I followed unknowing, as if the days disintegrate, as if the winning mistake had gained the highground and tossed itself cooly into space.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">La piedra que sostuvo tus pies por un momento se hizo polvo antes de que pudieras arrepentirte. Para entonces todo estuvo de acuerdo; la luz, la línea exacta de la noche.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">The stone momentarily supporting your shoe turned to dust before you could reconsider. But then everything accorded with itself; the light, the exact line of the night.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Cada vez más dócil al remolino, cada vez más dueña de la libertad de perderte. ¿Qué harás para llamarte en medio del fragor si en el horizonte azul se pierden también las palabras?</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Each time submitting more to the whirlpool, each time controlling more the freedom to forget yourself. How will you call yourself in such a din if the blue horizon too forgets the words?</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Deja que la corriente diluya entre nosotros este tiempo sin orillas.</div></li>
+                  </ul>
+                  </div>
+                  <div class="col">
+                  <ul>
+                  <li><div class="line-block">Leave now the current to wash away this time between us, shoreless time between us.</div></li>
+                  </ul>
+                  </div>
+                  </div>
+                  </div>
+                  <hr />
+                  <p>And now the two poems side-by-side.</p>
+                  <div class="container verse shrunk-to-col">
+                  <div class="row">
+                  <section id="medusa" class="col">
+                  <h1>Medusa</h1>
+                  <ul>
+                  <li><div class="line-block">Off that landspit of stony mouth-plugs,</div></li>
+                  <li><div class="line-block">Eyes rolled by white sticks,</div></li>
+                  <li><div class="line-block">Ears cupping the sea’s incoherences,</div></li>
+                  <li><div class="line-block">You house your unnerving head—God-ball,</div></li>
+                  <li><div class="line-block">Lens of mercies,</div></li>
+                  <li><div class="line-block">Your stooges</div></li>
+                  <li><div class="line-block">Plying their wild cells in my keel’s shadow,</div></li>
+                  <li><div class="line-block">Pushing by like hearts,</div></li>
+                  <li><div class="line-block">Red stigmata at the very center,</div></li>
+                  <li><div class="line-block">Riding the rip tide to the nearest point of departure,</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Dragging their Jesus hair.</div></li>
+                  <li><div class="line-block">Did I escape, I wonder?</div></li>
+                  <li><div class="line-block">My mind winds to you</div></li>
+                  <li><div class="line-block">Old barnacled umbilicus, Atlantic cable,</div></li>
+                  <li><div class="line-block">Keeping itself, it seems, in a state of miraculous repair.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">In any case, you are always there,</div></li>
+                  <li><div class="line-block">Tremulous breath at the end of my line,</div></li>
+                  <li><div class="line-block">Curve of water upleaping</div></li>
+                  <li><div class="line-block">To my water rod, dazzling and grateful,</div></li>
+                  <li><div class="line-block">Touching and sucking.</div></li>
+                  <li><div class="line-block">I didn’t call you.</div></li>
+                  <li><div class="line-block">I didn’t call you at all.</div></li>
+                  <li><div class="line-block">Nevertheless, nevertheless</div></li>
+                  <li><div class="line-block">You steamed to me over the sea,</div></li>
+                  <li><div class="line-block">Fat and red, a placenta</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Paralyzing the kicking lovers.</div></li>
+                  <li><div class="line-block">Cobra light</div></li>
+                  <li><div class="line-block">Squeezing the breath from the blood bells</div></li>
+                  <li><div class="line-block">Of the fuchsia. I could draw no breath,</div></li>
+                  <li><div class="line-block">Dead and moneyless,</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Overexposed, like an X-ray.</div></li>
+                  <li><div class="line-block">Who do you think you are?</div></li>
+                  <li><div class="line-block">A Communion wafer? Blubbery Mary?</div></li>
+                  <li><div class="line-block">I shall take no bite of your body,</div></li>
+                  <li><div class="line-block">Bottle in which I live,</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Ghastly Vatican.</div></li>
+                  <li><div class="line-block">I am sick to death of hot salt.</div></li>
+                  <li><div class="line-block">Green as eunuchs, your wishes</div></li>
+                  <li><div class="line-block">Hiss at my sins.</div></li>
+                  <li><div class="line-block">Off, off, eely tentacle!</div></li>
+                  <li><div class="line-block">There is nothing between us.</div></li>
+                  </ul>
+                  </section>
+                  <section id="medusas-2" class="col">
+                  <h1>Medusas</h1>
+                  <ul>
+                  <li><div class="line-block">You move in an incoherent sea. Your eyes jettison the ancient clarities in which a tree was a tree, and hot salt, a motive to head towards the world.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Like the wreckage of a ship, you leave the surf to embrace you. You pity yourself and that you have left on the shore.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Open medusas enclose you. Truly all nets now tend in your direction. Afraid, you want to return, but that is already closed off. The secret is to be completely consumed. You return, nevertheless, within yourself, admitting as a fact the red impulse that launched you to the sea.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">You breathe even beyond yourself, even beyond us. You have lengthened this traversal. I followed unknowing, as if the days disintegrate, as if the winning mistake had gained the highground and tossed itself cooly into space.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">The stone momentarily supporting your shoe turned to dust before you could reconsider. But then everything accorded with itself; the light, the exact line of the night.</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Each time submitting more to the whirlpool, each time controlling more the freedom to forget yourself. How will you call yourself in such din if the blue horizon too forgets the words?</div></li>
+                  <li><div class="line-block"><br/></div></li>
+                  <li><div class="line-block">Leave now the current to wash away this time between us, shoreless time between us.</div></li>
+                  </ul>
+                  </section>
+                  </div>
+                  </div>
+                  <hr />
+                  <p>Now, a much better reading of Plath’s “Medusa” than I could provide has been given by <a href="http://musemedusa.com/dossier_1/tresca/">Don Tresca</a>. Here is the skinny on the Path poem: the medusa (alternatively, the gorgon and the jellyfish) is the mother, whose past sacrificial care is both being acknowledged and cast off as oppressive in favor of the speaker achieving her own freedom and identity. The final line, then, is an ambiguous victory: “There is nothing between us” suggesting there is no connection between us, the umbilical cord has been cut and I, the speaker, am now on my own; but of course it can also mean that there is no distance or distinction between us, the speaker has failed to become independent, the eely tentacles have cought here.</p>
+                  <p>It is natural to read the Estrada poem as a perspective flip on “Medusa.” This works as a first approximation. “Medusas” might suggest that rather than getting Plath’s biographically rooted drama we are getting a more generalized picture: this is a mother’s perspective on their child’s burgeoning independence which many mothers will share. There are two crucial changes in the situation, beyond the change in perspective.</p>
+                  <ol type="1">
+                  <li>There is some dissociation here between the medusa and speaker. Perhaps the medusa too has been generalized to a metaphor for any paralyzing obstacle.</li>
+                  <li>Estrada’s <em>you</em> seems to be much less successful in forging her own path than Plath’s <em>I</em>: where Plath’s <em>I</em> was metaphorically a boat fording the sea (“my keel’s shadow”), Estrada’s <em>you</em> is in much danger of being consumed by the sea (and is like “the wreckage of a ship”).</li>
+                  </ol>
+                  <p>Still, these might not be changes in the narrative so much as consequences of the change in perspective.</p>
+                  <ol type="1">
+                  <li>The mother does not see herself as a medusa, i.e. as the monster the child must evade/slay. Instead what has driven the child away is something within the child — “a motive to head towards the world,” “a red impulse” — and not the “stooges” of the mother.</li>
+                  <li>The child and mother disagree as to how well the child’s independence is going. Where the one thinks the child is drowning, the other understands this as merely changing.</li>
+                  </ol>
+                  <p>The major difference is what this independence means. For Plath, it is freedom, particularly the freedom of self-definition. For Estrada, though, the subject is in part defined by the connection to the mother, so this freedom is merely “the freedom to forget yourself.” Furthermore, the sea is not a freeing space, but “incoherent,” filled with medusas, nets, whirlpools. It is natural to understand what the subject has left behind from the speaker’s perspective as including not only the speaker but something broader: a community, perhaps, or a way of life. After all, the subject has rejected not just the speaker but “the ancient clarities.”</p>
+                  <p>Finally, let’s turn to the last line. Like with Plath’s final line, there is a pregnant ambiguity here. First we have a specification of what is between them: time. But what time? Again, we have what can alternatively be a connection or a divide. The time between them might be the speaker’s childhood, and so its being washed away is the finalization of their separation. On the other hand, the time between them might be the generational gap, so the final line could be looking forward to the time where the subject too becomes a mother with a child after yet her own independence and so occupies the current position of the speaker, so this washing away would be a metaphorical (though, sadly, non-actual) reunion.</p>
+                  <p>So the movement towards separation is given a complex treatment in the poem. It is at once both rash and violent (a “red impulse”) and also natural and right (“a motive to head towards the world,” when “everything accorded with itself”). Thinking of the possible cyclical/generational nature of this movement suggests a similar complexity, where it is a both cyclical and represents real changes. Such generational transitions/disruptions are the product of a changing society, particularly a colonized society: where the old generational transitions still of necessity occur, children still grow up, but the old understanding of how that is supposed to work can no longer be assumed. (Ozu is the great filmmaker of just such transitions.)</p>
+          </div>
+  </div>
+</body>
+</html>
