@@ -20,6 +20,10 @@ A quick review / script-doctor of a somewhat interesting horror game.
 
 An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
 
+## [Medusa and Medusas](/pages/2021-02-23-medusas)
+
+A co-reading of the Estrada and Path poem.
+
 # Translations
 
 ## Vicente Huidobro
