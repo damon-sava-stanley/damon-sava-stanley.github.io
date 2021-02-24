@@ -4,7 +4,7 @@ title: "Vicente Huidobro: Altazor"
 
 # Canto I
 
-::: {class="container verse"}
+::: {class="container verse shrunk-to-col"}
 :::: row
 ::::: col
 * | Altazor ¿por qué perdiste tu primera serenidad?
