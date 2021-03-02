@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <meta name="dcterms.date" content="2021-03-01">
+  <title>The Alleged Neoliberalism of Roguelites</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a {
+  color: rgb(30, 31, 35);
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 31, 35, 0.3);;
+}
+
+
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 0.9;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 0.75;
+  margin-bottom: 2px;
+  filter: brightness(150%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">The Alleged Neoliberalism of Roguelites</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-3">
+      <nav id="TOC">
+        <ul>
+        <li><a href="#neoliberalism-roguelites-and-social-media">Neoliberalism, Roguelites, and Social Media</a>
+        <ul>
+        <li><a href="#the-connection">The Connection</a></li>
+        <li><a href="#social-media">Social Media</a></li>
+        </ul></li>
+        <li><a href="#really">Really?</a></li>
+        <li><a href="#so-what">So What?</a></li>
+        <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+    </div>
+        <div class="col col-sm-9">
+                  <h1 class="title">The Alleged Neoliberalism of Roguelites</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">March 1, 2021</p>
+            <br/>
+                  <blockquote>
+                  <p>So we worshipped the Gods of the Market Who promised these beautiful things.</p>
+                  </blockquote>
+                  <p>Christian Rock is not beloved by all Christians. <span class="citation" data-cites="cloudWhyWeAre2006">Cloud (<a href="#ref-cloudWhyWeAre2006" role="doc-biblioref">2006</a>)</span> complains that Contemporary Christian Music “refuses to separate from music that is openly used in the worship of the flesh and the devil.” In particular, even Christian Rock is infected with a “sensual and sexy back beat.” We can see that this follows a common form of puritanical reasoning: some <span class="math inline">\(X\)</span> (“drugs and sex”) is bad, some other <span class="math inline">\(Y\)</span> (“rock and roll”) is <em>hedonically similar</em>, i.e. is similarly pleasurable, to <span class="math inline">\(X\)</span>, and so <span class="math inline">\(Y\)</span> too is bad. Even accepting the premises of such an inference, which of course we should not, the reasoning itself is shaky. It rests on an infantilizing conception of others as morally indiscriminate: incapable of distinguishing and rejecting wicked temptations if they’ve already had a similar, if innocuous hit.</p>
+                  <p>Progressives have their own puritanical tendencies; we worry not about our pleasures being worldly or sinful, but instead about their ideological purity, paranoid of the reek of the neoliberal. One minor example of this comes in Steven <span class="citation" data-cites="harvieRoguelitesNeoliberalismSocial2020">Harvie (<a href="#ref-harvieRoguelitesNeoliberalismSocial2020" role="doc-biblioref">2020</a>)</span>’s essay “<a href="http://www.firstpersonscholar.com/roguelites-neoliberalism-and-social-media/">Roguelites, Neoliberalism, and Social Media</a>,” wherein he argues that roguelites embody neoliberal values and replicate the hedonic structure of social media platforms.</p>
+                  <p>From this analogy, we are supposed primarily to draw an explanatory connection: roguelites have exploded in popularity because they embody neoliberal values and replicate social media. There is additionally, though, a soft normative conclusion.</p>
+                  <blockquote>
+                  <p>It is important to remember that conceptions of “fun,” “enjoyment,” and “desire” are not created or produced in a vacuum; rather they are embroiled within the subtle but powerful dynamics of ideology…. As we continue to enjoy the creative and ingenious evolution of roguelites, we need to remain sensitive to the ideological contexts (social, political, digital) from which our enjoyment springs, and in turn consider how the form can be used or subverted for more critical and progressive ends.</p>
+                  </blockquote>
+                  <div class="line-block">“Remaining sensitive” is an easy course of action to recommend. Sensitivity, particularly a sensitivity so abstract as sensitivity to the ideological contexts from which one’s enjoyment springs, has no obvious consequences and is easy, at least, to profess. On the other hand, actual sensitivity has a non-zero cost and so ought to be recommended only when it has a non-zero benefit. Here is the question, then, is such paranoia warranted? We can divide this question into two subquestions. Is there really such a connection between roguelites and neoliberal values? (The “<a href="#really">Really?</a>” question.) And if there is such a connection, does the recommended sensitivity follow? (The “<a href="#so-what">So what?</a>” question.) I suggest skepticism on both counts. First, though, let’s summarize Harvie’s argument.</div>
+                  <h1 id="neoliberalism-roguelites-and-social-media">Neoliberalism, Roguelites, and Social Media</h1>
+                  <p>Let’s start by saying what neoliberalism is and roguelites are. Neoliberalism is a political ideology consisting of the following two claims.</p>
+                  <ol type="1">
+                  <li>Resources ought to be distributed by the market.</li>
+                  <li>The primary function of the government is to stabilize the market.</li>
+                  </ol>
+                  <p>Neoliberalism has been ascendant across the western world, in the United States and Great Britain especially in the figures of Ronald Reagan and Margaret Thatcher. Why has the American response to the coronavirus been so disastrous? Precisely because a sane response to the virus is precluded by the dominance of neoliberalism: extended lockdowns require the government and not the market to distribute resources. So of course lockdowns have been limited, half-hearted and thus ineffective (meanwhile, of course, in line with plank two, corporate welfare has been much more thoroughgoing). In line with neoliberalist ideology, we have the following neoliberal syllogism.</p>
+                  <ol type="1">
+                  <li>Resources ought to be distributed by the market.</li>
+                  <li>The market favors (tends to provide more resources to) those who are hard-working, risk-taking, and competent.</li>
+                  <li>Therefore, those who are hard-working, risk-taking, and competent ought, in general, to have more resources.</li>
+                  </ol>
+                  <p>Such an argument plays a central role in neoliberal thinking. Indeed, we might think that this is an essential motivation for neoliberalism, as it invites the following related argument.</p>
+                  <ol type="1">
+                  <li>Those who are hard-working, risk-taking, and competent ought, in general, to have more resources.</li>
+                  <li>The market favors (tends to provide more resources to) those who are hard-working, risk-taking, and competent.</li>
+                  <li>Therefore, resources ought to be distributed by the market.</li>
+                  </ol>
+                  <p>That is, neoliberals generally accept, in addition to the ideology-defining claims, a close-knit triad of climbs: a meritocratic claim — those with the most merit, i.e. being hard-working, risk-taking, and competent, ought to have the most resources — a descriptive claim about markets — the market awards resources according to merit, so conceived — and a political claim — resources ought to be distributed by the market.</p>
+                  <p>It is a presupposition of Harvie’s later normative claims, one that I agree with, that these claims are false. But what, you may ask, do these claims have to do with roguelites? First, a definition. Harvie follows <span class="citation" data-cites="parker2017culture">Parker (<a href="#ref-parker2017culture" role="doc-biblioref">2017</a>, 127)</span> in understanding roguelites as defined by the following three features:</p>
+                  <ol type="1">
+                  <li>procedural content generation,</li>
+                  <li>permadeath, and</li>
+                  <li>a tendency towards mechanical complexity.</li>
+                  </ol>
+                  <p>So, for example, <em>The Binding of Isaac</em> (2011), one of the games that launched this type of video game into popularity, is a twin-stick shooter (a la <em>Robotron</em>) in which the player attempts to shoot their way through a series of levels filled with grotesque horrors, in which</p>
+                  <ol type="1">
+                  <li>the layout of the levels, enemies the player faces, and rewards they are given are randomly generated,</li>
+                  <li>when the player runs out of life they lose and have to try again with newly generated levels, and</li>
+                  <li>in addition to the base mechanical complexity of twin-stick shooting, the player has to adjust to new abilities and different combinations of enemies.</li>
+                  </ol>
+                  <p>What does this have to do with neoliberalism. What does it take to win in such a game?</p>
+                  <ol type="1">
+                  <li>Commitment: players will very often die and have to start over. It takes many tries (especially as one is learning the game) to win.</li>
+                  <li>Strategic risk-taking: such games often offer and incentivize ways of playing that are more risky but offer greater rewards. For instance, a player might fight through rooms not needed to progress, thereby risking damage, in order to gain more items.</li>
+                  <li>Mechanical/strategic skill: because the challenge is procedurally generated, players cannot simply beat the game by memorizing a procedure or following a walkthrough. Rather, they must master the mechanical and strategic skills the game demands.</li>
+                  </ol>
+                  <p>Let us allow, following Harvie, that these three characteristics of the player may be identified with the neoliberal virtues of hard-work, risk-taking, and competence. We may then consider the following analogue of our first argument.</p>
+                  <ol type="1">
+                  <li>A good player is one who tends to win the game.</li>
+                  <li>Roguelite games favor (tends to provide wins to) those who are hard-working, risk-taking, and competent.</li>
+                  <li>Therefore, those who are hard-working, risk-taking, and competent are good players of roguelite games.</li>
+                  </ol>
+                  <h2 id="the-connection">The Connection</h2>
+                  <p>That is, there is an analogy between a good player of a roguelite and a good neoliberal subject and a similar meritocracy: the good players and good subjects tend to get rewards. What follows from this analogy? Harvie claims causality in both directions. Playing such games makes players “more receptive or vulnerable to the predetermined values embedded within the game’s systems,” i.e. neoliberal values. Furthermore, the popularity of roguelites is “no accident,” but is instead explained by broad acceptance of neoliberal values.</p>
+                  <p>Harvie’s arguments are quite elliptical here, so what follows are my best guesses as to what they are supposed to be. First, the “vulnerability” claims. Here Harvie refers to the <span class="citation" data-cites="charlesPlayingOneSelf2009">Charles (<a href="#ref-charlesPlayingOneSelf2009" role="doc-biblioref">2009</a>)</span>’s argument that a video “game’s demands for functional reactivity promote an illusion of agency which lulls the player into an interpretative passivity, and which thereby serves to posit its subject within a virtually invisible (and therefore virtually irresistible) ideological mould.” We might cast that argument as follows.</p>
+                  <ol type="1">
+                  <li>In playing a video game, a player takes their in-game choices to reflect their agency.</li>
+                  <li>Hence, in playing a game, a player takes their in-game choices to reflect their values. (By 1)</li>
+                  <li>A player’s in-game choices do not reflect their agency so much as the choice architecture of the game (the sorts of choices it rewards and punishes mechanically/narratively).</li>
+                  <li>The choice architecture of a game expresses its values.</li>
+                  <li>Hence, a player’s in-game choices reflect the game’s values. (By 3, 4)</li>
+                  <li>Hence, a player’s in-game choices “promote an illusion of agency” but actually reflect the game’s values. (By 2, 5)</li>
+                  <li>When a person takes their choices to reflect their agency, they are influenced to adopt the values those choices imply.</li>
+                  <li>Therefore, a player is influenced to adopt the values of the game they are playing.</li>
+                  </ol>
+                  <p>Harvie’s argument follows quickly.</p>
+                  <ol type="1">
+                  <li>A player is influenced to adopt the values of the game they are playing.</li>
+                  <li>Roguelite games have neoliberal values.</li>
+                  <li>Therefore, A player of roguelite games is influenced to adopt neoliberal values.</li>
+                  </ol>
+                  <p>What about the other direction? Here Harvie is less explicit, but we may supply the following argument.</p>
+                  <ol type="1">
+                  <li>A player is influenced to enjoy a game when it expresses values they share.</li>
+                  <li>Roguelite games have neoliberal values.</li>
+                  <li>Many people have neoliberal values.</li>
+                  <li>Factors that positively influence player’s enjoyment of a game make that game more likely to reach many players.</li>
+                  <li>Therefore, roguelites’ neoliberal values make them more likely to reach many players.</li>
+                  </ol>
+                  <p>We might think that claim 1 here is the mirror image of Charles’ idea that the game promotes an illusion of agency and that this is part of the pleasure of play. That illusion is strengthened by and so made more pleasant by alignment with a player’s extant values. So we have another triad. We have the player’s values, the game’s values, and the game as a hedonic mediator between them. Where the player’s and game’s values align, the pleasure is increased. But conversely, the pleasure of play also serves to bring the player’s and game’s values into alignment.</p>
+                  <h2 id="social-media">Social Media</h2>
+                  <p>Harvie proposes another, additional analogy: between roguelites and social media. Here is the argument.</p>
+                  <ol type="1">
+                  <li>Central to the appeal of social media is its systemic employment of variable rewards and variable schedule: sometimes the posts are infuriating, sometimes boring, sometimes agreeable, sometimes funny, etc., with no apparent rhyme or reason and random oscillation between these.</li>
+                  <li>Central to the appeal of roguelites are their systematic employment of variable rewards and variable schedule: sometimes a run goes disastrously, sometimes badly, sometimes well, sometimes spectacularly, with no apparent rhyme or reason and random oscillation between these.</li>
+                  <li>Therefore, “[w]ithout implying any kind of straightforward causation, [Harvie] propose[s] that a dialectical relationship exists between social media and gaming; that as our everyday online lives are increasingly gamified with the in-built features of randomness, risk, and endlessness, the popularity of roguelites has soared in response.”</li>
+                  </ol>
+                  <p>It is unclear what the hedge here is supposed to mean, or what a “dialectical relationship” is in this context. Perhaps we might expect a social media application with permadeath as the Hegelian synthesis.</p>
+                  <h1 id="really">Really?</h1>
+                  <p>Why do both bats and birds fly? We all know that bats are mammals and birds, well, not. They do not share a common flying ancestor; bat wings skeletally are quite unlike bird wings and quite like other mammalian forelimbs. Rather, both have wings because of homologous evolution: similar evolutionary pressures produced homologies between them: flying is quite helpful in avoiding (nonflying) predators, for instance.</p>
+                  <p>Why do both roguelites and social media employ variable rewards on variable schedules? Here’s a hypothesis: this is a good way to get <em>homo sapiens</em> hooked on an experience. I say <em>homo sapiens</em>, but the interest animals have in variable reward schedules was confirmed by behaviorists in pigeons and mice. It turns out, processes with variable reward schedules are inherently more interesting to us than fixed reward schedules: we try to see whether we can make the reward happen more frequently (i.e. such a situation is one where attention and learning are crucial).</p>
+                  <p>Of course, we did not need Skinner’s observation that a pigeon, given a food dispenser dispensing food at random periods and a button hooked up to nothing, will press that button frequently trying to get the food out. (Sometimes, after all, if the pigeon presses the button the food will dispense by random shortly afterwards, confirming the suspicion that there is some connection.) This is obvious from the behavior of gamblers: the random reward schedule of gambling is so compelling that we will persist in it despite its unprofitability. Of course, not all examples involve such manipulation. Rather, any activity humans find compelling is an activity with variable reward schedules: gardening, dating, sports, education, video games, and, yes, social media. It is much more credible that the popularity of social media is explained by this psychological mechanism than the reverse.</p>
+                  <p>You might think something equally dismissive can be said against the connection between neoliberalism and roguelites. People like to think that their hard work will be rewarded, that the risks they have taken will pay off. This is part of the appeal of neoliberalism: it reinforces this faith in a just world. Our striving is worthwhile, our reward deserved, and, as a bonus, the suffering of others? Not our problem. This broad meritocratic conception long predates neoliberalism: the British house of correction (the precursor to workhouses) were punishing the idle and “undeserving” poor before even capitalism existed.</p>
+                  <p>The political values Harvie references, then, are not peculiarly neoliberal. Their existence in games, as Harvie admits, is not particular to roguelites. Note, for example, that the features of roguelites that promote the hard-working, risk-taking, competent player as an ideal exist, for instance, in chess.</p>
+                  <ol type="1">
+                  <li>Victory is not at all guaranteed in chess, but demands dedication and practice.</li>
+                  <li>In many board states, a player is encouraged to make a risky move (e.g. a sacrifice) in order to gain some kind of advantage.</li>
+                  <li>Success in chess depends on deep strategic mastery, particularly with strong opponents.</li>
+                  </ol>
+                  <p>It would be preposterous to claim that the popularity of chess is explained by the ascendancy of neoliberalism. Rather a simple alternative suggestion presents itself: chess and roguelites are fun and succeeded because of that. <em>The Binding of Isaac</em> (published thirty years, let us remember, after the ascendancy of neoliberalism) takes a basic set of kinaesthetically pleasing mechanics (the twin-stick shooter) and uses the roguelite elements of permadeath and procedural generation to add a layer of stakes, mastery, and variable reward schedules atop that. This proved a hit and so other games tried a similar trick with other solid basic mechanics and similarly proved successful.</p>
+                  <p>Now, the explanation I just gave employs unsophisticated and brashly apolitical notions of fun and pleasure, as pure, hedonic states unmediated by ideology. We need not, however, completely deny the possibility of causal links between pleasure and ideology. Our enjoyment of music in general arises out of basic, built-in aspects of our biology (e.g. all societies have had music). Our enjoyment of “Proud to Be an American” is surely ideologically tinged. At the very least, we might suggest plausible some mechanisms by which ideological agreement increases our pleasure: we like to hear things we already agree with. The American patriot hearing “Proud to Be an American” gets the pleasure of hearing something they already believe repeated to them and the corresponding pleasure of belonging to a group of other like believers.</p>
+                  <p>Let us grant that similar pleasures arise when players are rewarded for exhibiting characteristics in games that they think of as valuable in real life. The points made above — that the alleged connection between neoliberal values and roguelites is, if a connection at all, a connection between a much broader set of values and a much broader set of games, both of which substantially predate neoliberalism — still cast doubt on the claim that neoliberalism plays any appreciable explanatory role in the success of these games. Such a connection is not excluded, but if there is an influence it seems it would have to be both weak and distal.</p>
+                  <p>Might we still think that some influence runs in the other direction — that playing these games makes one more neoliberal? This is the more important and interesting direction for Harvie, and I do not think I have excluded it. We have to ask what the mechanism of this influence would be. The following model seems to capture what is behind Harvie’s thinking.</p>
+                  <dl>
+                  <dt><strong>Presupposition Model</strong></dt>
+                  <dd>Pieces of media have normative presuppositions (e.g. the character portrayed as heroic is generally presupposed to be acting acceptable). Consuming such media, then, involves “taking up” such normative presuppositions. Taking up these presuppositions influences the consumer to accept them. This effect is mediated by the consumer’s length and degree of engagement and blocked by their critical reflection.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+                  </dd>
+                  </dl>
+                  <p>Harvie never commits to anything so explicit of this, but something like it is present in the cited <span class="citation" data-cites="charlesPlayingOneSelf2009">Charles (<a href="#ref-charlesPlayingOneSelf2009" role="doc-biblioref">2009</a>)</span> and it is a common enough picture among progressives. For instance, <span class="citation" data-cites="langtonScorekeepingPornographicLanguage1999">Langton and West (<a href="#ref-langtonScorekeepingPornographicLanguage1999" role="doc-biblioref">1999</a>)</span> propose that the consumption of pornography can spread misogynistic ideas through just such a mechanism (pornographic consumption is not the model of critical reflection). I will not object to the model. It is not an implausible psychological hypothesis.</p>
+                  <p>Notice, though, that the model is essentially communicative. It involves the consumer assuming a normative position for interpretive persons. Video games, however, are only part communicative. Their mechanics are not themselves communicative in a literal sense. When one dies in <em>The Binding of Isaac</em>, the game communicates that (in the fiction of a playthrough) Isaac dies, but one really loses the game. Interpreting <em>The Binding of Isaac</em> — whose story centers around Isaac’s attempts to escape from his maniacally religious mother’s imprisonment — may require us to presume that extreme religious beliefs are dangerous. Playing the game requires nothing of this sort of us. It is not clear that any sense can be made of the mechanics of a game presupposing or asserting anything, normative or not.</p>
+                  <p>This claim seems extreme. Don’t we speak of the mechanics of a game playing something? For instance, one might claim that the mechanics of <em>Sim City</em> communicate certain claims about the development of cities (e.g. that with careful management they can seamlessly and unproblematically grow into sustainable, major metropolises). Strictly speaking, though, such claims pertain to <em>Sim City</em> not as a game but as a narrative space (which only happens to be indexed by a game). <em>Sim City</em> conveys that careful management provides such growth because it includes as possible playthroughs narratives which convey this. That such playthroughs are accessed through a certain sequence of inputs is neither here nor there, semantically speaking, though it is of course of significant ludic interest.</p>
+                  <p>What this means is that we have no model of communication via mechanics to which we could apply such a model to explain the influence of a game’s mechanics on the player’s normative beliefs. This is not so important for many discussion of games — we can gloss over the distinction between the mechanics of the games and the narrative space those mechanics index — but it is crucial here as the claim is precisely that it is the mechanics of roguelites that convey neoliberal values. This, I claim, is incoherent.</p>
+                  <p>To see this, take another example of an activity which involves procedural generation, permadeath, and a tendency to mechanical complexity. Call this activity gardening. In gardening, the player plants seeds which may grow into plants which provide certain rewards. Gardening involves procedural generation: no two seeds grow the same, and various weather conditions, diseases, or insects may strike at any time. Gardening involves permadeath: once a plant goes, it’s gone. Gardening is mechanically complex: tending to plants, providing them adequate light, water, and nutrients, arranging them to promote growth all require significant skill. Gardening even involves random rewards: some harvests are much better than others. Gardening is even a game, at least for the standard backyard and urban gardener who can more cheaply buy equally good produce than they could grow. Does gardening produce neoliberal values?</p>
+                  <p>No. It produces carrots.</p>
+                  <h1 id="so-what">So What?</h1>
+                  <blockquote>
+                  <p>It reminds me of the bumper stickers that instruct people in other cars to “Question Authority.” Excellent advice, perhaps wasted on anyone who does whatever they’re ordered to do by a strip of paper glued to an automobile! <span class="citation" data-cites="sedgwick1997paranoid">(Sedgwick and others <a href="#ref-sedgwick1997paranoid" role="doc-biblioref">1997</a>)</span></p>
+                  </blockquote>
+                  <p>Suppose everything I said in the last section was completely wrongheaded. Roguelites have everything to do with neoliberalism. Whoops. What then follows?</p>
+                  <p>Not, I think, very much. We’re familiar with worries about corruption-by-video games. Will <em>Grand Theft Auto</em> make my Johnny a violent criminal? Will <em>Doom</em> turn him into a school shooter? Well, the research (some of it) is in, and it suggests that there is a causal connection between playing video games and violence. Great! (Or, rather, awful!) Get Johnny off that console pronto.</p>
+                  <p>Except, it turns out, effect sizes matter. Various studies and various meta-analyses have been performed. They point in different directions, but mostly they point to the effect being very slim. Like, about the size, if not smaller, of the increase in aggression watching violent movies would cause. See, it turns out our question was never really <em>will</em> Doom <em>make Johnny a maniac?</em> Nor even <em>will playing violent video games make Johnny more violent?</em> The question is really <em>will playing violent video games make Johnny sufficiently more violent compared to other things I might allow him to do as a parent with a whole-ass job and one-and-a-half more kids to monitor?</em> Given the effect size, the answer to this question is no. Likewise the question is not <em>should I, as a person with infinite capacity to worry, worry about violent video games?</em> But instead <em>should I, as a person with a whole-ass jobs and two-and-a-half kids, worry about violent video games?</em></p>
+                  <p>It might seem that “remaining sensitive” is fair, innocuous advice. Wherever there is the faintest intimation of danger, we ought to remain sensitive. No one ever died from an excess of caution. There might be neoliberalism in them there games. Keep your guard. There might be asteroids bearing down on you. Watch the skies.</p>
+                  <p>Sensitivity is a finite resource. Paranoia can be, in moderation, a good time: I do not object to worrying one one’s own time, even if I suspect there is nothing to see here. It is not, however, always a good use of one’s resources. However, because “This Thing You Like Is Maybe Bad” is an easy article to write, it is easy to recommend caution. There are, however, untold thousands of activities it would be more valuable to undertake than to spend anytime scrutinizing one’s enjoyment of a certain class of games. If in playing in the mud we ingest a few pathogens, so what? Improving the world does not require moral perfection in oneself. A better world will not be scrutinized into existence.</p>
+                  <h1 class="unnumbered" id="references">References</h1>
+                  <div id="refs" class="references hanging-indent" role="doc-bibliography">
+                  <div id="ref-charlesPlayingOneSelf2009">
+                  <p>Charles, Alec. 2009. “Playing with One’s Self: Notions of Subjectivity and Agency in Digital Games.” <em>Eludamos. Journal for Computer Game Culture</em> 3 (2): 281–94.</p>
+                  </div>
+                  <div id="ref-cloudWhyWeAre2006">
+                  <p>Cloud, David. 2006. “Why We Are Opposed to CCM.” <em>Way of Life Literature</em>. https://www.wayoflife.org/database/opposedtoccm.html.</p>
+                  </div>
+                  <div id="ref-harvieRoguelitesNeoliberalismSocial2020">
+                  <p>Harvie, Steven. 2020. “Roguelites, Neoliberalism, and Social Media.” <em>First Person Scholar</em>. http://www.firstpersonscholar.com/roguelites-neoliberalism-and-social-media/.</p>
+                  </div>
+                  <div id="ref-langtonScorekeepingPornographicLanguage1999">
+                  <p>Langton, Rae, and Caroline West. 1999. “Scorekeeping in a Pornographic Language Game.” <em>Australasian Journal of Philosophy</em> 77 (3): 303–19. <a href="https://doi.org/10.1080/00048409912349061">https://doi.org/10.1080/00048409912349061</a>.</p>
+                  </div>
+                  <div id="ref-parker2017culture">
+                  <p>Parker, Rob. 2017. “The Culture of Permadeath: Roguelikes and Terror Management Theory.” <em>Journal of Gaming &amp; Virtual Worlds</em> 9 (2): 123–41.</p>
+                  </div>
+                  <div id="ref-sedgwick1997paranoid">
+                  <p>Sedgwick, Eve Kosofsky, and others. 1997. “Paranoid Reading and Reparative Reading, or, You’re so Paranoid, You Probably Think This Essay Is About You.”</p>
+                  </div>
+                  </div>
+                  <section class="footnotes" role="doc-endnotes">
+                  <hr />
+                  <ol>
+                  <li id="fn1" role="doc-endnote"><p>One might wonder why “presupposition” is used rather than “assertion.” A theorist might indeed put forward such a model (indeed might accept both models). In the case of fictional media, though, normative assertions are rarely present (and, if present, only as assertions of a fictional narrator rather than an author). In a <em>Christmas Carol</em> it is never asserted that kindness and Christmas spirit is good. Rather, such things are presupposed given that we are to understand the book’s ending as a happy one. So presupposition is the relevant category.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+                  </ol>
+                  </section>
+          </div>
+  </div>
+</body>
+</html>
