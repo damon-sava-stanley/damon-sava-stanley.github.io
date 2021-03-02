@@ -6,33 +6,27 @@ title: Blog
 
 # Reviews
 
-## [My Work Is Not Yet Done](/pages/2020-8-13-my-work-is-not-yet-done)
-
-A review of the Ligotti novella.
-
-## [Layers of Fear](/pages/2019-5-layers-of-fear-review)
-
-A quick review / script-doctor of a somewhat interesting horror game.
+- [My Work Is Not Yet Done](/pages/2020-8-13-my-work-is-not-yet-done)
+- [Layers of Fear](/pages/2019-5-layers-of-fear-review)
 
 # Essays
 
-## [Numbers in Time of Trouble](/pages/2021-02-11-numbers-in-time-of-trouble)
+## Comments
 
-An overlong reading of the J. H. Prynne poem "Numbers in Time of Trouble."
+- [The Alleged Neoliberalism of Roguelites](/pages/2021-02-27-roguelites-neoliberalism)
 
-## [Medusa and Medusas](/pages/2021-02-23-medusas)
+## Poetry Criticism
 
-A co-reading of the Estrada and Path poem.
+- [Numbers in Time of Trouble](/pages/2021-02-11-numbers-in-time-of-trouble)
+- [Medusa and Medusas](/pages/2021-02-23-medusas)
 
 # Translations
 
 ## Vicente Huidobro
 
-* [Solitario Invencible](/pages/2021-02-14-huidobro-solitario-invencible)
-* [Altazor](/pages/2021-02-14-huidobro-altazor-1)
+- [Solitario Invencible](/pages/2021-02-14-huidobro-solitario-invencible)
+- [Altazor](/pages/2021-02-14-huidobro-altazor-1)
 
 # Other
 
-## [The Parable of the Mugger](/pages/2020-11-12-the-parable-of-the-mugger)
-
-Moral: some bad people speak well.
+- [The Parable of the Mugger](/pages/2020-11-12-the-parable-of-the-mugger)
