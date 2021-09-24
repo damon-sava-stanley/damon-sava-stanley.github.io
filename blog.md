@@ -20,6 +20,10 @@ title: Blog
 - [Numbers in Time of Trouble](/pages/2021-02-11-numbers-in-time-of-trouble)
 - [Medusa and Medusas](/pages/2021-02-23-medusas)
 
+## Thoughts
+
+- [Poptimism: Music Criticism's Reigning Ideology](/pages/2021-09-22-poptimism)
+
 # Translations
 
 ## Vicente Huidobro
