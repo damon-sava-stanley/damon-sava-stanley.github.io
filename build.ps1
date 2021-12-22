@@ -24,7 +24,7 @@ Get-ChildItem "blogs/" -Filter *.md | Foreach-Object {
         pp -en -pdf "blogs/$_" | pandoc -s --toc --filter pandoc-citeproc -o "$pdf"
       }
     } else {
-      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "$_"
+      pandoc -s --template=template.html --toc --mathjax --filter pandoc-citeproc -o "$html" "blogs/$_"
       if ($tex) {
         cat "$_" | pandoc -s --toc --filter pandoc-citeproc -o "$pdf" 
       }
