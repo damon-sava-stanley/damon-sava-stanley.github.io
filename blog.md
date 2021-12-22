@@ -22,6 +22,7 @@ title: Blog
 
 ## Thoughts
 
+- [Radicalization: Certain Remarks](/pages/2021-09-29-radicalization)
 - [Poptimism: Music Criticism's Reigning Ideology](/pages/2021-09-22-poptimism)
 
 # Translations

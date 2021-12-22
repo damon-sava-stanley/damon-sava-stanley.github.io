@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <meta name="dcterms.date" content="2021-09-29">
+  <title>Radicalization: Certain Remarks</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a {
+  color: rgb(30, 31, 35);
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 31, 35, 0.3);;
+}
+
+
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 0.9;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 0.75;
+  margin-bottom: 2px;
+  filter: brightness(150%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">Radicalization: Certain Remarks</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-3">
+      <nav id="TOC">
+        <ul>
+        <li><a href="#section">2011</a></li>
+        <li><a href="#section-1">2012</a></li>
+        <li><a href="#section-2">2013</a></li>
+        <li><a href="#section-3">2014</a></li>
+        <li><a href="#section-4">2015</a></li>
+        <li><a href="#section-5">2016</a></li>
+        <li><a href="#section-6">2017</a></li>
+        <li><a href="#section-7">2018</a></li>
+        <li><a href="#section-8">2019</a></li>
+        <li><a href="#section-9">2020</a></li>
+        <li><a href="#section-10">2021</a></li>
+        <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+    </div>
+        <div class="col col-sm-9">
+                  <h1 class="title">Radicalization: Certain Remarks</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">September 29, 2021</p>
+            <br/>
+                  <h1 id="section">2011</h1>
+                  <blockquote>
+                  <p>The water played against the grass in the reflection off the boat’s white prow. A bicycle rested against the concrete dock, its wheel not yet coming to rest, as the intercoastal gently rose and fell, wending its way along an alley of private docks and shaded mansions. It had taken only a minute for the officer to arrive and a quick, clipped conversation to send me off: it was not my dock; I had no right to be there. The sun glistened on the water, casting vague shadows on proprietary beaches. One was still permitted, at least, to look.</p>
+                  </blockquote>
+                  <p>“What radicalized you?” Spend any time online in lefty (or, at least I imagine, righty) circles and you will see this question asked and answered. <a href="https://twitter.com/afrodykee/status/1443570807293284353">This tweet</a> is my recent favorite, unhelpfully but unimpeachably pointing out that accepting radical claims is a step in the direction of accepting radical claims.</p>
+                  <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                  I think what radicalized me is realizing that it’s either Black liberation or death.
+                  </p>
+                  — 💎 (legally) blind himbo sailor mars 🦯 💎 (@afrodykee) <a href="https://twitter.com/afrodykee/status/1443570807293284353?ref_src=twsrc%5Etfw">September 30, 2021</a>
+                  </blockquote>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  <p>These narratives posit radicalization as a flash of insight, a sudden transformation from which there is no return. Hence the metaphor used by online right-wing fora: taking the red pill (which, in <em>The Matrix</em>, wakes one from a false but pleasant virtual reality into a harsh light). Academics studying radicalization, though, conceptualize it as a staged process, a staircase one can ascend more or less completely <span class="citation" data-cites="moghaddamStaircaseTerrorismPsychological2005">(Moghaddam 2005)</span>. After all, extreme views are not typically given in a single formula, but a patchwork of claims one can accept or reject piecemeal.</p>
+                  <h1 id="section-1">2012</h1>
+                  <blockquote>
+                  <p>Placing down the cell phone, the pen found itself raised hesitantly before the ballot. Light filtered messily into the messy dorm room, dust roiling in lukewarm air. My mother had just finished describing the campaign’s last push, an excursion into our hometown’s Haitian neighborhood, a door-to-door effort to secure Obama’s victory in our gerrymandered district. A state away, voting by mail and for the first time, the pen’s tip considered various presidential circles. In a moment it found and blacked in the socialist candidate. I cannot remember their name.</p>
+                  </blockquote>
+                  <p>Children, Judith Harris notoriously suggested, are not formed by parenting. They are socialized in the first instance by their peers <span class="citation" data-cites="harrisNurtureAssumptionWhy2009">(Harris 2009)</span>; children sand away edges to their personality to ingratiate themselves to their peers, edges themselves developed by the child’s status-driven need to differentiate themselves from those selfsame peers <span class="citation" data-cites="harrisNoTwoAlike2010">(Harris 2010)</span>. Such differentiation acts on small, largely genetically based, variations in the child (this one is a bit larger than their peers, this one a bit more naturally outgoing, and so on). The theory thus predicts that the child’s personality is formed in largest part in the womb and on the playground and not in the home. In the public consciousness, the moral implications of Harris’ theory weighed far more heavily than its scientific foundation. If sloppy parenting is not what made Suzie Q the little terror that she is, then her beleaguered parents might at least accept the consolation that it was not altogether their fault. On the flip side, the proud parents of wunderkind Lonnie Z ought instead to be blessing their lucky stars rather than their tedious implementation of every letter of a bookshelf of parental advice.</p>
+                  <p>A child’s character, their concomitant successes and failures, and the parent’s responsibility therefor form poles in a generational drama. The same can be said for a child’s political commitments. A child’s political divergence from their parents can be the source of a schism between them, or at least awkwardness at the Thanksgiving table. In the reverse direction, this political divergence can instead be understood as an expression of that schism. As Robert Lindner described a patient’s fascism, “[fascism gave him] a whole world to hate, in extension of his primary hatred of the father; targets on which to exercise brutality and revenge, both as expressions of identity with the father’s strength and dominance, and in retaliation for the hurts of childhood” <span class="citation" data-cites="lindnerFiftyMinuteHour1999">(Lindner and Lear 1999)</span>.</p>
+                  <p>Contemporary behavioral genetics disagrees here. The prevailing story of political development splits the responsibility between genetics and environmental influence outside the home, with little credit left over for parenting <span class="citation" data-cites="smithBiologyIdeologyEpistemology2012">(Smith et al. 2012)</span>. While Lindner understands the cruelty, the anger of his patient, Anton, as a response to his father’s abuse, it is possible instead that these traits were simply inherited from the father who was, by Anton’s account, cruel and angry. Of course, particular political opinions are not the expressions of particular genes, but as Lindner intuits there is a strong connection between character and politics, and character is partially genetically rooted.</p>
+                  <h1 id="section-2">2013</h1>
+                  <blockquote>
+                  <p>The town was an ugly swab of asphalt and concrete, a kind of hardened spittle tumoring amid forested hills. In the softly terminal stage of a relationship, I drove out to a supermarket. My carmate played a song from <em>The Dreaming</em> and pointed out a group gathered in front of a Planned Parenthood clinic. <em>That’s Alabama for you</em>. There was no counterprotest; we drove on.</p>
+                  </blockquote>
+                  <p>Not all people who believe abortion is murder show up to pro-life protests or events, not most of them. Even fewer bomb clinics. A person may come to adopt anti-abortion positions without ever acting on them. Hence, researchers distinguish cognitive radicalization, adoptions of radical beliefs, from behavioral radicalization, adoption of radical positions <span class="citation" data-cites="neumannTroubleRadicalization2013">(cf. Neumann 2013)</span>. It might be thought, however, that one of these flows from the others: first one must adopt political beliefs and then, when they are held with sufficient intensity, political action flows from the belief.</p>
+                  <p>This view, despite its plausibility, is questionable. <span class="citation" data-cites="munsonMakingProlifeActivists2009">Munson (2009)</span>’s study of pro-life activists concludes that what motivated them to begin their activism is not typically any strong conviction. Rather, activists are motivated by a desire to engage in a meaningful social activity. They reach a turning point in their life — they start college and are looking to get out there and make friends — and participation in an activist group presents itself by chance as an opportunity to meet this desire.</p>
+                  <p>You do not need profound conviction to stand outside and hold up a sign. You need not even agree with the sign: maybe you just like the idea of standing in a group, holding a sign, and shouting. However, stand out long enough and the sign might convince you, either as a result of motivated reasoning (it’s easier to explain your activism to yourself and others if you believe in it) or by ordinary persuasion (you’re surrounded by other signs all trying to convince you). On the reverse side, agreeing with the sign, even agreeing with it passionately, may well not be enough to get a person to want to get up there and hold it themselves.</p>
+                  <p>After all, there are myriad reasons one might have for refraining from participating in a political action that one agreed with. You could be busy. Standing out there with a sign might seem boring. You might doubt that it is politically effective. You might not want your friends to see you as person-that-holds-signs. You might think that the sign-carriers are assholes. Political activity is not simply an expression of political belief, but, like any activity, one that is the product of a person’s beliefs and desires in a context. This is true even for the more straightforwardly expressive action of tweeting one’s political opinions.</p>
+                  <h1 id="section-3">2014</h1>
+                  <blockquote>
+                  <p>He lived on the intercoastal, not in one of those multi-million summer homes, but an ordinary apartment tower. Outside, moonlight glinted vaguely atop shifting crests as he described a senior thesis on <em>To the Lighthouse</em>. I had only read <em>The Years</em>, but feigned familiarity, my finger running up a tower of spines of unshelved books. It reached <em>The Fountainhead</em> and he smiled, faintly embarrassed. <em>I mean, yeah, but I actually think the writing is not terrible.</em> I nodded with an excess of sympathy. <em>You know I used to buy into all of that shit.</em></p>
+                  </blockquote>
+                  <p>One and the same utterance may be a declaration, a confession, a disavowal, a sympathetic gesture, a flirtation, or multiple of these at the same time. Exactly how we should describe the action depends on what it was performed for, the intention from which it sprung. As <span class="citation" data-cites="macintyreVirtueStudyMoral2007">MacIntyre (2007)</span> argues, we should understand this intention in terms of the agent’s integration of the event into a self-centered narrative. Is this part of a story of political reformation? Our life, the totality of our action, is then, according to Macintyre, unified by the narratives we run through it.</p>
+                  <p>The musical <em>Assassins</em> examines assassinations and assassination attempts on American presidents. Beneath the variety of assassins and motivations, the musical uncovers a yawning chasm of need for recognition, a yearning for some special historical importance, a despair at one’s present deprivation and lowliness. In particular, it does not understand the assassinations as especially or universally ideologically motivated. (Giuseppe Zangara proclaims, “No left. No right. Only American. American nothing.”) These assassination attempts, rather, are the culmination of a <em>quest for significance</em>. The characters tell, and tell most of all themselves, a story in which the assassination of a president is the fulfillment of a personal need. (“Someone’s gotta listen.”)</p>
+                  <p><span class="citation" data-cites="kruglanskiThreePillarsRadicalization2019">Kruglanski, Bélanger, and Gunaratna (2019)</span> understand the radicalization of Islamic terrorists in similar terms. A terrorist, in their understanding, first experiences a particularly acute psychological need for significance, for esteem, for recognition: they feel unimportant, or have their sense of importance threatened. They are offered, or conjure for themselves, a narrative, a quest for significance, in which an act of terrorism is <em>the</em> solution to this psychological need. Crucially, the terrorist must despair of any other means for addressing this needs. (In <em>Assassins</em>, the narrator uselessly claims that America offers entirely licit opportunities for achieving significance, “Haven’t you heard the mailman won the lottery.”)</p>
+                  <p>An act as premeditated as a violent act of terror is the result of convincing oneself of a narrative in which terrorism is necessary. Typically, such conviction by a network, often by a network drawn from a terrorist group. Within the network, accepting such a terrorist narrative itself becomes a means for some measure of recognition. Even “lone-wolf” terrorist may well find a (decentralized) network pushing and rewarding one another for accepting terrorist massacre. Think about the Christchurch mosque murderer live-streaming his massacre to a forum of sycophants. <em>Assassins</em> further suggests that even political assassins with no apparent network may find company in the imagined community of past killers. Instances of “copycat terrorism” <span class="citation" data-cites="nacosRevisitingContagionHypothesis2009">(cf. Nacos 2009)</span> may point to a real phenomenon there.</p>
+                  <h1 id="section-4">2015</h1>
+                  <blockquote>
+                  <p>I almost had the fucking project working when they scrapped it. I had spent weeks trying to integrate our partner’s piece-of-shit security solution with our piece-of-shit search product, had scrutinized every syllable of their scant documentation, had learned more than I ever wanted to know about Solr’s internals, and then no one even fucking wanted this in the first place. Give me a fucking break. I replied to my boss’s announcement with two-weeks notice.</p>
+                  </blockquote>
+                  <p>The kind of radicalization narrative I am interested in here are personal, cognitive radicalizations: descriptions of personal experiences which led the subject to some radical revision to their political beliefs. Here is an example.</p>
+                  <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                  When I was 11 my mom would let our neighbor use water from our hose bc his utilities were shut off (he was elderly and living off of SS). Apparently this is illegal, and the cops came to shut off our water as well. It cost $400 to turn our water back on. <a href="https://t.co/jZjT6EzpHN">https://t.co/jZjT6EzpHN</a>
+                  </p>
+                  — brandy (@brandleminaj) <a href="https://twitter.com/brandleminaj/status/1290876073098518528?ref_src=twsrc%5Etfw">August 5, 2020</a>
+                  </blockquote>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  <p>This is in response to a tweet asking “What radicalized you?” Such narratives are rhetorically appealing: they represent (cognitive) radicalization as a rational response to obvious injustice. Note, however, that the rationality of such inferences is far from assured.</p>
+                  <p>In such narratives the particular injustice may receive a range of more or less radical explanation. Perhaps what this case illustrates is that the laws are written by capitalists to enforce their own interests at the expense of the working class, which issue a socialist revolution is needed to address. Perhaps though the issue is more local, confined to corruption around utilities, this jurisdiction, or utilities in this jurisdiction. Perhaps the laws themselves are fair — we have precious little to go on as to the nature of the violation — but they should have been waived. Perhaps the injustice is further back, concerning the neighbors poverty. Or, perhaps, if you’ve a Randian bent to your thinking, there is no injustice here: the neighbor was irresponsible or insufficiently hard-working, the family violated their contract with the water company, and justly had to face the agreed-upon consequences.</p>
+                  <p>This last possibility was somewhat painful to type, but the basic point remains. Events do not carry their morality on their sleeves. The wrongness of a stabbing is not given to experience in the same way that its duration is. Rather it is something we have to interpret. This is even more true of politics, as our political understanding of an event supervenes not only on our moral understanding but also our broader political beliefs. As a result, such personal radicalization narratives present political radicalism not as a logical conclusion but a smuggled premise. The point being not only that the inference here is irrational, but that it is psychologically implausible: one would not come to hold radical political opinions on the basis of such experiences unless one was already primed to accept such positions.</p>
+                  <p>Of course, I may well be accused of being uncharitable and perhaps a bit dense here. This is a tweet, not an intellectual autobiography. It is not attempting, and could not attempt (unless as part one of one of those dreadful Twitter chains) a complete account of radicalization, but presents merely a single, dramatic fragment of such a larger narrative. Sure, not much can be concluded from a single incident, partially described, but with more background, further incidents, and further reflection, the picture can be filled out. Indeed, when given more space than a tweet (<a href="https://thelinknewspaper.ca/article/what-radicalized-you">for instance</a>), subjects will contextualize such incidents as the start of a longer intellectual journey. Such narratives, then, should not be faulted as bad arguments, given that they are not intended as such. What are they intended as?</p>
+                  <p>We may still hypothesize a rhetorical purpose which is not directly an evidential one. Kenneth Burke describes rhetoric as a process of identification between the reader and rhetorical speaker. Central to any such process is the reader’s coming to see the desirability of identifying with the speaker. In the case of an ordinary argument, the reader begins their identification with the reader by sharing with him certain common assumptions. The argument shows that certain conclusions follow from those assumptions, yes, but thereby that it would be good (rational, likely correct) for the reader to join in. But our temptation may not consist in any cold rationalism. Instead, the speaker may entice by the warmer virtues of clarity, of care, of compassion.</p>
+                  <h1 id="section-5">2016</h1>
+                  <blockquote>
+                  <p>Trump is our new president and I am our new Cassandra, typing to those flyover Trojans through a drunk, Californian keyboards dark propositions that, to a one, will fail to come true. These yokels are Facebook friends of the second degree and so my vituperance carries with it no real consequence. I will never admit that I did not vote for Clinton; I could not drag myself out of bed to Pokemon Go to the polls.</p>
+                  </blockquote>
+                  <p>2016, in one telling, was the years the radicals won. Unfortunately for radicals on the left, it wasn’t them. Of course, that’s only one telling. In another telling, 2016 was the year Russian trolls subverted American democracy. In yet another telling, 2016 was the year American democracy worked pretty much as it usually does except for some reason the Democrats nominated an historically weak candidate and the Republicans primaried a bunch of establishment schmucks against a TV star who the media could not keep their cameras off because he was good for ratings. I mean, the last telling is certainly the accurate one, but at the time it was the freaks who won my and every other mainstream Liberal heart. Did you know they came from the internet? You know, Bannon and Pepe and the rest? And here I was thinking the internet was just where we read the <em>New York Times</em>.</p>
+                  <p>The definitive guide to that freak show is Angela <span class="citation" data-cites="nagleKillAllNormies2017">Nagle (2017)</span>’s <em>Kill All Normies</em>, which provides an history of the online culture war, focusing on the right, from 2012 to 2016. In the beginning was 4chan. 4chan, an anonymous internet forum, attracted users who developed a peculiar argot and a devotion to trolling, ironic humor, and shocking, transgressive posts. 4chan is an imposing place for outsiders, one of <span class="citation" data-cites="lewisInnerRing1944">Lewis (1944)</span>’s “inner rings,” who have to learn a new vocabulary and hazard a harsh and confusing place. The benefit, as Lewis suggests, is to be part of the club. Naturally, that club includes Nazis, the coolest and most outré provocateurs.</p>
+                  <p>4channers might be the result of techno-incubated ethnogenesis, but the Nazis predated them. As <span class="citation" data-cites="winterOnlineHateFarRight2019">Winter (2019)</span> notes, far-right groups were not especially effective users of the early internet. Throughout Obama’s presidency, however, far-right groups successfully grew their own fora, notably <em>Stormfront</em>, and later successfully “viralized” this community, deliberately entering other communities, communities which were not necessarily especially right wing or even especially political. Such spreading was at least in some part strategic, as suggested by “A Normie’s Guide to the Alt-Right,” a post on neo-Nazi website <em>Daily Stormer</em> which instructs fellow neo-Nazis on how to interact in irony-laden online fora like 4chan in such a way as to fit in with and convert the locals <span class="citation" data-cites="anglinNormieGuideAltRight2016">(Anglin 2016)</span>. Such conversion, however, cannot be accomplished merely by integrating oneself in a community — most 4channers hate and ridicule most other 4channers — one has to make being a neo-Nazi aspirational.</p>
+                  <p>Hence, the neo-Nazis espousal of self-improvement. Dissatisfied and isolated in their lives, perhaps, power-users of 4chan may have be drawn to the inner circle of 4chan for some sense of community, only to discover that this community cannot and has no interest in improving the conditions that brought you there. Unless, of course, there is yet a deeper inner circle that can do this. As <span class="citation" data-cites="elleyRebirthWestBegins2021">Elley (2021)</span> documents, neo-Nazis online have formulated an extension of the traditional fascist vision of the “New Man:” the reformed and radicalized ex-loser who through exercise, self-work, and, coincidentally, adoption of neo-Nazi ideas, becomes a winner, gets the girl, and destroys his (racial and political) enemies. When one takes this “iron pill” is taken, the dumbbell becomes a rhetorical device, each curl bringing the reader into greater identification with the “physically fit, handsome, sociable, successful, hygienic, happy, independent, proud, capable and competent” Nazi.</p>
+                  <figure>
+                  <img src="/images/radicalization/BeforeAfterSig.webp" alt="" /><figcaption>A meme often posted to 4chan’s self improvement board.</figcaption>
+                  </figure>
+                  <p>It is not altogether surprising that far-right online radicalization takes a similar form to other radicalization. The above image, and similar posts, function as narratives of radicalization centered around a quest for significance. They take their intended reader’s psychological needs and contextualize them in a particular way — our enemies are responsible for your loneliness, your distress — and tell a story about how a certain course of action — the iron-pill — will treat that need. This is carried out in a (decentralized, online) network of other speakers reinforcing this narrative.</p>
+                  <blockquote>
+                  <p><strong>Anonymous</strong> 08/28/16 (Sun) 06:07:38 ID IGvpantIG No. 86877726</p>
+                  <p>The concept of “THE” red pill is flawed. There is no single revelation. It’s not one red pill, it’s an unending course. Like antibiotics. Or, more accurately, like addictive painkillers.</p>
+                  <p>— 4chan post, quoted in <span class="citation" data-cites="elleyRebirthWestBegins2021">Elley (2021)</span>.</p>
+                  </blockquote>
+                  <p>The online far-right is thus not confined to their own private compounds, but are present in every major social media site. Special attention has been paid attention to their presence on YouTube, where commenters describe a “pipeline” of connections between channels, leading from more moderate right-wing channels through to the far-right <span class="citation" data-cites="munnAltrightPipelineIndividual2019 ribeiroAuditingRadicalizationPathways2020">(cf. Munn 2019; Ribeiro et al. 2020)</span>. The pipeline metaphor is unfortunate. It casts watchers of these channels as essentially passive participants in their own radicalization.</p>
+                  <p>Much is made, in describing this model, of YouTube’s recommendation algorithm. YouTube will recommend videos from the video a user is currently watching on the basis of its system’s prediction of what the user will likely also watch. Typically, YouTube will automatically play its top recommendation after the current video is finished. It is common for users of YouTube to consume its videos in a passive way, letting them play in the background while doing something else, so it is possible for a user to watch (or, more likely, to hear) a string of increasingly right-wing videos in a sitting. You thus have a model of how YouTube could radicalize viewers: one starts watching a moderate, right-leaning channel, which, given that its interviewers intersect with that of a farther-right channel (perhaps the host has on farther-right figures as guests), leads to one watching increasingly right-wing content. Let this go on long enough and, bingo bango bongo, you’ve got yourself a newly minted far-right believer.</p>
+                  <p>And you can find people describing themselves in this way. <span class="citation" data-cites="rooseMakingYouTubeRadical2019">Roose (2019)</span> quotes one self-proclaimed ex-radical calling themselves “brainwashed” by this pipeline. Brainwashing, at least in the popular conception, describes a sort of coercive persuasion, experimented with by the Nazi Gestapo and the CIA, which consists first of putting the subject into a hypnotic, hyper-suggestible state before forcing on them new beliefs or even a new personality <span class="citation" data-cites="anthonyTacticalAmbiguityBrainwashing2016">(Anthony 2016, 219f)</span>. Such radical, forced transformation was not found to work, but brainwashing nevertheless entered the public consciousness as CIA propaganda during the Cold War to explain Communist conversion especially among Wester soldiers in the Korean war <span class="citation" data-cites="anthonyTacticalAmbiguityBrainwashing2016">(Anthony 2016, 221)</span>. Such an explanation plays up the threat of one’s ideological enemies while casting conversion towards that enemy as both irrational and blameless.</p>
+                  <p>I worry that thinking about far-right radicalization and the pipeline model suffer from the same defect as early thinking about brainwashing. If converts to your enemy are made by hook and crook rather than honest, potentially rational change of beliefs, then such conversions are in no ways evidence for your enemy’s position. (In the way that sober-minded physicists’ adoption of quantum mechanics is evidence in favor of quantum mechanics.) At the same time, such stories help us forgive our former friends: they weren’t themselves! Anyone could have succumbed! The pipeline model of online far-right radicalization shares these features and is similarly dubious.</p>
+                  <p>The pipeline model has two further major issues. The first is that the more passive we make viewers with respect to their increasing consumption of farther-right content, the less plausible it is that such consumption actually results in ideological change. If Steven Crowder is yacking away in another tab while I’m browsing pictures of cats, probably I don’t even hear half of what he’s saying, much less form an opinion about it. Similarly, changes in the ideology of media one is consuming need not reflect changes in one’s own ideology. A viewer may follow a figure they find interesting, funny, provocative, or otherwise worth watching without signing on to that figure’s politics. (You might watch Jordan Peterson lectures just for the self-help, or just for the politics with which one already agrees.) Consumption is not agreement. Moreover, shifts in consumption may reflect not a consumer’s becoming more radical but finding sources more in line with their existing radical beliefs <span class="citation" data-cites="mungerRightWingYouTubeSupply2020">(Munger and Phillips 2020)</span>. I have not found defenses of the pipeline model which properly address these confounding factors.</p>
+                  <h1 id="section-6">2017</h1>
+                  <blockquote>
+                  <p>The clothes soaked in a bathtub, were wrung out by the sink, and dried over the shower rod. There was, one supposes, a perfectly functional washer and dryer nearby in the apartment complex. But that would have required quarters and quarters required speaking to a cashier a couple hundred meters down the road. It had been all I could do to assemble the other chair for my brother’s upcoming visit.</p>
+                  </blockquote>
+                  <p>Depression is constituted not by a particular emotional experience, a feeling blue, but by a restriction on how the world can matter to us, by what Heidegger would call a mood <span class="citation" data-cites="ratcliffe2013mood">(cf. Ratcliffe 2013, 160)</span>. When depressed, objects lose their positive significances: the dog in the park loses its power to charm; the treat, its power to entice; the friend, their power to console. Depressed patients, correspondingly, are more averse to losses and risks than usual <span class="citation" data-cites="chandrasekharpammiNeuralLossAversion2015">(Chandrasekhar Pammi et al. 2015)</span>: if nothing promises mirth, all is a sterile promontory, then best to stick to what you have, what is at least not unbearably painful.</p>
+                  <p>Such loss aversion, like many of the mechanisms of depression, is likely to be counterproductive. The depressed patient, terrified of worsening her barely tolerable situation, is likely to resist changes that will actually help her. Another such regulatory mechanism is rumination: one fixates on depressing objects causing one to feel, quelle surprise, more depressed <span class="citation" data-cites="nolen-hoeksemaRethinkingRumination2008">(cf. Nolen-Hoeksema, Wisco, and Lyubomirsky 2008)</span>. We may understand such tendencies in depressed subjects as part of the dynamics of depression: defining an attractor basin in which depression is a fixed point <span class="citation" data-cites="hayesDynamicSystemsTheory1998">(Hayes and Strauss 1998)</span>.</p>
+                  <p>This mathematical model is not in itself a theory of depression, but a picture in which we can situate and unify other theories. For example, understandings of depression that highlight the role of intrinsic, individual features in explaining the condition — cognitive styles, genetic and biochemical explanations — might be describing the size and shape of the attractor basins, while understandings stressing the role of an individual’s psycho-social conditions — poverty, illness, the burdens of work and childcare — point to the pushes which send an individual into the basin. We might further suggest that the experience of depression, the mood we pointed out, is tied to the central prediction of this theory: the imperviousness of depression to small, ordinary changes in environment and mental state. Depression as a mood consists in the awareness of this stasis permeating one’s experience. Not only are these things lousy, but everything is lousy and nothing can change it for the better. I’ll always come right back to where I started. A consequence of this picture is that a period of depression should be understood not only historically but systemically, i.e. not as a particular series of phenomena (I felt sad and then I felt sad some more) but additionally as a set of counterfactuals (were I to try not to, I would still feel sad). It therefore has a natural representation as an interactive fiction.</p>
+                  <p><span class="citation" data-cites="quinnDepressionQuestInteractive2013">Quinn (2013)</span>’s <em>Depression Quest</em> is a Twine game about having depression. You, an unnamed protagonist, struggle through a rather ordinary experience — boring job, girlfriend, a small social group — and have to get by. We are introduced to this background with all the grace of an encyclopedia entry. What follows is a flat series of choices. Our protagonist goes through a series of ordinary situations (invited to a birthday party, meeting a therapist, dinner with their family, work shit) and are offered a choice from a list of responses. The undepressed choices are crossed out — a constant reminder that you cannot just “throw off” this state — and the actual options range from modest improvements (adopt a kitten, start seeing a therapist) to wallowing in misery. Below these options, textboxes report on the intensity of your depression and the effectiveness of your therapy and medication. If you make the obviously good choices, you end the game having kept your life together and with reason for cautious optimism. If you make the obviously bad choices, your depression quickly worsens, making the obviously good choices mostly unclickable, and your life falls apart.</p>
+                  <p><em>Depression Quest</em> is an artless, earnest experience that is very insistent on passing on what it understands as the core truths about depression: depression can be managed with honesty, the right strategies, and external support, but it is also a condition that impairs one’s ability to do exactly those things. There is a tension between the rhetoric of its writing — a series of dull sentences pounding into one’s head that our protagonist is not in a state to do anything helpful — and that of its choices — where nevertheless the helpful, productive option is only one click away. This is the result of a failing endemic to interactive fiction — a sequence of hyperlinks is a terrible representation of the feeling of choice — but it is a particularly embarrassing failure in this context.</p>
+                  <p>With that being said, this game would have, on its own merits, faded into a quick obscurity had it not been the catalyst for, and this is saying something, one of the stupidest and longest controversies to ever embroil the internet. To tell the story as quickly as possible, Quinn is falsely accused by an ex of having slept with a journalist to obtain a favorable review of a free game. This gets picked up by an incipient harassment campaign, Gamergate, which begins bullying (up to and including death threats) Quinn and others. Gamergate ends up persisting for a couple ignoble years, petering out sometime in 2016, and has been identified with the larger activities of the online far-right, sharing certain principle players, message boards, and regressive themes.</p>
+                  <p>That, at least, is the simple, unsympathetic telling of what happens. In another telling, that of <span class="citation" data-cites="youngAlmostEverythingYou2020">Young (2020)</span>, the online movement comes off looking rather better. Yes, the harassment did occur, but that was by a mad fringe of an otherwise respectable group who had legitimate complaints about the gaming media and industry, which, in their view, had been captured by corruption and extreme progressive politics. Yes, there were far-right loons, but Obama voters predominated. Anyone could append ‘#gamergate’ to their tweet or join the reddit forum; there was no structure or strategy in place.</p>
+                  <p>There is a dynamics also of beliefs. <span class="citation" data-cites="gardenforsKnowledgeFluxModeling2008">Gardenfors and Makinson (2008)</span> describes a rational believer as seeking belief states that maintain an equilibrium between rational pressures. An early astronomer watches the planets wandering about at night and accepts, as their contemporaries accept, a simple geocentric model. All the heavenly bodies revolve in circles around the earth. After further, more careful observation, though, the evidence and the theory just don’t add up: the planets are just not moving how the model says they should howsoever one fiddles with the parameters. The astronomer is, for a moment, out of equilibrium. Rational pressures impel them to change their beliefs somehow, but how?</p>
+                  <p>There is no single, obviously correct answer here. The astronomer might change their model. Perhaps they could try out this epicycle idea that certain of their colleagues have mentioned as a refinement of their geocentric model. Or maybe they picked the center of the solar system incorrectly and it’s the sun not the earth. Or maybe they’re just worse at this whole observation and recordkeeping business than they thought and the simple geocentric model was right all along. This is an instance of the underdetermination of theory by evidence: two astronomers looking at the same series of observations can come to different conclusions without either having or having obviously made a mistake <span class="citation" data-cites="stanfordUnderdeterminationScientificTheory2021">(cf. Stanford 2021)</span>.</p>
+                  <p>These equilibria can be more or less fragile depending on the believer, the belief, and the environment. A die-hard geocentrist astronomer can reject or explain away any apparently conflicting evidence, after each small perturbance pulled back to the central earth. The measurements might be wrong, or, if consistently wrong, the instruments broken or miscalibrated. The reports of rival astronomers might be erroneous, or, if these persist, the rivals might be lying, and, if they lie persistently enough, might be a part of a vast conspiracy. In each case the astronomer’s geocentrism comes up against other commitments — that they are a competent measurer, that their instruments are reliable, that their peers are trustworthy — but, if they are certain enough that the sun goes round the earth, there is no reason, psychologically and perhaps even rationally speaking, that this certainty should ever fail. As a result, two believers, starting with different assumptions, may be given all of the same evidence without converging to the same belief.</p>
+                  <p>While there is no guarantee of convergence, there is always the possibility of collaboration. For our evidence comes not only from our shared environment but from each other: most people’s astronomical beliefs (e.g. that the sun is 93 million miles away) come not from staring through a telescope but reading, say, a Wikipedia article. We are always receiving reports from one another and have to decide whether to accept them, i.e. whether to trust their source. Trusting someone’s report is at least partly a matter of assessing their competence: does this person look like they’ve at least seen a telescope. An inavoidable part of assessing someone’s competence is checking their track record, i.e. whether they agree with me. Given a natural, rational desire to listen and speak to people one trusts, the formation of communities of like-minded believers is inevitable. A equilibrium in one’s beliefs can grow to contain an entire group. And just as two people can look at the sky and come up with different pictures of the solar system, two communities can have access to the same observations and come to two stable and different pictures.</p>
+                  <p>The protagonist’s life in <em>Depression Quest</em> is not obviously a depressing one. Sure, their job is not great, their family imperfect, their future not promising the wealth and security of professional life, but they have things mostly together: financial security, personal interests, meaningful relationships. In short, they have the kind of life many might be reasonably envious of, and of course even more enviable lives, those of the wealthy, may be marked by depression <span class="citation" data-cites="lutharCultureAffluencePsychological2003">(cf. Luthar 2003)</span>. From an outside perspective, one may, as the protagonist’s mother, reasonably ask what the person is so goddamn glum about. But for the depressed person there is a void at the center of the solar system — a conviction that things are bad and only likely to get worse — too fixed to be shifted by mere phenomena.</p>
+                  <p>The same can be said about Gamergate. On the face of it, people’s beliefs about Gamergate — it is or is not a harassment campaign; it is or is not dominated by or a gateway to the farright; it is or is not centrally concerned with ethical and political issues in gaming and video game journalism — can seem, especially to the other side, curiously recalcitrant, immune to contrary evidence. But there is no pre-theoretical evidence — an observation only becomes evidence for or against an hypothesis when interpreted by the light of a background theory — and one’s community will filter and emphasize observations so that what one reads is already prepared to support one’s existing understanding.</p>
+                  <p>This is all, of course, treating everyone highly sympathetically. In reality, our beliefs are not so pristinely motivated.</p>
+                  <h1 id="section-7">2018</h1>
+                  <blockquote>
+                  <p>Ash rose from the bonfire. The partymembers gathered about in green, plastic chairs. The air smelled faintly of whiskey and smoke. I gesticulated angrily. He had cited Leibniz, a man lighting only a piece of a cellar and all that. <em>This is not an ordinary philosophical dispute,</em> I insisted. <em>You want to believe in possible worlds, whatever, go ahead. But fucking theodicies.</em> Later someone pulls me aside, <em>Leave him alone; NA saved his life.</em></p>
+                  </blockquote>
+                  <p>Pascal’s wager goes something like this. God promises you eternal bliss if you’ll only pay him the compliment in believing in him. Maybe He exists, maybe He doesn’t. If you believe in Him and He exists, you get the big payoff. If you believe in Him and He doesn’t, well, you haven’t lost much. On the other side, there’s no percentage in atheism. You don’t get anything but Richard Dawkin’s approval, and that doesn’t go for much nowadays.</p>
+                  <p>Worry the first. You cannot start believing something just because it would be nice to believe it. Fair enough. But you can behave in ways likely to change your beliefs. You can start going to church. You can read every defense of Christianity you can get your hands on. You can start debating atheists on online fora. If you’re self-conscious about doing these things, conversion is unlikely. But, if you forget for a moment what you are doing, it is possible that such a regime will be effective in minting a real believer.</p>
+                  <p>Beliefs can be motivated by much lower stakes. In the previous section, for instance, I wanted to draw a connection between depression and radicalization, to posit depression as a significant factor disposing people towards participation in movements like the online farright and Gamergate. This motivation was a weak, aesthetic one: a paragraph there would have tightened up, unified the section. Like Pascal’s aspirant Christian, I cast about for evidence in a motivated way. I could have, for instance, inserted <span class="citation" data-cites="desboroughGamergateSocialHistory2017">Desborough (2017)</span>’s account of their GamerGate-inspired suicidal gesture. Except that there does not seem to be any there there, beyond a few anecdotes. More rigorous studies however, do not uncover particularly strong links between depression and political ideology <span class="citation" data-cites="bernardiDepressionPoliticalPredispositions2020">(Bernardi 2020)</span> or depression and radicalization <span class="citation" data-cites="misiakSystematicReviewRelationship2019">(Misiak et al. 2019)</span>.</p>
+                  <p>While it is possible to slow down, to catch ourselves engaging in motivated reasoning, much of our belief formation operates according to quick rules of thumb prone to irrationality <span class="citation" data-cites="kahnemanThinkingFastSlow2013a">(see Kahneman 2013)</span>. With this point in mind, we should be concerned not to make too much of the argumentative efforts associated with political radicalization. Radicals typically are not made by rational persuasion nor do they seek to reproduce in such a way. Politics in this way is much like religion. The arguments against religion are simple, obvious, and compelling: the world is much to shitty to have a providential designer and the diversity, nature, and distribution of religious belief obviously reflect historic contingency rather than eternal verity. These facts do little to impact religious belief, precisely because religious conviction is not the result of honest inquiry.</p>
+                  <p>We might find another comparison between politics and religion in the centrality of rituals. Here I follow <span class="citation" data-cites="collinsInteractionRitualChains2005">Collins (2005)</span>’s development of Durkheim’s (via Goffman) understanding of rituals. For Collins, a ritual occurs when a group is gathered and achieve a mutual focus of attention on some object or activity and share or come to share a common emotional experience. Through rhythmic interaction, mutual attention and emotion intensify until the ritual ceases. Collins describes this emotional buildup as a collective effervescence. In a successful ritual, this shared experience should produce in the participants a certain quantity of emotional energy, by which Collins means feelings, e.g. of anger or confidence, which motivate the participant to future action, alongside a sense of group solidarity. Such feelings can be projected on symbols connected with the rituals, so that they are identified with the individual and the group. Finally, the ritual may generate a moral commitment by the individual to the group and its symbols.</p>
+                  <p>Take as example confession in the Catholic church. Here we have a formal ritual of the minimum group, a confessor and a priest. The pair give mutual attention to a shared activity, the confessor’s recitation of sins. We have rhythmic entrainment through mutual turn-taking, the confessor confesses and the priest probes. The shared emotional experience is one of guilt yielding to relief. The ritual has its appointed climax in the priest’s recitation, “I absolve you from your sins in the name of the Father, and of the Son, and of the Holy Spirit.” Afterwards, if all has gone well, the penitent and the priest alike will come out feeling renewed, confident, their attachment to the Catholic church, symbols, and morality strengthened. Given this influx of emotional energy, the participants are disposed to seek out new rituals and, in particular, to engage in similar, i.e. Catholic, rituals. In this model, then, the success of a religion, or an institution more broadly, has much to do with its capacity to control symbols and arrange circumstances associated with successful rituals and to chain these rituals together to sustain a body of believers.</p>
+                  <p>Of course, rituals are not always successful, as evidenced by the fact that something like 60% of American Catholics fail to attend confession once a year <span class="citation" data-cites="coopermanParticipationCatholicRites2015">(Cooperman et al. 2015)</span>. Moreover, participation in a ritual is not always driven by expectation of achieving collective effervescence. As the same study shows, a majority of American Catholics admit to participating in Catholic activities to please or out of obligations towards their friends and family. Not only can ritual participation drive group identification, but so can the reverse. For Collins though there is a close, almost analytic, connection between success in a group’s rituals and solidarity with, commitment to that group. Success and commitment also correlate with, with causal chains running in both directions, taking seriously the symbols, the values, and thereby the ideology of the group, becoming a true believer.</p>
+                  <p>The confession ritual, as with many religious rituals, is stratified. Certain individuals, the priest, take up a more active role over certain passive others, the penitent. Just as the ritual itself may be more or less formalized, the respective positions of the participants may be more or less formalized. (The evangelical preacher is the official active participant, but at an appointed time in preaching may ask those who feel called upon to take up an active role.) Just as symmetrical rituals reinforce egalitarian group belonging, asymmetrical, “power” rituals reinforce group hierarchies. To take a dramatic example, voting in dictatorial states like North Korea becomes a power ritual. The populace is expected to attend and to vote yes for the appointed candidate, which expectations are enforced <span class="citation" data-cites="marquezVarietiesElectoralExperience2014">(see Marquez 2014)</span>. Such ballot-casting dramatizes the regime’s power over the individual and functions as a negative ritual, aiming for not collective effervescence but collective depression, submission to the regime.</p>
+                  <p>This is an extraordinary political ritual, but politics as a whole is shot through with rituals, of both formal (elections, addresses, political meetings) and informal (protests, political commentary, political conversation) varieties. Just as a religious institution operates and maintains itself in large part by coordinating religious ritual, so does a political institution coordinate political rituals. As a central example of such a ritual, consider politically inflected news. On Breitbart today, for example, I count a baker’s dozen of antivaxx headlines. As one might expect, these articles frequently do not reflect what an impartial observer might consider newsworthy, but, I suggest, serve a ritual opportunity: an opportunity to “get mad” in a way that is energizing and reinforces group solidarity, symbols, and values.</p>
+                  <p>Collins insists on the social character of ritual and is likely correct to assert that the intimacy of a ritual plays a key part in its power. However, he makes room for “internal rituals,” which may be performed when one lacks opportunities for engaging in an adequate external ritual. For example, prayer may restore or maintain one’s conviction when the churches are closed. One’s position in an internal ritual may be passive, as when one recites a prayer from a prayer book, or active, as when one “has a conversation with God.” Moreover, such an internal ritual may be preparation for an external ritual, as when one plans what one is to confess or the priest practices their part in the Eucharist.</p>
+                  <p>We might point out that asynchronous, distant communication (letter writing, blogging, tweeting) functions as a pair of internal rituals. In one, the author engages in a certain imaginative ritual, taking the active part in conducting an imagined speech to an imagined readership. The reader of the product of this ritual takes a passive part in a dual internal ritual. Thus, for instance, the production and distribution of radicalization narratives is a ritual in this sense: the author seeks “collective” effervescence in the activity of relaying a symbolically charged narrative. In a radicalization narrative, the shared mood and symbols are politically inflected.</p>
+                  <p>(The situation is somewhat more complex on a platform like Twitter. For the point of publishing there is not only to garner attention but also to prompt replies. This may in some cases, when the cadence of replies is fast enough, permit the Twitter thread to function as a conversation. In the usual case, given the asynchronous nature of Twitter and other social media, the Twitter thread functions as a ritual chain, wherein one continually consumes and contributes to the conversation as a virtual, growing object.)</p>
+                  <h1 id="section-8">2019</h1>
+                  <blockquote>
+                  <p>The city has become crossing planes of graffiti. Businesses have covered their windows with plywood and the plywood has been covered with spraypainted slogans. I am perched anxiously on the porch, not thinking of what is up there (weeks of grading piling up and festering), or what is out there.</p>
+                  </blockquote>
+                  <p>It is well enough time to give some order to these stray remarks. When it comes to radicalization there are a number of strands to tease apart. We have already seen a distinction between cognitive and behavioral radicalization. Further, we can imagine toy theories that center each account of radicalization. On a <em>cognitive-first</em> model of radicalization, radicalization is essentially a process of belief change. The radicalized is someone who takes on a series of “red pills” offered by the already radical. Such a model can make room for the affective, the motivational in terms of the motivation of inquiry: a certain degree of dissatisfaction with orthodoxy may needs precede going looking for such pills and their peddlers. But the inquiry is ordinary research, if carried out under conditions of human frailty, and, crucially, a change of beliefs precedes radical behavior. You have to be convinced that throwing bombs is necessary before being moved to throw bombs.</p>
+                  <p>Except, we noticed, this does not exactly fit the mold of observed radicalizations. The pro-life activist often starts at a protest with only a vague antipathy towards abortion. Neo-Nazi groups will bring prospective recruits as participants in hate crime before they have imbibed much by way of Nazi ideology. Group bonding and behavioral radicalization come in advanced of radical beliefs. We may refine this <em>behavior-first</em> model by noticing that these examples are <em>radicalizing rituals</em>: interaction rituals, in Collins’ sense, par excellence. A protest, for example, involves a high degree of rhythmic entrainment (the group marching in step, shouting slogans in a call-and-response) centered around a set of symbols.</p>
+                  <p>It has been observed that terrorist groups have a <em>free rider</em> problem. Frequently enough, they exist among populations where there is a substantial degree of support for terrorist activities and, even more so, for the aspirations of such groups. Actual being a terrorist, however, encounters a collective action problem where a group can agree that one of them should commit terrorist violence, but no member of the group wants to be the one to do it. After all, you’ll probably die. This is the kind of problem that drawing lots was invented for and such a procedure, or a group leader who can assign roles, can solve the problem.</p>
+                  <p>Note that this problem is extremely general and often much less dramatic. All kinds of unsexy labor suffers from free rider problems. The protest requires not just protesters but members of the group to coordinate rides and provide water. Your cult members can’t spend all of their time in dynamic meditation; someone has to clean the toilets. That is, an institution has to engage in both goal-directed and reproductive activity. There is overlap here. Terrorist violence may be both goal-directed and reproductive (insofar as it boosts the organization’s reputation and inspires new recruits). A key point here is, first, that radicalization efforts are a key piece of reproductive labor for radical groups, and, correspondingly, that we therefore have to understand radicalization not just from the perspective of the radicalized individual but the group which needs such radicalizations to maintain itself.</p>
+                  <p>One fact which an excessively cognitive point of view threatens to obscure is that radicalism suffers a tendency to decay. We tend to think of beliefs as more-or-less static. Once I have reached an equilibrium, my beliefs tomorrow will be the same as those today, unless something occurs to upset the mix. Radical behavior, however, has an inherent tendency to decay. A society which has any hopes of lasting is one in which normal, i.e. unradical, behavior is the path of least resistance for almost all its members. To take a novelistic example, Nick Hornby’s <em>How To Be Good</em> depicts a bourgeois marriage, temporarily beset by a bout of radical moralism, reforming about the typical, the normal. Intentional communities have a rather poor track record. Reproductive labor in a radical organization is therefore of crucial importance. The ship is always sinking, will always need bailing out.</p>
+                  <p>Thus we can observe that extant radicalization models, like the staircase model, incorporate both <em>stasis</em> (people tend to stay around the same stair) and <em>movement</em> (some are radicalized, others deradicalize or simply drop out). We should understand stasis, however, not as an absence of pressures but again as an equilibrium, a balancing of pressures. A successful, in the sense of reproductive fitness, radical group is one which not only is capable of the production of such forces but which incentivizes the newly-inducted to become proselytizers. That is, a successful group is one in which reproduction is sexy.</p>
+                  <p>I want to suggest that the success of online radicalization owes in large part to this very sexiness. Online radicalization shares the advantage of traditionally successful radical groups of the central radicalizing act being a powerful ritual both for prospective and established group members. The long-time protesters can feel proud and confident as the leaders of the protest while the newcomers can experience a rush of emotional energy. Whereas online the radicalization narrative and the shitpost alike serve a similar purpose: the poster gets to feel confident and in control and the reader can feel energized, scandalized, outraged. From such things are group solidarity and symbols born. And what the online forum lacks in intensity it can make up in ease.</p>
+                  <p>This poses an opportunity for the radicals: accelerated reproduction via ideological pornography. But for the genuinely ideologically driven radical, it also poses a problem. Online groups have the same free rider problems as any other group, but they lack much of the infrastructure that allows in-person groups to overcome that problem. The online group may not have the same issue of their being unsexy reproductive labor. The tubes of the internet do not need scrubbing in the same way as the compound toilets. But they face the same problem of boring-old goal-directed labor. At some point, if you want to get anything done, you have to stop posting and go outside. If posting is the main draw and outside is a drag, it’s less clear how this is going to get done.</p>
+                  <p>I have not yet come across all that much data covering these dynamics. I suspect that not only are these primarily online radical movements ineffective at achieving their goals, but would further guess that they sap membership from more active offline communities. The main claim here is that we should interpret what, on the face, looks like a principally ideological, propagandistic phenomenon — the radicalization narrative and the wider genre of radical posting — as primarily instead a central example of radical and radicalizing behavior. Our portrait of the to-be radical, then, should include not or not only a litany of intellectual vices — a curious combination of distrust and gullibility — but (also) an affective openness towards involvement.</p>
+                  <h1 id="section-9">2020</h1>
+                  <blockquote>
+                  <p>After getting off the phone, I find myself caught by a rare bout of nostalgia. I am not looking for anything, and yet, stumbling across the image, I decided that I had found it. Vague abstract shapes floated around one another, casting shadows from an undisclosed light source, a title imposed itself faintly on the bottom. I had never got around to editing the draft; it could never live up to its cover.</p>
+                  </blockquote>
+                  <p>In another Sondheim musical, <em>Into the Woods</em>, the fairy-tale characters are caught in the aftermath of fairy-tale moments, marrying a prince, plundering from a kingdom in the sky. In the second act, when the unintended consequences of the character’s bliss come back with a vengeance, the baker’s wife wanders away from the group. In the titular woods, she stumbles into one of the princes and engages in the briefest of romances. It is an odd encounter, confirming the prince’s well-established infidelity and challenging our understanding of her virtue. Tidying up, she reflects on this tryst in one of the musical’s best numbers.</p>
+                  <p>The piece, “Moments in the Woods,” opens with the baker’s wife caught between a bewildered appreciation of the moment — “Was that him? Was it me? Did a prince really kiss me?” — and objection to it as a dereliction of duties — “Back to life. Back to sense.” At a remove, she is likewise caught between two resolutions of this conflict, one in which such energizing ruptures have a place in life — “That’s what woods are for, for those moments in the woods.” — and one on which they threaten to destabilize a proper existence — “And to get what you wish only just for a moment, these are dangerous woods.”</p>
+                  <p>Of present concern are the related thoughts, first, that such moments cannot amount to a life and, second, that one is not oneself in such moments.</p>
+                  <blockquote>
+                  <div class="line-block">Oh, if life were made of moments,<br />
+                  Even now and then a bad one!<br />
+                  But if life were only moments,<br />
+                  Then you’d never know you had one.</div>
+                  </blockquote>
+                  <p>And</p>
+                  <blockquote>
+                  <div class="line-block">Was that him?<br />
+                  Yes, it was.<br />
+                  Was that me?<br />
+                  No, it wasn’t.<br />
+                  Just a trick of the woods.</div>
+                  </blockquote>
+                  <p>We might relate these thoughts in the following way. An experience like this is overwhelming. Users of certain psychedelics report that their trips involve ego death. Their experiences are so extreme, so involving that the self seems to be annihilated; one has no sense of things happening <em>to them</em>, but simply to things <em>happening</em>. What is going on here is something milder, not a case of the ego being annihilated but rather its being suppressed. One simply lacks the bandwith to attend to future concerns, to worry too much about what one is doing and its consequences, and similarly one cannot contextualize one’s actions in terms of the past. It simply does not make sense that a devoted wife and husband should give herself so easily over to the prince’s advances. Insofar as having a life, as something more than continuing to be alive, requires such fundamentally narrative connections, a life cannot survive an abundance of such experiences, even if a human organism clearly can.</p>
+                  <p>We may, in passing, remark upon the fit with Collin’s theory of rituals. On the one hand, they square quite well with his thought on the power of the situation. At least in the well-functioning ritual, the actions of the participants are in large part determined by the needs of the ritual itself as something distinct from those of the participants themselves. The riot can produce behavior completely out of character of the rioters. It is in the moment between rituals that Collins finds a place for individual agency and participation. Even here, the draw of the ritual is key; Collins, along with the economist, understands the agent as a preference-maximizer, but goes further to understand a person’s core preference as being towards the emotional energy supplied by rituals.</p>
+                  <p>If people are fundamentally emotional-energy maximizers, the baker’s wife (partial) aversion towards the moment may strike us as puzzling. Certainly there are those who resist the siren’s call of the mob, and I count myself among their numbers, howsoever energizing mob participation might be. Plausibly, though, the traditional parameters of rational choice theory may be tweaked to fit the datum. What is being maximized is not moment-to-moment emotional energy, but long-term, expected energy. Individuals can differ on how long term their thinking is (their rate of time discounting) and their aversion to (or even preference for) risk. Someone invested in long-term and relatively riskless payoff may prefer the quiet, domestic life to the uncertain, extreme-filled life of adventure.</p>
+                  <p>Such a rationalistic gloss does lose the emotional texture of the baker’s wife’s deliberation. It also misses its personal, psychological dimension. Her uncertainty concerns not centrally the vagaries of time- and risk-preference but dueling pictures of what life itself amounts to: one of life as an extended, coherent narrative, and one of life as a fragmented series of episodes. We have already seen the claim that the continuity of a person’s life consists in its coherence to a larger narrative; such a descriptive claim is often paired with a corresponding normative claim that it is good for a person’s life to have such a narrative unity. Note, however, that the descriptive claim is not obviously true of every person; some self-report even the undramatic portions of their lives as consisting of lower-case-‘m’ moments, as episodes rather than a continuous narrative. We can find a fictional example in Eleanor from Woolf’s <em>The Years</em>.</p>
+                  <blockquote>
+                  <p>My life, she said to herself. That was odd, it was the second time that evening that somebody had talked about her life. And I haven’t got one, she thought. Oughtn’t a life to be something you could handle and produce?—a life of seventy odd years. But I’ve only the present moment, she thought. Here she was alive, now, listening to the fox-trot.</p>
+                  </blockquote>
+                  <p>That there are people who do not understand their lives in terms of narratives, whose self-understanding is formless, episodic, fragmented, and that this is no bad thing is defended by <span class="citation" data-cites="strawsonNarrativity2004">Strawson (2004)</span>. Sure, certain may well engage in and be very engaged by the project of casting themselves as the hero of some grand quest. They may even find some value in these things. But there are dangers here — generating a tidy narrative may require significant distortion or even falsification of our histories — and prospects too to dispensing with such a questing for narrative.</p>
+                  <p>Nevertheless, there is something melancholy in Eleanor’s reflections. Even those who do not naturally understand their life in capital-‘N’ Narrative terms may, with a certain wistfulness, wish that they could fit themselves into some tidy story. Such it is with the baker’s wife. Her valuing of hearth and home, husband and child, is not merely a cautious desire for certain if modest happiness, but a desire for a life that makes sense, that fits a given pattern. Abandonements of such projects or sudden, unexpected losses, even sudden, unexpected windfalls (to be kissed by a prince!), threaten not merely our aversion to sunk costs but a natural, if not universal, desire for an ordered existence. A chaotic death, for instance the baker’s wife’s own, strikes us as worse than if one’s affairs were in order, even if it is not marked by any greater suffering. In the other direction, a possibility which promises a story-book structure to our lives is thereby all the more tempting.</p>
+                  <p>This is an offer that comes with political radicalization, and which exists over and above all the usual inducements: money, status, recognition, acceptance, power, righteousness. Identifying oneself with a political narrative offers to solve the great narrative problem of death. On the one hand, we may finish our quest before we die and have to live with the rather embarrassing happily-ever-after. More likely, but no less distressing, we die having only some progress to show. Understanding one’s life as that of a radical, an activist, an advanced guard of some great and distant utopia, provides a way out of this bind. There is no earthly chance of actually living to see the promised land. But nor does one’s own death preclude its arrival — others are there to take up the good fight. We might expect, then, greater attraction towards and loyalty to political radicalism among those attracted to a narrative understanding of themselves. (Again, I have not come across testing of this, admittedly vague, speculation.)</p>
+                  <p>On the other side, we might expect the distortions that tend to afflict our self-starring life narratives also to plague our self-starring political narratives. We noted a tendency towards excessive patness in radicalization narratives. Ambiguities, alternative accounts, confounding factors, all have been exorcised from the radicalizing event before it is put on display. As they must, if it is to work its magic. But this I think need not be merely a rhetorical effect and certainly need not be insincere. Rather in the same way that our memory and our attention come to our aid in constructing a self-centered narrative — if we want to describe how our mother inspired our recent achievement, every encouraging word from her lips will spring to mind; questioned by a therapist, every cruel remark takes its place — we can practice a strategic (though innocent) blindness towards the conditions of our own radicalization. Indeed, we have little choice but to do so.</p>
+                  <h1 id="section-10">2021</h1>
+                  <blockquote>
+                  <p>With her practiced eye, she had spotted the offensive slogans right away, though the light yellow paint and offensive calligraphy made the messages unreadable to the passing cars. In the evening, when we went to make our emendations, the glare from the streetlights merged the consonants into a scrawl. In a nearly identical paint and differently illegible script, the other two crossed out, revised, and commented on the offending graffiti. We walked into the suburbs. In a month, it had all been cleaned up anyways.</p>
+                  </blockquote>
+                  <p>At the end of <em>Into the Woods</em>, the surviving main cast band together and kill the giant. The act is of terrible significance and significant moral ambiguity: the giant’s revenge quest came with significant justification; one of the band had killed her husband. The giant’s death marks the coalescing of their new community and it forms the community’s founding myth. The play closes with the baker telling his son the story of the play; it had begun with the narrator (who shares an actor with the baker’s father) telling the audience the same story, in a different register. The baker’s father dies when his story comes to an end, when the family curse is lifted. The narrator dies later, sacrificed to the giant. The play, then, functions as the example of the death and rebirth of a narrative.</p>
+                  <p>In <em>Assassins</em>, two narratives are at war. There is the story of the assassins themselves (“Another National Anthem”) in which their projects, from grand, moralistic designs to personal ends, are essentially at odds, incompatible with the functioning of American society. Either they or the system has to go; and since you can’t dismantle a system all by your lonesome, you do the next best thing. You kill the president. This mad striving, as the play makes clear, has something in common with the mainstream, American story: “Everyone has a right to their dream.” But the mainstream story is one on which those dreams, at least when they are not mad, can be achieved in good-old American fashion, by “working your way to the front of the line.”</p>
+                  <p>These narratives and their conflict seems hopelessly eternal. As the meritocratic American story is cruelly naive, it inevitably produces discontents. As it is hegemonic, these discontents can think to engage only in weighty symbolic, but ultimately counterproductive, acts of regicide. Such acts do nothing to win the sympathy of the larger public or to advance the assassin’s aims. The play closes by forgetting for a moment this systemic understanding and focusing on a personal understanding of these assassinations. Lee Harvey Oswald is visited by the spirits of these assassins, who beseech him to carry out the assassination of John F. Kennedy as a way of giving their own assassinations meaning. The following number, “Something Just Broke,” makes clear that to the American public, by contrast, the shooting of JFK was a profound but profoundly meaningless event. The fact that two of the assassins addressing Oswald postdated him confirms this meaninglessness.</p>
+                  <p>It is no great surprise that Sondheim, given his age, has recently died. It is some small coincidence that the news came just as I was wrapping (?) this essay (?) up (?), which features two of his musicals. (Given its length and the sluggishness of my drafting, I can hardly be accused of capitalizing on his passing.) Sondheim managed works of considerable accessibility which rarely yielded to simple-mindedness. I fear, by contrast, that this piece might rather reveal me as an obscurantist simpleton. If I have any defense, it is that the topic, like our own lives, does not yield to clean, comprehensive treatment, but only partially, in contrary flashes of light.</p>
+                  <h1 class="unnumbered" id="references">References</h1>
+                  <div id="refs" class="references hanging-indent" role="doc-bibliography">
+                  <div id="ref-anglinNormieGuideAltRight2016">
+                  <p>Anglin, Andrew. 2016. “A Normie’s Guide to the Alt-Right.” Daily Stormer. August 31, 2016. <a href="https://dailystormer.su/a-normies-guide-to-the-alt-right/">https://dailystormer.su/a-normies-guide-to-the-alt-right/</a>.</p>
+                  </div>
+                  <div id="ref-anthonyTacticalAmbiguityBrainwashing2016">
+                  <p>Anthony, Dick. 2016. “Tactical Ambiguity and Brainwashing Formulations: Science or Pseudo-Science?” In <em>Misunderstanding Cults: Searching for Objectivity in a Controversial Field</em>, 215–317. University of Toronto Press. <a href="https://doi.org/10.3138/9781442677302-009">https://doi.org/10.3138/9781442677302-009</a>.</p>
+                  </div>
+                  <div id="ref-bernardiDepressionPoliticalPredispositions2020">
+                  <p>Bernardi, Luca. 2020. “Depression and Political Predispositions: Almost Blue?” <em>Party Politics</em>, June, 1354068820930391. <a href="https://doi.org/10.1177/1354068820930391">https://doi.org/10.1177/1354068820930391</a>.</p>
+                  </div>
+                  <div id="ref-chandrasekharpammiNeuralLossAversion2015">
+                  <p>Chandrasekhar Pammi, V S, Purushothaman Pillai Geethabhavan Rajesh, Chandrasekharan Kesavadas, Paramban Rappai Mary, Satish Seema, Ashalatha Radhakrishnan, and Ranganatha Sitaram. 2015. “Neural Loss Aversion Differences Between Depression Patients and Healthy Individuals: A Functional MRI Investigation.” <em>The Neuroradiology Journal</em> 28 (2): 97–105. <a href="https://doi.org/10.1177/1971400915576670">https://doi.org/10.1177/1971400915576670</a>.</p>
+                  </div>
+                  <div id="ref-collinsInteractionRitualChains2005">
+                  <p>Collins, Randall. 2005. <em>Interaction Ritual Chains</em>. Princeton, NJ: Princeton University Press.</p>
+                  </div>
+                  <div id="ref-coopermanParticipationCatholicRites2015">
+                  <p>Cooperman, Alan, Gregory Smith, Jessica Martínez, and Stefan Cornibert. 2015. “Participation in Catholic Rites and Observances.” Pew Research Center’s Religion &amp; Public Life Project. September 2, 2015. <a href="https://www.pewforum.org/2015/09/02/chapter-2-participation-in-catholic-rites-and-observances/">https://www.pewforum.org/2015/09/02/chapter-2-participation-in-catholic-rites-and-observances/</a>.</p>
+                  </div>
+                  <div id="ref-desboroughGamergateSocialHistory2017">
+                  <p>Desborough, James. 2017. <em>Inside Gamergate: A Social History of the Gamer Revolt</em>. Lulu.com. <a href="http://books.google.com?id=4LYzDwAAQBAJ">http://books.google.com?id=4LYzDwAAQBAJ</a>.</p>
+                  </div>
+                  <div id="ref-elleyRebirthWestBegins2021">
+                  <p>Elley, Ben. 2021. “‘The Rebirth of the West Begins with You!’—Self-Improvement as Radicalisation on 4chan.” <em>Humanities and Social Sciences Communications</em> 8 (1, 1): 1–10. <a href="https://doi.org/10.1057/s41599-021-00732-x">https://doi.org/10.1057/s41599-021-00732-x</a>.</p>
+                  </div>
+                  <div id="ref-gardenforsKnowledgeFluxModeling2008">
+                  <p>Gardenfors, P., and D. Makinson. 2008. <em>Knowledge in Flux: Modeling the Dynamics of Epistemic States</em>. Revised ed. edition. London: College Publications.</p>
+                  </div>
+                  <div id="ref-harrisNurtureAssumptionWhy2009">
+                  <p>Harris, Judith Rich. 2009. <em>The Nurture Assumption: Why Children Turn Out the Way They Do, Revised and Updated</em>. 2nd Revised, Updated ed. edition. New York: Free Press.</p>
+                  </div>
+                  <div id="ref-harrisNoTwoAlike2010">
+                  <p>———. 2010. <em>No Two Alike: Human Nature and Human Individuality</em>. Annotated edition. W. W. Norton &amp; Company.</p>
+                  </div>
+                  <div id="ref-hayesDynamicSystemsTheory1998">
+                  <p>Hayes, Adele M., and Jennifer L. Strauss. 1998. “Dynamic Systems Theory as a Paradigm for the Study of Change in Psychotherapy: An Application to Cognitive Therapy for Depression.” <em>Journal of Consulting and Clinical Psychology</em> 66 (6): 939–47. <a href="https://doi.org/10.1037/0022-006X.66.6.939">https://doi.org/10.1037/0022-006X.66.6.939</a>.</p>
+                  </div>
+                  <div id="ref-kahnemanThinkingFastSlow2013a">
+                  <p>Kahneman, Daniel. 2013. <em>Thinking, Fast and Slow</em>. 1st edition. New York: Farrar, Straus and Giroux.</p>
+                  </div>
+                  <div id="ref-kruglanskiThreePillarsRadicalization2019">
+                  <p>Kruglanski, Arie W., Jocelyn J. Bélanger, and Rohan Gunaratna. 2019. <em>The Three Pillars of Radicalization: Needs, Narratives, and Networks</em>. Illustrated edition. New York, NY: Oxford University Press.</p>
+                  </div>
+                  <div id="ref-lewisInnerRing1944">
+                  <p>Lewis, C. S. 1944. “The Inner Ring.” presented at the Memorial Lecture, King’s College, University of London. <a href="https://www.lewissociety.org/innerring/">https://www.lewissociety.org/innerring/</a>.</p>
+                  </div>
+                  <div id="ref-lindnerFiftyMinuteHour1999">
+                  <p>Lindner, Robert, and Jonathan Lear. 1999. <em>The Fifty-Minute Hour</em>. 1st edition. New York: Other Press.</p>
+                  </div>
+                  <div id="ref-lutharCultureAffluencePsychological2003">
+                  <p>Luthar, Suniya S. 2003. “The Culture of Affluence: Psychological Costs of Material Wealth.” <em>Child Development</em> 74 (6): 1581–93. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950124/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950124/</a>.</p>
+                  </div>
+                  <div id="ref-macintyreVirtueStudyMoral2007">
+                  <p>MacIntyre, Alasdair. 2007. <em>After Virtue: A Study in Moral Theory</em>. 3rd edition. Notre Dame, Ind: University of Notre Dame Press.</p>
+                  </div>
+                  <div id="ref-marquezVarietiesElectoralExperience2014">
+                  <p>Marquez, Xavier. 2014. “The Varieties of Electoral Experience.” Abandoned Footnotes. March 13, 2014. <a href="http://abandonedfootnotes.blogspot.com/2014/03/the-varieties-of-electoral-experience.html">http://abandonedfootnotes.blogspot.com/2014/03/the-varieties-of-electoral-experience.html</a>.</p>
+                  </div>
+                  <div id="ref-misiakSystematicReviewRelationship2019">
+                  <p>Misiak, Błażej, Jerzy Samochowiec, Kamaldeep Bhui, Merryam Schouler-Ocak, Hella Demunter, Levent Kuey, Andrea Raballo, Philip Gorwood, Dorota Frydecka, and Geert Dom. 2019. “A Systematic Review on the Relationship Between Mental Health, Radicalization and Mass Violence.” <em>European Psychiatry</em> 56 (1): 51–59. <a href="https://doi.org/10.1016/j.eurpsy.2018.11.005">https://doi.org/10.1016/j.eurpsy.2018.11.005</a>.</p>
+                  </div>
+                  <div id="ref-moghaddamStaircaseTerrorismPsychological2005">
+                  <p>Moghaddam, F. M. 2005. “The Staircase to Terrorism: A Psychological Exploration.” <em>American Psychologist</em> 60 (2): 161–69. <a href="https://doi.org/10.1037/0003-066X.60.2.161">https://doi.org/10.1037/0003-066X.60.2.161</a>.</p>
+                  </div>
+                  <div id="ref-mungerRightWingYouTubeSupply2020">
+                  <p>Munger, Kevin, and Joseph Phillips. 2020. “Right-Wing YouTube: A Supply and Demand Perspective.” <em>The International Journal of Press/Politics</em>, October, 1940161220964767. <a href="https://doi.org/10.1177/1940161220964767">https://doi.org/10.1177/1940161220964767</a>.</p>
+                  </div>
+                  <div id="ref-munnAltrightPipelineIndividual2019">
+                  <p>Munn, Luke. 2019. “Alt-Right Pipeline: Individual Journeys to Extremism Online.” <em>First Monday</em>, June. <a href="https://doi.org/10.5210/fm.v24i6.10108">https://doi.org/10.5210/fm.v24i6.10108</a>.</p>
+                  </div>
+                  <div id="ref-munsonMakingProlifeActivists2009">
+                  <p>Munson, Ziad W. 2009. <em>The Making of Pro-Life Activists: How Social Movement Mobilization Works</em>. 1st edition. Chicago: University of Chicago Press.</p>
+                  </div>
+                  <div id="ref-nacosRevisitingContagionHypothesis2009">
+                  <p>Nacos, Brigitte L. 2009. “Revisiting the Contagion Hypothesis: Terrorism, News Coverage, and Copycat Attacks.” <em>Perspectives on Terrorism</em> 3 (3): 3–13. <a href="http://www.jstor.org/stable/26298412">http://www.jstor.org/stable/26298412</a>.</p>
+                  </div>
+                  <div id="ref-nagleKillAllNormies2017">
+                  <p>Nagle, Angela. 2017. <em>Kill All Normies: Online Culture Wars from 4Chan and Tumblr to Trump and the Alt-Right</em>. Winchester, UK ; Washington, USA: Zero Books.</p>
+                  </div>
+                  <div id="ref-neumannTroubleRadicalization2013">
+                  <p>Neumann, Peter. 2013. “The Trouble with Radicalization.” <em>International Affairs</em> 89 (4): 873–93. <a href="https://doi.org/10.1111/1468-2346.12049">https://doi.org/10.1111/1468-2346.12049</a>.</p>
+                  </div>
+                  <div id="ref-nolen-hoeksemaRethinkingRumination2008">
+                  <p>Nolen-Hoeksema, Susan, Blair E. Wisco, and Sonja Lyubomirsky. 2008. “Rethinking Rumination.” <em>Perspectives on Psychological Science</em> 3 (5): 400–424. <a href="https://doi.org/10.1111/j.1745-6924.2008.00088.x">https://doi.org/10.1111/j.1745-6924.2008.00088.x</a>.</p>
+                  </div>
+                  <div id="ref-quinnDepressionQuestInteractive2013">
+                  <p>Quinn, Zoë. 2013. “Depression Quest: An Interactive (Non)Fiction About Living with Depression.” February 14, 2013. <a href="http://www.depressionquest.com/">http://www.depressionquest.com/</a>.</p>
+                  </div>
+                  <div id="ref-ratcliffe2013mood">
+                  <p>Ratcliffe, Matthew. 2013. “Why Mood Matters.” <em>The Cambridge Companion to Heidegger’s Being and Time</em>, 157–76.</p>
+                  </div>
+                  <div id="ref-ribeiroAuditingRadicalizationPathways2020">
+                  <p>Ribeiro, Manoel Horta, Raphael Ottoni, Robert West, Virgílio A. F. Almeida, and Wagner Meira. 2020. “Auditing Radicalization Pathways on YouTube.” In <em>Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</em>, 131–41. FAT* ’20. New York, NY, USA: Association for Computing Machinery. <a href="https://doi.org/10.1145/3351095.3372879">https://doi.org/10.1145/3351095.3372879</a>.</p>
+                  </div>
+                  <div id="ref-rooseMakingYouTubeRadical2019">
+                  <p>Roose, Kevin. 2019. “The Making of a YouTube Radical.” <em>The New York Times: Technology</em>, June 8, 2019. <a href="https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html,%20https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html">https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html, https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html</a>.</p>
+                  </div>
+                  <div id="ref-smithBiologyIdeologyEpistemology2012">
+                  <p>Smith, Kevin, John R. Alford, Peter K. Hatemi, Lindon J. Eaves, Carolyn Funk, and John R. Hibbing. 2012. “Biology, Ideology, and Epistemology: How Do We Know Political Attitudes Are Inherited and Why Should We Care?” <em>American Journal of Political Science</em> 56 (1): 17–33. <a href="https://doi.org/10.1111/j.1540-5907.2011.00560.x">https://doi.org/10.1111/j.1540-5907.2011.00560.x</a>.</p>
+                  </div>
+                  <div id="ref-stanfordUnderdeterminationScientificTheory2021">
+                  <p>Stanford, Kyle. 2021. “Underdetermination of Scientific Theory.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Winter 2021. Metaphysics Research Lab, Stanford University. <a href="https://plato.stanford.edu/archives/win2021/entries/scientific-underdetermination/">https://plato.stanford.edu/archives/win2021/entries/scientific-underdetermination/</a>.</p>
+                  </div>
+                  <div id="ref-strawsonNarrativity2004">
+                  <p>Strawson, Galen. 2004. “Against Narrativity.” <em>Ratio</em> 17 (4): 428–52. <a href="https://doi.org/10.1111/j.1467-9329.2004.00264.x">https://doi.org/10.1111/j.1467-9329.2004.00264.x</a>.</p>
+                  </div>
+                  <div id="ref-winterOnlineHateFarRight2019">
+                  <p>Winter, Aaron. 2019. “Online Hate: From the Far-Right to the ‘Alt-Right’ and from the Margins to the Mainstream.” In <em>Online Othering: Exploring Digital Violence and Discrimination on the Web</em>, edited by Karen Lumsden and Emily Harmer, 39–63. Palgrave Studies in Cybercrime and Cybersecurity. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-12633-9_2">https://doi.org/10.1007/978-3-030-12633-9_2</a>.</p>
+                  </div>
+                  <div id="ref-youngAlmostEverythingYou2020">
+                  <p>Young, Cathy. 2020. “(Almost) Everything You Know About GamerGate Is Wrong.” Arc Digital. January 1, 2020. <a href="https://medium.com/arc-digital/almost-everything-you-know-about-gamergate-is-wrong-c4a50a3515fb">https://medium.com/arc-digital/almost-everything-you-know-about-gamergate-is-wrong-c4a50a3515fb</a>.</p>
+                  </div>
+                  </div>
+          </div>
+  </div>
+</body>
+</html>
