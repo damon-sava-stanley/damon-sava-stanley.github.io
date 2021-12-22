@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <meta name="dcterms.date" content="2021-05-26">
+  <title>Video Games</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a {
+  color: rgb(30, 31, 35);
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 31, 35, 0.3);;
+}
+
+
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 0.9;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 0.75;
+  margin-bottom: 2px;
+  filter: brightness(150%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">Video Games</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-9">
+                  <h1 class="title">Video Games</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">May 26, 2021</p>
+            <br/>
+                  <p>When <a href="https://www.youtube.com/watch?v=3fCdZzsP4U0">Sufjan Stevens says</a>, “I don’t want to play your video game,” which video game is he talking about? The question can be easily answered, either through the lyrics (“I don’t want to be the center of the universe / … / I don’t want to play your video game”) or in <a href="https://www.abc.net.au/doublej/music-reads/features/sufjan-stevens-feature-ascension-america-video-game/12711108">interviews</a> (“I’m kind of over it, the self-aggrandisement of popular culture and celebrity culture on social media”): the game is that of social media.</p>
+          </div>
+  </div>
+</body>
+</html>

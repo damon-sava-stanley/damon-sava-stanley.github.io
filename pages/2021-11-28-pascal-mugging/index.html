@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <meta name="dcterms.date" content="2021-11-28">
+  <title>Iterated Pascal’s Mugging</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a {
+  color: rgb(30, 31, 35);
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 31, 35, 0.3);;
+}
+
+
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 0.9;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 0.75;
+  margin-bottom: 2px;
+  filter: brightness(150%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">Iterated Pascal’s Mugging</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-9">
+                  <h1 class="title">Iterated Pascal’s Mugging</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">November 28, 2021</p>
+            <br/>
+                  <p>A sequel to Nick Bostrom’s “Pascal’s Mugging,” based on the Eliezer Yudkowsky post of the same name. Read that one first.</p>
+                  <p>Mugger: Top of the evening.</p>
+                  <p>Pascal: It’s you. You rascal, you rapscallion, you veritable confidence artist.</p>
+                  <p>Mugger: Come again?</p>
+                  <p>Pascal: “Come again?” I give you my ten livres, I tell my friends of the fantastic opportunity I have lucked into, I endure all their mockery out of some vainglorious hope. And for what? I have not had one happy day in a year! My head, mon ami, my head!</p>
+                  <p>Mugger: Ah, Pascal, this is quite awkward.</p>
+                  <p>Pascal: Awkward, indeed! I shall have my livres back. No! I shall have a greater satisfaction, or I shall turn the constables on you.</p>
+                  <p>Mugger: You quite misunderstand me. The only awkwardness is this sudden hostility — born entirely on a lack of faith in your part, I might add. If I had only recognized you immediately, but you look frailer than I recall, I was returning you to tell you the promised boon is nearly upon you.</p>
+                  <p>Pascal: Is it?</p>
+                  <p>Mugger: My friend, but you do not believe me. And I have been quite delayed, I grant. Well, I have my own reasons. Still, I recognize my obligations, a quintillion happy days, neither more nor less. In exchange for your disappointment, my regrettable tardiness, yes, you should have recompense, I grant, and not merely ten livres, but seven by seven times what you had been promised. Only —</p>
+                  <p>Pascal: Only you need ten more livres.</p>
+                  <p>Mugger: Astounding! Your brilliance, sir, to see precisely my situation. It is shameful to admit, but the art it is so subtle and men of your understanding so hard to come by. You of all people will understand the difficulty an honest man — I use the word, you understand, in a broad sense, for lack of a better one — can have in repaying his debts.</p>
+                  <p>Pascal: That is quite enough, I have seen through your game.</p>
+                  <p>Mugger: Game? My friend, I fear those are quite your department.</p>
+                  <p>Pascal: Silence! I see that my mistake was a failure to appreciate your part in this dreadful affair, treating it only as a decision on my part, whether your glittering promise trumped your near-certain dishonesty.</p>
+                  <p>Mugger: I must approve of the qualification “near.” One would hate to be irregular.</p>
+                  <p>Pascal: Hush! But, and of course I had some inkling of this, just not enough, not enough, there is another half to this equation. Your promise, your delivery, your manner, these were not independent of my own distrust. No, they were calibrated precisely to overcome it. It was always the correct move for you to adjust your lie to match my disbelief.</p>
+                  <p>Mugger: Well observed, my clever friend. If I may make a rejoinder, it should seem that if you were right, and I am very far from granting that, having more confidence both in my powers and your good sense than your troubled mind retains, but if you were right, then there should be very many more muggers than we see. Put another way, why should a man ever discharge his obligations if he may, as you cruelly suspect me of doing, taking his money and running?</p>
+                  <p>Pascal: You fail to appreciate a fact revealed by our very encounter. Our promising game is in general played not once, as I admit you played me, but multiple times. The confidence man may gain the temporary advantage, but he is properly punished for it, losing every sequlae. Indeed, in an ordered society, like our Paris, he has the constable called on him. Speaking of!</p>
+                  <p>Mugger: Pause. I repent. I see the justice in your analysis and understand now my mistake. Clearly, I did not offer you nearly enough. I am a fair man (again, that word!), and I am quite ready to strike a fairer bargain. Take this piece of paper, write down whatever figure you take to be appropriate.</p>
+                  <p>Pascal: What?! It is as if you had not listened to a word I have said.</p>
+                  <p>Mugger: My friend, you wound me. I hang upon your every syllable. But while I agree with your analysis as far as it goes, it is dangerously incomplete. Permit me a collegial emendation.</p>
+                  <p>Pascal: If you must, but the next officer-of-the-law I see, I am hailing.</p>
+                  <p>Mugger: If I am, as you accuse me of being, a man, which I repudiate, a vagabond, a player of games, I would have the motives just as you describe them. But we must never give earthly matters our full assent. You of all people know that we must deal always in probability. There must be a chance, howsoever slim, that I am not a common criminal motivated by a few coins, as you suspect, but what I claim I am. What was it? A magician of the Seventh Dimension? (I jest. I jest.) In truth, it is quite nearly the same to me to grant a sextillion happy days as a quintillion. Were I a man moved by coin, expecting to run, I would grant the uselessness of my word. I am a higher, more virtuous thing than that. Whatever your doubts, you must accord the latter some probability.</p>
+                  <p>Pascal: Constable! Constable! Come quick, I am being mugged!</p>
+                  <p>Mugger: I had nearly forgotten. This time I brought my gun.</p>
+                  <p>Pascal: Wait, I yield! Only, satisfy my curiosity and it shall have been worth ten more livres. Suppose I grant that my solution fails. Still, I may point out that all this talk of probabilities is good as far as it goes, but it goes only so far. In truth, I cannot assign a probability with the necessary precision. I am in a fog, but it seems to me my reasoning should recur the next level up. I should assume you were playing my uncertainty (no, that is not the right word, my vagueness, perhaps), my fallibility just as on the ground floor you played my gullibility. For a finite creature, if not for God, an angel, or indeed a magician of the Seventh Dimension, the only stable strategy is not to pay.</p>
+                  <p>Mugger: Good! You are thinking, again. I was only joking about the gun, by the way. What would a magician need that for? And I must admit to being a finite, if superior, being. Grant everything you have said, still you do not escape so easily. That I am playing on your inferiority is a possibility, I admit, but a possibility just like any other. It is one we must put a probability on; we can do no better on this earth, but we most do at least this much. And the probability is not a certainty. There are no certainties. I see the problem is still that I am not offering enough. Look here, I have a larger piece of paper. Many more digits, you see.</p>
+                  <p>Pascal: If you can see this far, you must see farther. This problem reappears at yet one level up. Whatever you propose to offer, it will not be enough.</p>
+                  <p>Mugger: You drive a hard bargain, Monsieur Pascal, I see you are trying to drive me to an infinite reward! That we must leave to the Almighty.</p>
+                  <p>Pascal: As we must in all things. If I may, I will be on my way.</p>
+                  <p>Mugger: One moment. One last proposition. I ask only that you have a little faith, my friend. If nothing else, if nothing comes of it, it will have been good practice. For the big one, if you will.</p>
+                  <p>Pascal hands over his wallet.</p>
+                  <p>Mugger: Come back! The paper is blank! We never agreed on the price!</p>
+          </div>
+  </div>
+</body>
+</html>

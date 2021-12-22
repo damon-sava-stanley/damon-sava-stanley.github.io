@@ -17,7 +17,7 @@ Here are some worrying facts, for someone in the discipline, about academic phil
 
 These I take to be well documented and fairly noncontroversial. What I want to
 take up here is an interesting hypothesis proposed in @Berenstain2018 (who also
-does an admirable job fleshing out the above three jobs). In particular, she
+does an admirable job fleshing out the above three facts). In particular, she
 seeks to explain one aspect of this last point: namely that philosophy as a
 discipline has not properly enacted measures that, we have good evidence to
 believe, counteract implicit biases (e.g. triple-blind review processes). These

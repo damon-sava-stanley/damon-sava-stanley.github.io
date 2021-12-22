@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Damon Stanley">
+  <meta name="dcterms.date" content="2021-11-27">
+  <title>Diary of a Pardoned Turkey</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+body {
+  background-color: rgb(250, 250, 247);
+  color: rgb(30, 31, 35);
+  font-family: Georgia;
+  hanging-punctuation: first;
+}
+a {
+  color: rgb(30, 31, 35);
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 31, 35, 0.3);;
+}
+
+
+#TOC ul,
+#TOC ul li {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 2px;
+}
+.author {
+  font-size-adjust: 0.9;
+  margin-bottom: 3px;
+  filter: brightness(125%);
+}
+.date {
+  font-size-adjust: 0.75;
+  margin-bottom: 2px;
+  filter: brightness(150%);
+}
+.verse ul, .verse ol {
+  list-style-type: none;
+}
+.shrunk-to-col {
+  font-size-adjust: 0.45;
+}
+
+.verse li {  
+  text-indent: -2em;
+  padding-left: 2em;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+figure { 
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+figcaption {
+  padding-top: 2px;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      /*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
+(function (document, documentElement) {
+    // Enable strict mode
+    "use strict";
+
+    // Form the style on the fly to result in smaller minified file
+    var important = "!important;";
+    var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
+
+    window.getEmPixels = function (element) {
+
+        var extraBody;
+
+        if (!element) {
+            // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
+            element = extraBody = document.createElement("body");
+            extraBody.style.cssText = "font-size:1em" + important;
+            documentElement.insertBefore(extraBody, document.body);
+        }
+
+        // Create and style a test element
+        var testElement = document.createElement("i");
+        testElement.style.cssText = style;
+        element.appendChild(testElement);
+
+        // Get the client width of the test element
+        var value = testElement.clientWidth;
+
+        if (extraBody) {
+            // Remove the extra body element
+            documentElement.removeChild(extraBody);
+        }
+        else {
+            // Remove the test element
+            element.removeChild(testElement);
+        }
+
+        // Return the em value in pixels
+        return value;
+    };
+}(document, document.documentElement));
+    </script>
+    <script type="text/javascript">
+/*
+ * Hanging Punctuation
+ * This function takes a DOM element,
+ * searches each of its direct descendants,
+ * and, if the element begins with hangable punctuation,
+ * the appropriate HTML class is applied to the element.
+ *
+ * Then the parent DOM element get's a class to activate
+ * the child classes we applied. 
+ *
+ * CREDIT: https://webdesign.tutsplus.com/articles/getting-the-hang-of-hanging-punctuation--cms-19890
+ */
+function hangPunctuation(element) {
+ 
+    // Punctuation marks that qualify to be hung
+    var marks = {
+        '\u201c': 'medium',     // “ - ldquo - left smart double quote
+        '\u2018': 'small',      // ‘ - lsquo - left smart single quote
+        '\u0022': 'medium',     // " - ldquo - left dumb double quote
+        '\u0027': 'small',      // ' - lsquo - left dumb single quote
+        '\u00AB': 'large',      // « - laquo - left double angle quote
+        '\u2039': 'medium',     // ‹ - lsaquo - left single angle quote
+        '\u201E': 'medium',     // „ - bdquo - left smart double low quote
+        '\u201A': 'small',      // ‚ - sbquo - left smart single low quote
+    };
+
+    var sizeIndent = {
+        'small': '.2325em',
+        'medium': '.4125em',
+        'large': '.6125em',
+    };
+         
+    var text = element.innerText || element.textContent;
+
+    for(var mark in marks) {
+        if ( text.indexOf(mark) === 0 ){
+            var style = window.getComputedStyle(element)
+            var currentIndent = style.getPropertyValue('text-indent');
+            var currentIndentPx = parseFloat(currentIndent);
+            var toIndentEm = sizeIndent[marks[mark]];
+            var toIndentPx = getEmPixels() * parseFloat(toIndentEm);
+            var indent = currentIndentPx - toIndentPx;
+            element.style.textIndent = Math.floor(indent) + 'px';
+        }
+    }
+}
+ 
+window.onload = function() {
+    var container = document.querySelectorAll('div.line-block');
+    for (var i = 0; i < container.length; i++) {
+      hangPunctuation(container[i]);
+    }
+}    
+
+    </script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">/</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+    </ul>
+        <div class="navbar-text">Diary of a Pardoned Turkey</div>
+      </nav>
+  <div class="row" id="body">
+        <div class="col col-sm-3">
+      <nav id="TOC">
+        <ul>
+        <li><a href="#november-21">November 21</a></li>
+        <li><a href="#november-22">November 22</a></li>
+        <li><a href="#november-23">November 23</a></li>
+        <li><a href="#november-24">November 24</a></li>
+        <li><a href="#november-25">November 25</a></li>
+        </ul>
+      </nav>
+    </div>
+        <div class="col col-sm-9">
+                  <h1 class="title">Diary of a Pardoned Turkey</h1>
+                  <p class="author ml-3">Damon Stanley</p>
+                  <p class="date ml-3">November 27, 2021</p>
+            <br/>
+                  <h1 id="november-21">November 21</h1>
+                  <blockquote>
+                  <p>I heard the following incident from Hu He. “The king,” said he, “was sitting aloft in the hall, when a man appeared, leading an ox past the lower part of it. The king saw him, and asked, Where is the ox going? The man replied, We are going to consecrate a bell with its blood. The king said, Let it go. I cannot bear its frightened appearance, as if it were an innocent person going to the place of death. The man answered, Shall we then omit the consecration of the bell? The king said, How can that be omitted? Change it for a sheep.”</p>
+                  <p>— Mencius, <a href="https://ctext.org/mengzi/liang-hui-wang-i">Liang Hui Wang</a>, IA7, trans. James Legge</p>
+                  </blockquote>
+                  <p>Though the sun shone brightly, the cold and hard ground remained cold and hard. Few remained, which reassured, but, while there were even two, a man could not count fortune his friend. The top of the coup opened and two pairs of gloves reached in. One almost hoped to be selected; one had grown so sick of quaking.</p>
+                  <p>In the resulting hollow silence, the other (having no tongues, we lacked also names) spoke. “It is a pity.”</p>
+                  <p>In the corner, several others picked at the dirt. I turned away, unable to stand his prattling.</p>
+                  <p>“Still, we must be thankful that we have been spared.”</p>
+                  <p>The space was impossibly vast and hatefully empty.</p>
+                  <h1 id="november-22">November 22</h1>
+                  <blockquote>
+                  <p>You’re ugly to look at, and hideous in all sorts of ways; your body is squat, your neck is scrawny, your head is bigger than the rest of you put together; your eyes are black as coal, and as big as if they were painted with woad.</p>
+                  <p>— <a href="http://wpwt.soton.ac.uk/trans/owl/owltrans.htm"><em>The Owl and the Nightingale</em></a>, l72–75.</p>
+                  </blockquote>
+                  <p>“It is good,” the other insisted in the early morning, “that we should be so subjected, though I grant it does not appear so.”</p>
+                  <p>That I would have ripped his mouth out of his skull, except that I would have been damned for sure. I responded, though all sense bade me not.</p>
+                  <p>“Pray tell why.”</p>
+                  <p>The other puffed himself up. “Simple, you should not exist to ask questions were we not so positioned.”</p>
+                  <p>“You nincompoop!” I roared. “You absolute, bird-brained fool.”</p>
+                  <h1 id="november-23">November 23</h1>
+                  <blockquote>
+                  <div class="line-block">If you ever come into their territory,<br />
+                  They will put you in a secure prison,<br />
+                  And there you will stay;<br />
+                  The lies you have told<br />
+                  You will recant there,<br />
+                  And you will be humiliated.</div>
+                  <p>— <a href="http://wpwt.soton.ac.uk/digby86/thrushtxt.htm"><em>The Thrush and the Nightingale</em></a>, l127–132.</p>
+                  </blockquote>
+                  <p>Though four others had died the previous day, I took the other’s silence as suitable recompense. Our numbers had grown so few that I had permitted myself an unreasonable degree of optimism. After all, if I had made it so far. I would not be permitted to crow: the other would not permit his pride to be forever wounded.</p>
+                  <p>“I ask you, friend, because you are so wise. Should we regret so tearfully our station? We have our lives, a certain measure of comfort and companionship.”</p>
+                  <p>“It is not the scanty pleasures previously enjoyed that concern me.” I ruffled my arms. “Instead, I dread the loss of future joys and curse those who design to take them from me.”</p>
+                  <p>“But see, as I was trying to say, we should not prefer freedom. I have heard of such things as foxes.”</p>
+                  <p>“Myth!” I insisted.</p>
+                  <p>“Perhaps so. But you must admit we have a secure part, a lesser part, an improvable part, but not an unenviable part, from a certain point of view.”</p>
+                  <p>“Damn your point of view. Let the beasts take you.”</p>
+                  <p>Here the other puffed himself up and approach. “If you put such a bounty on freedom, flee this place. See how the outside world treats you.”</p>
+                  <p>“Perhaps I shall, and you shall find yourself in the smallest cage!”</p>
+                  <h1 id="november-24">November 24</h1>
+                  <blockquote>
+                  <p>For it is impossible to find out how many kinds of birds there are. And anyone who could penetrate the desert places of Scythia and India or Ethiopia still could not get to know all the species of birds there or the differences between them. Birds are called <em>aves</em> because they do not go in a straight line but fly at random, off-course, per <em>avia</em>. They are called <em>alites</em>, winged creatures, because it is on their wings, <em>ale</em>, that they reach for the skies and it is by beating them that they ascend to the heights. They are called <em>volucres</em>, flying creatures, from volandum, flying, For what we call ‘walking’ and ‘flying’ stem from the same mechanism.</p>
+                  <p><a href="https://www.abdn.ac.uk/bestiary/ms24/f25v"><em>The Aberdeen Bestiary</em></a>, 25v.</p>
+                  </blockquote>
+                  <p>The other was taken yesterday. I was glad for it, and thought there must be some justice. I had outwitted him, I was sure, destroyed him, and the world had recognized this fact. And with only one other left! My survival was practically ensured. And yet I felt a certain melancholy which grew as the flush of victory faded. I felt sorry, I decided, for the remaining one in the cage, whom I would surely best the next day. And so I hatched a certain plan for both of our benefits.</p>
+                  <p>“We should run away. We might both survive that way; they will not try too hard to retrieve us.”</p>
+                  <p>The miserable creature looked me up and down, its black eyes sunken and resigned. “I’d rather try my luck with them, if it’s all the same.”</p>
+                  <p>I almost preferred the stupidity of the other to this rank cowardice. Fortunately, I should not have to suffer it much longer.</p>
+                  <h1 id="november-25">November 25</h1>
+                  <blockquote>
+                  <p>Et ledit prieur nous ait supplié que il nous plaise consentir que en faisant justice de trois ou quatres desdits porcs le demeurant soit delivré. Nous inclinans à sa requeste, avons de gràce especiale ouctroyé et consenty, et par ces présentes ouctroyons et consentons que en faisant justice et execution desdites trois truyes et de l’ung des pourceaulx dudit prieur, que le demeurant desdits pourceaulx soit mis à delivre, nonobstant qu’ils aient esté à la mort dudit pourchier.</p>
+                  <p>— Letters patent, by which Philip the Bold, Duke of Burgundy, on Sept. 12, 1379, granted the petition of the friar Humbert de Poutiers, prior of the town of Saint-Marcel-lez-Jussey, and pardoned two herds of swine which had been condemned to suffer the extreme penalty of the law as accomplices in an infanticide committed by three sows. Quoted in Edmund Evans, <a href="https://www.gutenberg.org/files/43286/43286-h/43286-h.htm#Page_342"><em>The Criminal Prosecution and Capital Punishment of Animals</em></a>, 343.</p>
+                  </blockquote>
+                  <p>What strange fortunes. We were both taken. And also spared, paraded in front of queer machines operated by innumerable monsters. Stroked and touched, one was ready at any moment to have one’s neck wrung, to be torn to pieces. And one was not: we were boxed, unboxed, and boxed again, finally let free in a bright and open field filled with an uneasy grace.</p>
+          </div>
+  </div>
+</body>
+</html>
